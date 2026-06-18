@@ -1,0 +1,219 @@
+---
+title: "Crop AI-Generated Images for Social Media"
+description: "Step-by-step guide to cropping AI-generated images for Instagram, TikTok, YouTube, and every social platform. Includes size charts for Midjourney, DALL-E 3, FLUX, and SDXL outputs."
+date: "2026-06-10"
+tags: ["AI images", "Midjourney", "DALL-E", "FLUX", "social media", "cropping"]
+author: "ImageCropKit"
+---
+
+# How to Crop AI-Generated Images for Social Media
+
+AI image generators like Midjourney, DALL-E, and FLUX create stunning artwork — but almost always in the wrong size for your platform. A square Midjourney image looks awkward cropped into a TikTok Story. A DALL-E landscape gets cut off when forced into an Instagram portrait.
+
+This guide shows you how to handle AI-generated images for every social platform, with exact dimensions, practical workflows, and free tools.
+
+## What Size Do AI Generators Output?
+
+Every AI model has a native output resolution. Understanding this is the first step.
+
+| Model | Default Output | Aspect Ratio | Max Upscaled |
+|-------|---------------|-------------|-------------|
+| Midjourney v7 | 1024 × 1024 | 1:1 | 2048 × 2048 |
+| Midjourney v8.1 (--hd) | 2048 × 2048 | varies | 4K |
+| DALL-E 3 | 1024 × 1024 | 1:1 | — |
+| DALL-E 3 (landscape) | 1792 × 1024 | 16:9 | — |
+| DALL-E 3 (portrait) | 1024 × 1792 | 9:16 | — |
+| FLUX Dev/Pro | 1024 × 1024 | 1:1 | 2048+ |
+| SDXL | 1024 × 1024 | 1:1 | 1536+ |
+| Stable Diffusion 1.5 | 512 × 512 | 1:1 | 768+ |
+
+**Key insight:** Most AI models default to 1:1 square. But almost no social platform uses square as its primary format anymore.
+
+## Why You Should Not Crop After Generating
+
+The biggest mistake AI image creators make is generating a square image and cropping it to fit a platform. Here is why this fails:
+
+1. **The AI composes for the aspect ratio you specify.** When you generate a 1:1 image, the AI places the subject, background, and framing for a square. Cropping to 9:16 cuts off the edges the AI intentionally included.
+
+2. **Heads get cut off.** Portrait crops from square images often remove the top of the subject's head or important background elements.
+
+3. **Composition is destroyed.** The rule of thirds, leading lines, and visual balance the AI created are all based on the original ratio.
+
+**The better approach:** Generate at the correct aspect ratio from the start, or generate at a higher resolution and crop with intentional padding.
+
+## Platform-by-Platform Guide
+
+### Instagram
+
+| Format | Size | Aspect Ratio | Tip |
+|--------|------|-------------|-----|
+| Feed post (square) | 1080 × 1080 | 1:1 | Safe default, works everywhere |
+| Feed post (portrait) | 1080 × 1350 | 4:5 | Takes more screen space, higher engagement |
+| Story / Reels | 1080 × 1920 | 9:16 | Full-screen vertical |
+| Reel cover | 1080 × 1920 | 9:16 | Same as Story |
+| Profile picture | 320 × 320 | 1:1 | Displayed as circle |
+
+**For Midjourney:** Use `--ar 4:5` for portrait feed posts, `--ar 9:16` for Stories.
+
+**For DALL-E:** Use the portrait preset (1024 × 1792) for Stories, square for feed posts.
+
+**For FLUX/SDXL:** Set dimensions directly — 832 × 1024 for 4:5, 576 × 1024 for 9:16.
+
+[Crop images for Instagram →](/crop-image-for-instagram)
+
+### TikTok
+
+| Format | Size | Aspect Ratio |
+|--------|------|-------------|
+| Photo post | 1080 × 1920 | 9:16 |
+| Video cover | 1080 × 1920 | 9:16 |
+| Profile picture | 200 × 200 | 1:1 |
+
+TikTok is entirely vertical. Always generate at 9:16 for TikTok content.
+
+**Composition tip:** Keep the main subject in the lower two-thirds. The top third is often covered by the username and caption, and the bottom has interaction buttons. Place text in the center third.
+
+[Crop images for TikTok →](/crop-image-for-tiktok)
+
+### YouTube
+
+| Format | Size | Aspect Ratio |
+|--------|------|-------------|
+| Thumbnail | 1280 × 720 | 16:9 |
+| Channel banner | 2560 × 1440 | 16:9 |
+| Profile picture | 800 × 800 | 1:1 |
+
+**For Midjourney:** Use `--ar 16:9` and upscale. The initial output is 1456 × 816, which upscales to 2912 × 1632 — more than enough for a 1280 × 720 thumbnail.
+
+**Composition tip:** Thumbnails display small on mobile. Use high contrast, minimal text, and a clear focal point. The most important element should be in the center.
+
+### Facebook
+
+| Format | Size | Aspect Ratio |
+|--------|------|-------------|
+| Post (landscape) | 1200 × 630 | 1.91:1 |
+| Post (square) | 1080 × 1080 | 1:1 |
+| Story | 1080 × 1920 | 9:16 |
+| Cover photo | 820 × 312 | 2.63:1 |
+| Profile picture | 170 × 170 | 1:1 |
+
+### LinkedIn
+
+| Format | Size | Aspect Ratio |
+|--------|------|-------------|
+| Post (landscape) | 1200 × 627 | 1.91:1 |
+| Post (square) | 1080 × 1080 | 1:1 |
+| Profile picture | 400 × 400 | 1:1 |
+| Banner | 1584 × 396 | 4:1 |
+
+**Tip:** LinkedIn profile photos need at least 400 × 400 pixels to look sharp. Blurry LinkedIn photos are a common complaint.
+
+### Pinterest
+
+| Format | Size | Aspect Ratio |
+|--------|------|-------------|
+| Standard pin | 1000 × 1500 | 2:3 |
+| Square pin | 1000 × 1000 | 1:1 |
+| Story pin | 1080 × 1920 | 9:16 |
+
+**Tip:** Pinterest strongly favors 2:3 vertical pins. Horizontal pins get significantly less distribution in the smart feed.
+
+### X / Twitter
+
+| Format | Size | Aspect Ratio |
+|--------|------|-------------|
+| Post (single image) | 1600 × 900 | 16:9 |
+| Post (4-image grid) | 1200 × 675 each | 16:9 |
+| Header | 1500 × 500 | 3:1 |
+| Profile picture | 400 × 400 | 1:1 |
+
+## The Workflow: Generate, Then Crop
+
+Here is the practical workflow for handling AI-generated images across platforms.
+
+### Step 1: Generate at the Right Ratio (Best Case)
+
+If you know exactly where the image will be posted, generate at the correct aspect ratio from the start.
+
+**Midjourney examples:**
+```
+a serene mountain landscape --ar 16:9    (YouTube thumbnail)
+a fashion portrait --ar 4:5              (Instagram feed)
+a full-body character --ar 9:16          (TikTok/Stories)
+```
+
+**FLUX/SDXL examples:**
+Set the width and height directly in your interface. For a 4:5 Instagram portrait, use 832 × 1024.
+
+### Step 2: Generate Large, Then Crop (Flexible)
+
+If you need the same image across multiple platforms, generate at the largest size you need and crop for each platform.
+
+1. Generate at 2048 × 2048 (or the highest resolution your tool supports)
+2. Keep the main subject centered with padding on all sides
+3. Crop to each platform's dimensions using a tool like ImageCropKit
+
+This approach works because a larger image contains enough pixels to crop into any format without quality loss.
+
+### Step 3: Upscale, Then Crop (Print or High-Resolution)
+
+For print-on-demand or high-resolution needs:
+
+1. Generate at 1024 × 1024
+2. Upscale 2× or 4× using Real-ESRGAN, Topaz Gigapixel, or built-in upscalers
+3. Crop to the target dimensions
+
+**Print-on-demand sizes:**
+
+| Platform | T-Shirt Size | DPI |
+|----------|-------------|-----|
+| Redbubble | 4500 × 5400 | 300 |
+| TeePublic | 5000 × 5500 | 300 |
+| Merch by Amazon | 4500 × 5400 | 300 |
+| Printful | 4500 × 5400 | 300 |
+
+A 1024 × 1024 AI image upscaled 4× gives you 4096 × 4096 — enough for most t-shirt designs when cropped to 4500 × 5400 with canvas extension.
+
+## Quick Reference: AI Model to Platform
+
+| AI Model | Best For Instagram | Best For TikTok | Best For YouTube |
+|----------|-------------------|----------------|-----------------|
+| Midjourney | `--ar 4:5` | `--ar 9:16` | `--ar 16:9` |
+| DALL-E 3 | Portrait preset | Portrait preset | Landscape preset |
+| FLUX | 832 × 1024 | 576 × 1024 | 1216 × 684 |
+| SDXL | 832 × 1024 | 576 × 1024 | 1216 × 684 |
+
+## Common Mistakes to Avoid
+
+1. **Generating square then cropping to 9:16.** The AI composed for square — you will lose the edges. Generate at 9:16 instead.
+
+2. **Using unsupported aspect ratios in FLUX.** FLUX generates directly at the specified resolution. Using odd ratios can cause object duplication or anatomical distortion. Stick to standard ratios.
+
+3. **Ignoring safe zones.** TikTok, Instagram Stories, and Reels have UI elements that cover the top and bottom of the image. Keep text and important content in the center.
+
+4. **Uploading 1024 × 1024 directly to print platforms.** A 1024px image will look blurry and pixelated when printed. Always upscale first.
+
+5. **Over-generating at max resolution.** Generating at 4096 × 4096 is slow and often produces worse quality than generating at 1024 and upscaling. AI models work best at their native resolution.
+
+## Free Tools for Cropping AI Images
+
+After generating your AI image, use a free browser-based tool to crop it for each platform:
+
+- **[Crop Image Online](/crop-image)** — Upload your AI image, choose a platform preset, adjust the crop, and download.
+- **[Crop for Instagram](/crop-image-for-instagram)** — Presets for square, portrait (4:5), Story (9:16), and Reel cover.
+- **[Crop for TikTok](/crop-image-for-tiktok)** — 1080 × 1920 presets for photo posts and video covers.
+- **[Bulk Crop Images](/bulk-crop-images)** — Crop multiple AI images at once and download as a ZIP.
+
+All processing happens in your browser. Your AI-generated images are never uploaded to a server.
+
+## Summary
+
+| Step | Action |
+|------|--------|
+| 1 | Generate at the correct aspect ratio for your target platform |
+| 2 | If multi-platform, generate at 2048 × 2048 and crop |
+| 3 | For print, upscale 2–4× before cropping |
+| 4 | Use free tools like ImageCropKit for platform-specific crops |
+| 5 | Avoid cropping square images to non-square formats |
+
+*Last updated: June 2026*

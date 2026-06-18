@@ -1,0 +1,176 @@
+---
+title: "E-commerce Product Image Sizes 2026"
+description: "Exact image dimensions, background rules, and file format requirements for Amazon, Shopify, and Etsy product listings. Includes comparison table and batch cropping workflow."
+date: "2026-06-10"
+tags: ["ecommerce", "product images", "Amazon", "Shopify", "Etsy", "image sizes"]
+author: "ImageCropKit"
+---
+
+# E-commerce Product Image Size Guide 2026
+
+Getting product images wrong costs real money. Amazon suppresses listings that fail their background check. Etsy auto-crops your thumbnails and chops off products that aren't centered. Shopify themes silently resize your images and turn 800px uploads into blurry catalog grids.
+
+This guide covers the exact pixel dimensions, file formats, background rules, and aspect ratios for every major marketplace — based on each platform's published seller documentation as of mid-2026.
+
+## The Quick Reference Table
+
+| Platform | Recommended Size | Minimum Size | Max File | Format | Aspect Ratio | Background | Special Rules |
+|----------|-----------------|-------------|----------|--------|-------------|------------|---------------|
+| Amazon | 2000 × 2000 px | 1000 × 1000 px | 10 MB | JPEG preferred | 1:1 | Pure white (#FFFFFF) | Product fills 85%+ of frame |
+| Shopify | 2048 × 2048 px | 800 × 800 px | 20 MB | JPEG, PNG, WebP | 1:1 | White/neutral | Theme-driven crops |
+| Etsy | 2700 × 2025 px | 1000 px wide | ~20 MB | JPEG, PNG | 4:3 | Any | 10 photos + 1 video per listing |
+| eBay | 1600 × 1600 px | 500 px | 12 MB | JPEG, PNG | 1:1 | Clean | No borders, watermarks, logos |
+| Walmart | 2200 × 2200 px | 1500 × 1500 px | 5 MB | JPEG preferred | 1:1 | White/transparent | Stricter than Amazon |
+| Google Shopping | 1500 × 1500 px | 100 × 100 px | 16 MB | JPEG, PNG, WebP | 1:1 | Square preferred | No text overlays |
+
+**Bookmark this table.** Every number below explains why these specs exist and what happens when you ignore them.
+
+## Amazon: The Strictest Rules
+
+Amazon's main image requirements are enforced by both bots and human moderators. Getting them wrong doesn't just look bad — your listing gets suppressed.
+
+### Main Image Rules (Non-Negotiable)
+
+- **Background:** Pure white — RGB 255, 255, 255 exactly. Amazon's auto-check rejects subtle off-whites like #FAFAFA or #F5F5F5.
+- **Product fill:** Must occupy at least 85% of the frame. A product floating in white space triggers rejection.
+- **No overlays:** No text, logos, watermarks, borders, props not included in the sale, or human models on the main image.
+- **Resolution:** 1000 × 1000 px minimum to enable zoom. Recommended 2000 × 2000 px or larger.
+- **Format:** JPEG preferred. PNG and TIFF accepted. GIF rejected for main images.
+- **File size:** Under 10 MB.
+- **Color profile:** sRGB. Adobe RGB or CMYK will cause color shifts on the storefront.
+
+### Secondary Images (Slots 2-9)
+
+Amazon is much more lenient for additional images. You can use lifestyle photography, infographics, comparison charts, multiple angles, and scale references. White backgrounds are recommended but not required.
+
+### The 85% Rule
+
+This is the most common rejection reason. Amazon measures how much of the image frame your product occupies. If your product is a shoe and it's centered in a large white square with lots of empty space around it, Amazon considers the fill ratio too low.
+
+**Fix:** Crop tighter. The product should extend close to the edges of the frame while maintaining a small white margin. Use the [Product Image Cropper](/crop-product-images) to crop to exactly 2000 × 2000 px with the product filling the frame.
+
+## Shopify: Theme-Driven, Square by Default
+
+Shopify accepts images up to 4472 × 4472 px and 20 MB, but what actually gets displayed depends on your theme.
+
+### What Most Themes Do
+
+Modern Shopify themes (Dawn, Sense, Refresh) default to 1:1 square crops on collection pages. Upload 2048 × 2048 px and you get sharp Retina display plus automatic responsive generation for mobile.
+
+### Two Pitfalls
+
+1. **Mixing aspect ratios:** If you upload a mix of portrait and square images in the same collection, thumbnails become uneven. Pick one ratio per collection and stick to it.
+
+2. **Theme-specific crops:** Some fashion themes use 4:5 or 3:4 crops. If your theme does this, crop your master images to that ratio before upload — letting Shopify center-crop will cut off shoes, bottles, and other tall products.
+
+### Practical Workflow
+
+1. Shoot at 3000 px or larger.
+2. Edit and save a full-resolution master (JPEG quality 95+, sRGB).
+3. Export to 2048 × 2048 px, JPEG quality 85-90.
+4. Preview on mobile before publishing.
+
+Use the [Product Image Cropper](/crop-product-images) to batch-crop your Shopify images to 2048 × 2048 px.
+
+## Etsy: The 4:3 Exception
+
+Etsy is the only major marketplace that recommends a non-square aspect ratio. This surprises many sellers who default to 1:1.
+
+### Why 4:3?
+
+Etsy displays listing thumbnails in different crops depending on the device:
+- Desktop search: roughly square crop
+- Mobile app: tends toward 4:5 portrait
+- Homepage: multiple formats simultaneously
+
+A 2700 × 2025 px image at 4:3 ratio survives all these crops better than a square image. The product stays centered and visible across all surfaces.
+
+### Key Rules
+
+- **Minimum:** 1000 px wide. Below this, zoom is disabled.
+- **Recommended:** 2000+ px wide. Etsy officially recommends 2000 px on the shortest side.
+- **First image matters:** This is what shoppers see in search. Treat it as a movie poster — clear product, on-brand background, product slightly off-center to leave room for Etsy's price tag and "favorite" overlays.
+- **Use all 10 slots:** Etsy buyers want scale shots (product next to a hand), context (product in a room), packaging, variations, and close-ups.
+- **Avoid PNG transparency:** On colored backgrounds, transparent PNGs can look unprofessional.
+
+## White Background vs. Lifestyle: When to Use Each
+
+Every marketplace follows the same pattern:
+
+- **Hero image (main image):** Clinical, tight crop, white background. This exists to make the catalog grid uniform and to let algorithms cut the product silhouette for dynamic ads and AR previews.
+- **Supporting images:** Warmer, contextual, lifestyle settings. These sell the dream — the candle on a nightstand, the chair under a lamp.
+
+**Don't combine them.** A lifestyle hero that violates marketplace rules gets your listing suppressed. A sterile white-background lifestyle gallery wastes your chance to build emotional appeal.
+
+## Color Profile: Why sRGB Matters
+
+Browsers expect sRGB for consistent color rendering. If you export in Adobe RGB or CMYK:
+
+- Colors appear dull or shifted on the storefront
+- What you see in Photoshop doesn't match what customers see
+- Amazon's auto-check may flag the color profile
+
+**Always export as sRGB.** In Photoshop: File > Export > Save for Web > check "Convert to sRGB." In Lightroom: set Color Space to sRGB in the export dialog.
+
+## The Cross-Platform Workflow
+
+If you sell on multiple platforms, you need a master-and-export pipeline:
+
+1. **Shoot at 3000 px or larger** on the long edge. Modern phone cameras do this trivially.
+2. **Archive a master.** Full-resolution JPEG (quality 95+), named by SKU. This is your source of truth.
+3. **Export per-platform variants:**
+   - Amazon: 2000 × 2000 px, JPEG, white background
+   - Shopify: 2048 × 2048 px, JPEG
+   - Etsy: 2700 × 2025 px, JPEG, 4:3
+   - Google Shopping: 1500 × 1500 px, JPEG
+4. **Test on mobile.** 70%+ of marketplace traffic is phone-based.
+
+Use the [Bulk Crop tool](/bulk-crop-images) to process multiple images at once with a file name prefix — useful when you're preparing a batch for a specific platform.
+
+## Common Mistakes That Cost Sales
+
+| Mistake | Platform | Consequence |
+|---------|----------|-------------|
+| Background is #FAFAFA instead of #FFFFFF | Amazon | Listing suppressed |
+| Product fills only 60% of frame | Amazon | Listing suppressed |
+| 900 × 900 image uploaded | Amazon | Zoom disabled, lower conversion |
+| Mixed portrait/square in same collection | Shopify | Uneven thumbnails, unprofessional grid |
+| Letting Shopify center-crop | Shopify | Shoes, bottles cut off at edges |
+| Square image on Etsy | Etsy | Thumbnails crop awkwardly |
+| Product off-center in 4:3 image | Etsy | Thumbnail cuts off product |
+| Exported in Adobe RGB | All | Dull, shifted colors on storefront |
+| Uploaded Instagram-resaved JPEG | All | Compounded compression artifacts |
+| Treating platform max as target | All | Slow page load, lower ranking |
+
+## Keep Your Originals
+
+Platforms change their specs. Two years ago Amazon's recommended size was 1500 px; today it's 2000. Walmart bumped from 1000 to 1500 minimum. If you kept your 3000 px masters, every spec change is a five-minute re-export. If you only have the 1000 px versions, you're re-shooting the catalog.
+
+Archive the originals. Cloud storage is cheap. Re-shoots are not.
+
+## Tools for Product Image Cropping
+
+- **[Crop Product Images](/crop-product-images)** — Free online tool with Shopify (2048 × 2048), Etsy (2000 × 1500), and Amazon (2000 × 2000) presets.
+- **[Bulk Crop](/bulk-crop-images)** — Crop multiple product images at once with file name prefixes and ZIP download.
+- **[Crop Image Online](/crop-image)** — General-purpose cropper with free-form and aspect ratio options.
+
+All processing happens in your browser. Your product images are never uploaded to a server.
+
+## FAQ
+
+**Does DPI/PPI matter for web listings?**
+No. Web browsers ignore DPI/PPI entirely. Pixel dimensions are what matter — a 2048 × 2048 px image displays the same whether it's labeled 72 DPI or 300 DPI.
+
+**Can I use PNG with transparency?**
+Not for Amazon. Shopify and Etsy accept PNG, but transparent backgrounds can display oddly on colored surfaces. Use JPEG for product photos.
+
+**What file format should I use?**
+JPEG at quality 85-90 for photos. PNG only if you need transparency on Shopify/Etsy. Amazon prefers JPEG.
+
+**Do I need different sizes for mobile?**
+No — upload high-res images and the platform auto-resizes. But always preview your listing on a phone to check for cropping issues.
+
+**How do I speed up batch processing?**
+Use the [Bulk Crop tool](/bulk-crop-images) for free browser-based batch cropping with ZIP download. For compression, use TinyPNG or Squoosh.
+
+*Last updated: June 2026*

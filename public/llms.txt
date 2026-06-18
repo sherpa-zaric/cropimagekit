@@ -1,0 +1,28 @@
+# ImageCropKit
+> Free browser-based image cropper. All processing is local — zero upload, zero signup, zero watermark.
+
+## Tools
+- [/crop-image] Single image cropper with free crop and aspect ratio presets
+- [/bulk-crop-images] Batch crop multiple images, download as ZIP
+- [/crop-image-for-instagram] Instagram post, story, reel, and profile presets
+- [/crop-image-for-tiktok] TikTok photo and video cover presets
+- [/crop-product-images] Shopify (2048×2048), Amazon (2000×2000), Etsy (2700×2025) presets
+- [/crop-headshot] LinkedIn, resume, passport, and ID photo headshot cropper
+- [/crop-images-for-lora-training] AI dataset cropper for SD 1.5 (512×512) and SDXL (1024×1024)
+- [/circle-crop-image] Round profile picture and avatar cropper with transparent background
+- [/oval-crop-image] Ellipse crop for creative compositions
+- [/crop-image-to-passport-size] US, UK, EU, India, and China passport photo presets
+- [/crop-image-by-dimensions] Enter exact pixel width and height
+- [/crop-and-resize-image] Crop and resize in one step
+- [/crop-image-to-1x1] Square image cropper with common pixel presets
+- [/crop-image-locally] Privacy-focused cropper with local processing explanation
+
+## Blog
+- [/blog] Guides on image cropping, social media sizes, and privacy-first photo editing
+
+## Key Facts
+- Price: Free, no account required
+- Privacy: All processing happens in the browser, images never uploaded to any server
+- Formats: JPG, PNG, WebP, BMP, GIF input; PNG, JPG, WebP export
+- Batch: Bulk crop with ZIP download and file naming prefix
+- Quality: Browser Canvas API with imageSmoothingEnabled, no server recompression
