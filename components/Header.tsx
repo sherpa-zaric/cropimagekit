@@ -8,19 +8,22 @@ import BrandWordmark from "@/components/BrandWordmark";
 
 const primaryLinks = [
   { href: "/crop-image", label: "Crop Image" },
+  { href: "/crop-screenshot", label: "Screenshot" },
+  { href: "/ai-dataset-cropper", label: "AI Dataset" },
+  { href: "/profile-photo-cropper", label: "Profile" },
   { href: "/bulk-crop-images", label: "Bulk Crop" },
-  { href: "/crop-product-images", label: "Product" },
-  { href: "/crop-image-for-instagram", label: "Instagram" },
-  { href: "/crop-image-for-tiktok", label: "TikTok" },
-  { href: "/crop-headshot", label: "Headshot" },
-  { href: "/crop-image-by-dimensions", label: "By Dimensions" },
-  { href: "/crop-and-resize-image", label: "Resize" },
+  { href: "/crop-image-to-passport-size", label: "Passport" },
+  { href: "/circle-crop-image", label: "Circle" },
 ];
 
 const moreLinks = [
-  { href: "/crop-images-for-lora-training", label: "AI Dataset" },
-  { href: "/circle-crop-image", label: "Circle Crop" },
-  { href: "/crop-image-to-passport-size", label: "Passport Size" },
+  { href: "/crop-images-for-lora-training", label: "LoRA Cropper" },
+  { href: "/crop-headshot", label: "Headshot" },
+  { href: "/crop-product-images", label: "Product" },
+  { href: "/crop-image-for-instagram", label: "Instagram" },
+  { href: "/crop-image-for-tiktok", label: "TikTok" },
+  { href: "/crop-image-by-dimensions", label: "By Dimensions" },
+  { href: "/crop-and-resize-image", label: "Resize" },
   { href: "/oval-crop-image", label: "Oval Crop" },
   { href: "/blog", label: "Blog" },
 ];

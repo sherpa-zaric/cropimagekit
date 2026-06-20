@@ -23,11 +23,11 @@ const newsreader = Newsreader({
 
 export const metadata: Metadata = {
   title: {
-    default: "ImageCropKit - Free Online Image Cropper & Bulk Crop Tool",
+    default: "ImageCropKit - Crop Images for Screenshots, AI Datasets, and Profile Photos",
     template: "%s | ImageCropKit",
   },
   description:
-    "Crop images online for free with ImageCropKit. Crop single images or bulk crop multiple images locally in your browser. No upload, no signup, no watermark.",
+    "Crop images online for screenshots, AI datasets, passport photos, and profile pictures. Browser-based image cropping with no upload, no signup, and no watermark.",
   metadataBase: new URL("https://imagecropkit.com"),
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         url: "/opengraph-image.svg",
         width: 1200,
         height: 630,
-        alt: "ImageCropKit — Free Online Image Cropper",
+        alt: "ImageCropKit — Browser-based image cropping for screenshots, AI datasets, and profile photos",
       },
     ],
   },

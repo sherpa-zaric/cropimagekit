@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 import RelatedTools from "@/components/RelatedTools";
 import FAQSection from "@/components/FAQSection";
 import StructuredData from "@/components/StructuredData";
@@ -78,7 +79,7 @@ export default function BulkCropImagesPage() {
         <p>
           For a complete reference of every platform dimension, see our
           {" "}
-          <a href="/blog/social-media-image-sizes-2026">social media image sizes guide</a>.
+          <Link href="/blog/social-media-image-sizes-2026">social media image sizes guide</Link>.
         </p>
 
         <h2>Supported image formats</h2>

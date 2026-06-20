@@ -3,6 +3,9 @@ import { SITE_NAME } from "@/lib/siteConfig";
 import BrandWordmark from "@/components/BrandWordmark";
 
 const toolLinks = [
+  { href: "/crop-screenshot", label: "Screenshot Cropper" },
+  { href: "/ai-dataset-cropper", label: "AI Dataset Cropper" },
+  { href: "/profile-photo-cropper", label: "Profile Photo Cropper" },
   { href: "/crop-image", label: "Crop Image" },
   { href: "/bulk-crop-images", label: "Bulk Crop Images" },
   { href: "/crop-image-locally", label: "Crop Image Locally" },
@@ -35,7 +38,7 @@ export default function Footer() {
             <BrandWordmark className="text-xl" />
           </Link>
           <p className="text-sm text-muted-foreground mt-2">
-            A fast, private, browser-based image cropper.
+            Browser-based image cropping for screenshots, AI datasets, and profile photos.
             <br />
             No upload, no signup, no watermark.
           </p>

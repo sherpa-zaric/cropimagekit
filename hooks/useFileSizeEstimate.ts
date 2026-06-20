@@ -26,20 +26,24 @@ export function useFileSizeEstimate(
 ): string | null {
   const [estimate, setEstimate] = useState<string | null>(null);
   const timerRef = useRef<ReturnType<typeof setTimeout>>(null);
+  const cropX = crop?.x ?? 0;
+  const cropY = crop?.y ?? 0;
+  const cropWidth = crop?.width ?? 0;
+  const cropHeight = crop?.height ?? 0;
 
   useEffect(() => {
     if (timerRef.current) clearTimeout(timerRef.current);
 
-    if (!image || !crop || crop.width <= 0 || crop.height <= 0) {
-      setEstimate(null);
+    if (!image || cropWidth <= 0 || cropHeight <= 0) {
+      timerRef.current = setTimeout(() => setEstimate(null), 0);
       return;
     }
 
     timerRef.current = setTimeout(() => {
       try {
-        const sampleScale = Math.min(1, 256 / Math.max(crop.width, crop.height));
-        const sw = Math.max(1, Math.round(crop.width * sampleScale));
-        const sh = Math.max(1, Math.round(crop.height * sampleScale));
+        const sampleScale = Math.min(1, 256 / Math.max(cropWidth, cropHeight));
+        const sw = Math.max(1, Math.round(cropWidth * sampleScale));
+        const sh = Math.max(1, Math.round(cropHeight * sampleScale));
 
         const canvas = document.createElement("canvas");
         canvas.width = sw;
@@ -49,7 +53,7 @@ export function useFileSizeEstimate(
 
         ctx.drawImage(
           image,
-          crop.x, crop.y, crop.width, crop.height,
+          cropX, cropY, cropWidth, cropHeight,
           0, 0, sw, sh,
         );
 
@@ -57,7 +61,7 @@ export function useFileSizeEstimate(
 
         canvas.toBlob((blob) => {
           if (!blob) return;
-          const scale = (crop.width * crop.height) / (sw * sh);
+          const scale = (cropWidth * cropHeight) / (sw * sh);
           const estimatedBytes = Math.round(blob.size * scale);
           setEstimate(formatBytes(estimatedBytes));
         }, mimeType, format === "png" ? undefined : quality / 100);
@@ -69,7 +73,7 @@ export function useFileSizeEstimate(
     return () => {
       if (timerRef.current) clearTimeout(timerRef.current);
     };
-  }, [image, crop?.x, crop?.y, crop?.width, crop?.height, format, quality]);
+  }, [image, cropHeight, cropWidth, cropX, cropY, format, quality]);
 
   return estimate;
 }

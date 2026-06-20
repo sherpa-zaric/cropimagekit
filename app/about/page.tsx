@@ -5,7 +5,7 @@ import StructuredData from "@/components/StructuredData";
 export const metadata: Metadata = {
   title: "About ImageCropKit",
   description:
-    "ImageCropKit is a free browser-based image cropper. All processing happens locally in your browser — no upload, no signup, no watermark.",
+    "ImageCropKit is a browser-based image cropping platform for screenshots, AI datasets, and passport/profile photos. No upload, no signup, no watermark.",
   alternates: { canonical: `${SITE_URL}/about` },
 };
 
@@ -16,15 +16,18 @@ export default function AboutPage() {
         <h1>About ImageCropKit</h1>
 
         <p>
-          ImageCropKit is a free, browser-based image cropper built for people who need to crop,
-          resize, and export images without installing software or uploading files to a server.
+          ImageCropKit is a free, browser-based image cropping platform specializing in
+          screenshot cropping, AI dataset cropping, and passport/profile photo cropping.
+          It is built for people who need precise crops without installing software or
+          uploading files to a server.
         </p>
 
         <h2>Why it exists</h2>
         <p>
-          Most online image croppers require an account, upload your photos to a remote server, or
-          add a watermark to the result. For casual users this is fine. For photographers, ecommerce
-          sellers, and anyone handling sensitive images, it is not.
+          Most online image croppers require an account, upload your photos to a remote server,
+          or add a watermark to the result. That is a poor fit for internal screenshots,
+          private dataset images, passport-style photos, professional headshots, and other
+          sensitive files.
         </p>
         <p>
           ImageCropKit processes every image entirely in your browser using the Canvas API. Your
@@ -34,20 +37,23 @@ export default function AboutPage() {
 
         <h2>What it does</h2>
         <ul>
+          <li><strong>Screenshot cropping</strong> — crop browser, chat, mobile, work, and documentation screenshots without uploading them</li>
+          <li><strong>AI dataset preparation</strong> — batch crop to SD 1.5 (512×512), SDXL (1024×1024), and custom training sizes</li>
+          <li><strong>Passport and profile photo cropping</strong> — crop headshots, ID-style photos, LinkedIn pictures, and round avatars</li>
           <li><strong>Single image cropping</strong> — free crop, aspect ratio presets, and exact pixel dimensions</li>
           <li><strong>Bulk cropping</strong> — upload multiple images, apply a shared crop, download as ZIP</li>
           <li><strong>Platform presets</strong> — Instagram, TikTok, YouTube, Shopify, Amazon, Etsy, LinkedIn, passport photos</li>
           <li><strong>Shape cropping</strong> — circle and oval crops for profile pictures and avatars</li>
-          <li><strong>AI dataset preparation</strong> — batch crop to SD 1.5 (512×512), SDXL (1024×1024), and custom training sizes</li>
           <li><strong>Export formats</strong> — PNG, JPG, and WebP with quality control</li>
         </ul>
 
         <h2>Who it is for</h2>
         <ul>
+          <li>Product teams, support teams, and writers who crop screenshots for documentation or reports</li>
+          <li>AI practitioners who need consistently sized training datasets</li>
+          <li>People preparing profile photos, headshots, avatars, passport photos, or ID-style images</li>
           <li>Ecommerce sellers who need consistent product photos across multiple marketplaces</li>
           <li>Social media creators who crop the same image for different platform dimensions</li>
-          <li>Photographers who need quick browser-based cropping without opening Photoshop</li>
-          <li>AI practitioners who need consistently sized training datasets</li>
           <li>Anyone who values privacy and does not want their images uploaded to a server</li>
         </ul>
 

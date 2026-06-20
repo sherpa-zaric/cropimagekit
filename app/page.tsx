@@ -23,18 +23,14 @@ const faqItems = [
 ];
 
 const homeRelated = [
+  { title: "Screenshot Cropper", href: "/crop-screenshot", description: "Crop screenshots, trim whitespace, and export private screenshots locally." },
+  { title: "AI Dataset Cropper", href: "/ai-dataset-cropper", description: "Batch crop images to 512, 768, 1024, and dataset training sizes." },
+  { title: "Profile Photo Cropper", href: "/profile-photo-cropper", description: "Crop profile pictures, headshots, passport photos, and avatars." },
   { title: "Crop Image Online", href: "/crop-image", description: "Crop a single image with free crop or a common aspect ratio." },
   { title: "Bulk Crop Images", href: "/bulk-crop-images", description: "Crop a batch of images and download them as a ZIP." },
   { title: "Crop Image Locally", href: "/crop-image-locally", description: "A private image cropper that runs entirely in your browser." },
   { title: "Crop Image to 1:1", href: "/crop-image-to-1x1", description: "Make a square image at 512, 768, 1024, 1080, or 2000 pixels." },
-  { title: "Product Image Cropper", href: "/crop-product-images", description: "Square product photos for Shopify, Etsy, and Amazon." },
-  { title: "Instagram Image Cropper", href: "/crop-image-for-instagram", description: "Posts, stories, reels, and profile picture presets." },
-  { title: "Headshot Cropper", href: "/crop-headshot", description: "Centered crops for LinkedIn, resumes, and profile photos." },
-  { title: "LoRA Image Cropper", href: "/crop-images-for-lora-training", description: "Batch crop training images at common AI dataset sizes." },
   { title: "Circle Crop Image", href: "/circle-crop-image", description: "Crop a round profile picture or avatar with a transparent background." },
-  { title: "Passport Photo Cropper", href: "/crop-image-to-passport-size", description: "Crop photos to US, UK, EU, India, and China passport dimensions." },
-  { title: "Custom Size Cropper", href: "/crop-image-by-dimensions", description: "Crop an image to any exact width and height in pixels." },
-  { title: "Oval Crop Image", href: "/oval-crop-image", description: "Crop an image into an oval or elliptical shape." },
 ];
 
 export default function Home() {
@@ -42,17 +38,17 @@ export default function Home() {
     <div className="max-w-screen-2xl mx-auto px-4 py-24 space-y-24">
       <section className="text-center space-y-6">
         <h1 className="text-4xl sm:text-5xl tracking-tight">
-          Free Online Image Cropper &amp; Bulk Crop Tool
+          Crop Images Perfectly for Screenshots, AI Datasets, and Profile Photos
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Crop, trim, and cut images online, privately and instantly. Upload one image or crop multiple images at once. ImageCropKit works in your browser, so your images never leave your device.
+          Fast browser-based image cropping. No uploads. No watermarks. No signup. Crop one image or batch crop multiple files while keeping your images on your device.
         </p>
         <div className="flex items-center justify-center gap-4 flex-wrap">
           <Link href="/crop-image" className="inline-flex items-center justify-center rounded-md bg-primary text-primary-foreground h-10 px-6 text-sm font-medium hover:opacity-90 transition-opacity">
-            Upload Image
+            Crop Image Now
           </Link>
-          <Link href="/bulk-crop-images" className="inline-flex items-center justify-center rounded-md border border-border h-10 px-6 text-sm font-medium hover:bg-muted transition-colors">
-            Bulk Crop Images
+          <Link href="/crop-screenshot" className="inline-flex items-center justify-center rounded-md border border-border h-10 px-6 text-sm font-medium hover:bg-muted transition-colors">
+            Try Screenshot Cropper
           </Link>
         </div>
       </section>
@@ -63,58 +59,63 @@ export default function Home() {
       </section>
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
-        <h2 className="text-center">Crop images online without uploading them</h2>
+        <h2 className="text-center">A specialist image cropping platform</h2>
         <p>
-          ImageCropKit is a free browser-based image cropper for everyday image editing tasks.
-          You can upload an image, choose a crop area, select a common aspect ratio, and
-          download the cropped result as PNG, JPG, or WebP.
+          ImageCropKit is a free browser-based image cropping platform specializing in
+          screenshot cropping, AI dataset cropping, and passport/profile photo cropping.
+          You can upload an image, choose a crop area, select a common aspect ratio or
+          output size, and download the cropped result as PNG, JPG, or WebP.
         </p>
         <p>
           Your images are processed locally in your browser. That means your files are not
-          uploaded to a server, and you can crop private photos, screenshots, product images,
-          circle profile pictures, or social media graphics without creating an account.
+          uploaded to a server, and you can crop private screenshots, training images,
+          passport-style photos, profile pictures, or social media graphics without creating
+          an account.
         </p>
       </section>
 
       <section>
-        <h2 className="text-2xl text-center mb-4">One cropper for different image workflows</h2>
+        <h2 className="text-2xl text-center mb-4">Cropping tools organized by workflow</h2>
         <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Use ImageCropKit for simple image cropping, batch cropping, square crops, circle profile pictures, product photos, Instagram images, headshots, and AI dataset preparation.
+          Start with the workflow that matches your image. Each tool uses the same private, no-upload cropper and adds presets for the task.
         </p>
 
         <div className="space-y-8">
           <div>
-            <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">Popular tools</h3>
+            <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">Core workflows</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <ToolCard href="/crop-screenshot" title="Screenshot Cropper" description="Crop screenshots, trim edges, remove extra whitespace, and export privately." />
+              <ToolCard href="/ai-dataset-cropper" title="AI Dataset Cropper" description="Batch crop images for LoRA, Stable Diffusion, Flux, and dataset prep." />
+              <ToolCard href="/profile-photo-cropper" title="Profile Photo Cropper" description="Crop headshots, passport photos, LinkedIn pictures, and avatars." />
+              <ToolCard href="/bulk-crop-images" title="Bulk Crop Images" description="Batch crop many images and download the results as a ZIP file." />
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">Profile and ID tools</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <ToolCard href="/crop-headshot" title="Headshot Cropper" description="Crop headshots for LinkedIn, resumes, and profile photos." />
+              <ToolCard href="/crop-image-to-passport-size" title="Passport Photo Cropper" description="Official passport dimensions for US, UK, EU, India, China, and ID cards." />
+              <ToolCard href="/circle-crop-image" title="Circle Crop Image" description="Create round profile pictures, avatars, logos, and transparent PNG circle crops." />
+              <ToolCard href="/crop-image-to-1x1" title="Crop Image to 1:1" description="Make a square image at 512, 768, 1024, 1080, or 2000 pixels." />
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">Supporting tools</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               <ToolCard href="/crop-image" title="Crop Image Online" description="Single image cropping with free crop and common aspect ratios." />
-              <ToolCard href="/bulk-crop-images" title="Bulk Crop Images" description="Batch cropping with shared aspect ratio and ZIP download." />
-              <ToolCard href="/crop-image-to-1x1" title="Crop Image to 1:1" description="Make a square image with the 1:1 cropper." />
-              <ToolCard href="/circle-crop-image" title="Circle Crop Image" description="Create round profile pictures, avatars, logos, and transparent PNG circle crops." />
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">Use-case tools</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               <ToolCard href="/crop-product-images" title="Product Image Cropper" description="Crop product photos for Shopify, Etsy, and Amazon." />
               <ToolCard href="/crop-image-for-instagram" title="Instagram Image Cropper" description="Instagram post, story, reel, and profile presets." />
-              <ToolCard href="/crop-headshot" title="Headshot Cropper" description="Crop headshots for LinkedIn, resumes, and profile photos." />
-              <ToolCard href="/crop-images-for-lora-training" title="LoRA Image Cropper" description="Batch crop images for AI datasets and LoRA training." />
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">New tools</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              <ToolCard href="/crop-image-to-passport-size" title="Passport Photo Cropper" description="Official passport dimensions for US, UK, EU, India, China, and ID cards." />
               <ToolCard href="/crop-image-by-dimensions" title="Custom Size Cropper" description="Crop to any exact pixel width and height you need." />
-              <ToolCard href="/oval-crop-image" title="Oval Crop Image" description="Create oval and elliptical profile pictures and shapes." />
             </div>
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">Privacy</h3>
+            <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">More crop shapes and privacy</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <ToolCard href="/oval-crop-image" title="Oval Crop Image" description="Create oval and elliptical profile pictures and shapes." />
+              <ToolCard href="/crop-and-resize-image" title="Crop and Resize" description="Crop and resize images to exact output dimensions in one step." />
               <ToolCard href="/crop-image-locally" title="Crop Image Locally" description="Private, browser-based cropping with no upload." />
             </div>
           </div>
@@ -144,14 +145,14 @@ export default function Home() {
           <div className="p-4 rounded-lg border"><h3 className="font-semibold text-sm mb-1">Private by default</h3><p className="text-xs text-muted-foreground">Images are processed locally in your browser and are not uploaded to our servers.</p></div>
           <div className="p-4 rounded-lg border"><h3 className="font-semibold text-sm mb-1">Fast browser-based cropping</h3><p className="text-xs text-muted-foreground">Crop images instantly without waiting for server uploads or account setup.</p></div>
           <div className="p-4 rounded-lg border"><h3 className="font-semibold text-sm mb-1">Batch-friendly</h3><p className="text-xs text-muted-foreground">Crop multiple images in one workflow and download the results as a ZIP file.</p></div>
-          <div className="p-4 rounded-lg border"><h3 className="font-semibold text-sm mb-1">Built for real use cases</h3><p className="text-xs text-muted-foreground">Use presets for social media, ecommerce, headshots, square crops, and AI datasets.</p></div>
+          <div className="p-4 rounded-lg border"><h3 className="font-semibold text-sm mb-1">Built for specialist workflows</h3><p className="text-xs text-muted-foreground">Use focused presets for screenshots, AI datasets, passport photos, profile pictures, and exact-size crops.</p></div>
         </div>
       </section>
 
       <RelatedTools tools={homeRelated} />
 
       <FAQSection items={faqItems} />
-      <StructuredData pageTitle="Free Online Image Cropper & Bulk Crop Tool" pageUrl="https://imagecropkit.com" faqItems={faqItems} includeBreadcrumb={false} includeOrganization={true} />
+      <StructuredData pageTitle="ImageCropKit" pageUrl="https://imagecropkit.com" faqItems={faqItems} includeBreadcrumb={false} includeOrganization={true} includeWebsite={true} />
     </div>
   );
 }

@@ -20,7 +20,11 @@ interface StructuredDataProps {
     description?: string;
   };
   includeOrganization?: boolean;
+  includeWebsite?: boolean;
 }
+
+const siteUrl = "https://imagecropkit.com";
+const siteDescription = "ImageCropKit is a browser-based image cropping platform specializing in screenshot cropping, AI dataset cropping, and passport/profile photo cropping.";
 
 export default function StructuredData({
   pageTitle, pageUrl, faqItems, howToSteps,
@@ -28,12 +32,13 @@ export default function StructuredData({
   includeWebApp = true,
   article,
   includeOrganization = false,
+  includeWebsite = false,
 }: StructuredDataProps) {
   const breadcrumbJson = includeBreadcrumb ? {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://imagecropkit.com" },
+      { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
       { "@type": "ListItem", position: 2, name: pageTitle, item: pageUrl },
     ],
   } : null;
@@ -43,7 +48,8 @@ export default function StructuredData({
     "@type": "WebApplication",
     name: "ImageCropKit",
     url: pageUrl,
-    applicationCategory: "MultimediaApplication",
+    description: siteDescription,
+    applicationCategory: "DesignApplication",
     operatingSystem: "Web Browser",
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
   } : null;
@@ -95,13 +101,27 @@ export default function StructuredData({
         "@context": "https://schema.org",
         "@type": "Organization",
         name: "ImageCropKit",
-        url: "https://imagecropkit.com",
+        url: siteUrl,
+        description: siteDescription,
+        sameAs: ["https://github.com/sherpa-zaric/cropimagekit"],
+      }
+    : null;
+
+  const websiteJson = includeWebsite
+    ? {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: "ImageCropKit",
+        url: siteUrl,
+        description: siteDescription,
+        publisher: { "@type": "Organization", name: "ImageCropKit", url: siteUrl },
       }
     : null;
 
   return (
     <>
       {organizationJson && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJson) }} />}
+      {websiteJson && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJson) }} />}
       {breadcrumbJson && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJson) }} />}
       {webAppJson && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppJson) }} />}
       {articleJson && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJson) }} />}

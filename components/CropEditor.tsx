@@ -81,35 +81,6 @@ export default function CropEditor({
   const customWidth = propCustomWidth ?? localCustomWidth;
   const customHeight = propCustomHeight ?? localCustomHeight;
 
-  // Sync external defaultPreset changes without remounting
-  useEffect(() => {
-    if (defaultPreset && defaultPreset.id !== selectedPreset?.id) {
-      handlePresetSelect(defaultPreset);
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [defaultPreset]);
-
-  // Sync external custom dimension changes
-  useEffect(() => {
-    if (showCustomDimensions && propCustomWidth != null && propCustomHeight != null) {
-      const w = Math.max(1, Math.min(8000, propCustomWidth));
-      const h = Math.max(1, Math.min(8000, propCustomHeight));
-      const preset: CropPreset = {
-        id: "custom",
-        name: "Custom",
-        width: w,
-        height: h,
-        aspectRatio: w / h,
-        category: "basic",
-      };
-      setSelectedPreset(preset);
-      if (imageElement) {
-        setCrop(calculateInitialCrop(preset.aspectRatio, imageElement.naturalWidth, imageElement.naturalHeight));
-      }
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [propCustomWidth, propCustomHeight]);
-
   const pixelCrop = crop && imageElement
     ? percentCropToPixelCrop(crop, imageElement.naturalWidth, imageElement.naturalHeight)
     : null;
@@ -170,6 +141,41 @@ export default function CropEditor({
     }
     onCustomDimensionChange?.(w, h);
   }, [imageElement, onCustomDimensionChange]);
+
+  // Sync external defaultPreset changes without remounting.
+  useEffect(() => {
+    if (!defaultPreset || defaultPreset.id === selectedPreset?.id) return;
+
+    const timer = setTimeout(() => {
+      handlePresetSelect(defaultPreset);
+    }, 0);
+
+    return () => clearTimeout(timer);
+  }, [defaultPreset, handlePresetSelect, selectedPreset?.id]);
+
+  // Sync external custom dimension changes.
+  useEffect(() => {
+    if (!showCustomDimensions || propCustomWidth == null || propCustomHeight == null) return;
+
+    const timer = setTimeout(() => {
+      const w = Math.max(1, Math.min(8000, propCustomWidth));
+      const h = Math.max(1, Math.min(8000, propCustomHeight));
+      const preset: CropPreset = {
+        id: "custom",
+        name: "Custom",
+        width: w,
+        height: h,
+        aspectRatio: w / h,
+        category: "basic",
+      };
+      setSelectedPreset(preset);
+      if (imageElement) {
+        setCrop(calculateInitialCrop(preset.aspectRatio, imageElement.naturalWidth, imageElement.naturalHeight));
+      }
+    }, 0);
+
+    return () => clearTimeout(timer);
+  }, [imageElement, propCustomHeight, propCustomWidth, showCustomDimensions]);
 
   const handleDownload = useCallback(async () => {
     if (!imageElement || !isValidCrop(crop)) return;
