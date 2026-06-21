@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import dynamic from "next/dynamic";
 import RelatedTools from "@/components/RelatedTools";
 import FAQSection from "@/components/FAQSection";
@@ -26,9 +27,9 @@ const faqItems = [
 ];
 
 const related = [
+  { title: "Trim Screenshot", href: "/trim-screenshot", description: "Remove whitespace, browser chrome, and extra screenshot edges." },
   { title: "Crop Image Locally", href: "/crop-image-locally", description: "A private cropper that runs entirely in your browser with no upload." },
   { title: "Crop Image Online", href: "/crop-image", description: "Single image cropping with free crop and common aspect ratios." },
-  { title: "Crop by Dimensions", href: "/crop-image-by-dimensions", description: "Crop a screenshot to any exact pixel width and height." },
   { title: "Bulk Crop Images", href: "/bulk-crop-images", description: "Crop multiple screenshots and download them as a ZIP file." },
 ];
 
@@ -84,9 +85,10 @@ export default function CropScreenshotPage() {
 
         <h2>Related screenshot workflows</h2>
         <p>
-          If you need exact output dimensions, use the <a href="/crop-image-by-dimensions">custom size cropper</a>.
-          If you need to process many screenshots together, use <a href="/bulk-crop-images">bulk crop images</a>.
-          For a technical explanation of local processing, read <a href="/crop-image-locally">crop image locally</a>.
+          If you mainly need to remove extra margins, use <Link href="/trim-screenshot">trim screenshot</Link>.
+          If you need exact output dimensions, use the <Link href="/crop-image-by-dimensions">custom size cropper</Link>.
+          If you need to process many screenshots together, use <Link href="/bulk-crop-images">bulk crop images</Link>.
+          For a technical explanation of local processing, read <Link href="/crop-image-locally">crop image locally</Link>.
         </p>
       </section>
 

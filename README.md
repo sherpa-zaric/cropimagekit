@@ -1,16 +1,18 @@
 # ImageCropKit
 
-Free browser-based image cropper. All processing is local — zero upload, zero signup, zero watermark.
+ImageCropKit is a browser-based image cropping platform for screenshots, AI datasets, and passport/profile photos. All processing is local — zero upload, zero signup, zero watermark.
 
 **[Live Site →](https://imagecropkit.com)**
 
 ## Features
 
 - **Single image cropping** — free crop, aspect ratio presets, exact pixel dimensions
+- **Screenshot cropping** — crop and trim screenshots without uploading private captures
+- **AI dataset preparation** — batch crop to SD 1.5 (512x512), SDXL (1024x1024), custom sizes
+- **Passport and profile photo cropping** — crop headshots, ID-style photos, avatars, and profile pictures
 - **Bulk crop** — upload multiple images, apply shared crop, download as ZIP
 - **Platform presets** — Instagram, TikTok, YouTube, Shopify, Amazon, Etsy, LinkedIn, passport photos
 - **Shape cropping** — circle and oval crops for profile pictures and avatars
-- **AI dataset preparation** — batch crop to SD 1.5 (512x512), SDXL (1024x1024), custom sizes
 - **Export formats** — PNG, JPG, WebP with quality control
 - **Privacy-first** — all processing happens in your browser using Canvas API
 
@@ -40,6 +42,10 @@ pnpm dev
 ```
 app/                    # Next.js pages (one per tool)
   crop-image/           # Single image cropper
+  crop-screenshot/      # Screenshot cropper hub
+  trim-screenshot/      # Screenshot whitespace and edge trimming
+  ai-dataset-cropper/   # AI dataset cropper hub
+  profile-photo-cropper/# Profile, passport, and avatar cropper hub
   bulk-crop-images/     # Batch crop tool
   crop-product-images/  # Ecommerce presets
   crop-image-for-instagram/

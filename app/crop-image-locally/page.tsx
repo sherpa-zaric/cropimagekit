@@ -24,10 +24,10 @@ const faqItems = [
 ];
 
 const related = [
+  { title: "Screenshot Cropper", href: "/crop-screenshot", description: "Crop private screenshots without uploading them." },
+  { title: "Trim Screenshot", href: "/trim-screenshot", description: "Remove browser chrome, margins, and screenshot whitespace." },
   { title: "Crop Image Online", href: "/crop-image", description: "A simple single-image cropper with common aspect ratios." },
   { title: "Bulk Crop Images", href: "/bulk-crop-images", description: "Batch cropping with shared aspect ratio and ZIP download." },
-  { title: "Headshot Cropper", href: "/crop-headshot", description: "Centered crops for LinkedIn, resumes, and profile photos." },
-  { title: "Circle Crop Image", href: "/circle-crop-image", description: "Create round avatars and transparent PNG circle crops." },
 ];
 
 export default function CropImageLocallyPage() {
@@ -96,6 +96,11 @@ export default function CropImageLocallyPage() {
           Use this page when privacy is more important than cloud-based editing. It is
           suitable for screenshots, family photos, ID-style images, workplace graphics, and
           other files you want to keep on your own device.
+        </p>
+        <p>
+          For screenshot-specific workflows, use the <a href="/crop-screenshot">screenshot cropper</a>
+          to crop private captures or <a href="/trim-screenshot">trim screenshot</a> to remove
+          browser chrome, margins, and empty space before sharing.
         </p>
       </section>
 

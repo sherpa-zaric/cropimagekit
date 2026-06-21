@@ -53,6 +53,7 @@ seo-keywords-report.md
 # AI / tool configs (local-only, never commit)
 .claude/
 .agents/
+.codegraph/
 .playwright-mcp/
 skills-lock.json
 CLAUDE-FABLE-5.md

@@ -30,10 +30,10 @@ const faqItems = [
 ];
 
 const related = [
+  { title: "Screenshot Cropper", href: "/crop-screenshot", description: "Crop and trim screenshots without uploading them." },
   { title: "Crop Image to 1:1", href: "/crop-image-to-1x1", description: "Make a single square image with a chosen pixel preset." },
   { title: "Product Image Cropper", href: "/crop-product-images", description: "Square product photos with consistent framing." },
   { title: "LoRA Image Cropper", href: "/crop-images-for-lora-training", description: "Batch crop training images at common AI dataset sizes." },
-  { title: "Circle Crop Image", href: "/circle-crop-image", description: "Crop a round profile picture or avatar with a transparent background." },
 ];
 
 export default function BulkCropImagesPage() {
@@ -112,6 +112,11 @@ export default function BulkCropImagesPage() {
           to a server, which makes this tool useful for private photos, internal screenshots,
           ecommerce product images, and dataset preparation. Close the tab and the image data
           is gone — nothing is stored anywhere.
+        </p>
+        <p>
+          If your batch is mostly screenshots, start with the <Link href="/crop-screenshot">screenshot cropper</Link>
+          for one image or <Link href="/trim-screenshot">trim screenshot</Link> when the main task is
+          removing whitespace and extra interface edges.
         </p>
       </section>
 

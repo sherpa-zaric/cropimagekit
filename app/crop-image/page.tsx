@@ -24,10 +24,10 @@ const faqItems = [
 ];
 
 const related = [
+  { title: "Screenshot Cropper", href: "/crop-screenshot", description: "Crop screenshots, trim whitespace, and export private captures." },
   { title: "Bulk Crop Images", href: "/bulk-crop-images", description: "Crop a batch of images with a shared aspect ratio and download a ZIP." },
   { title: "Crop and Resize Image", href: "/crop-and-resize-image", description: "Crop and resize to exact pixel dimensions in one step." },
   { title: "Crop Image to 1:1", href: "/crop-image-to-1x1", description: "Make a square image at 512, 768, 1024, 1080, or 2000 pixels." },
-  { title: "Instagram Image Cropper", href: "/crop-image-for-instagram", description: "Posts, stories, reels, and profile picture presets." },
 ];
 
 export default function CropImagePage() {
@@ -97,6 +97,12 @@ export default function CropImagePage() {
         </p>
 
         <h2>Crop images for specific use cases</h2>
+        <p>
+          <strong>Screenshots:</strong> PNG keeps UI text sharp and avoids JPG artifacts around
+          letters and icons. Use the <a href="/crop-screenshot">screenshot cropper</a> for general
+          screenshot crops or <a href="/trim-screenshot">trim screenshot</a> when you mainly need
+          to remove browser chrome, margins, or whitespace.
+        </p>
         <p>
           <strong>Social media:</strong> Instagram posts work best at 1080 &times; 1080 (1:1) or
           1080 &times; 1350 (4:5). TikTok and Reels need 1080 &times; 1920 (9:16). YouTube

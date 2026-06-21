@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/",
     "/crop-image",
     "/crop-screenshot",
+    "/trim-screenshot",
     "/ai-dataset-cropper",
     "/profile-photo-cropper",
     "/bulk-crop-images",
