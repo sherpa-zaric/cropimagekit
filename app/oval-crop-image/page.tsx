@@ -11,7 +11,7 @@ const OvalCropEditor = dynamic(() => import("@/components/OvalCropEditor"), {
 });
 
 export const metadata: Metadata = {
-  title: "Oval Image Cropper — Free Online, Ellipse Crop | ImageCropKit",
+  title: "Oval Image Cropper — Free Online, Ellipse Crop",
   description: "Free online oval image cropper. Crop images into oval and elliptical shapes. Choose portrait, tall, or round oval presets. Export as PNG with transparency or JPG with white background.",
   alternates: { canonical: `${SITE_URL}/oval-crop-image` },
 };
