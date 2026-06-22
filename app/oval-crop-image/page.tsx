@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
-const OvalCropEditor = dynamic(() => import("@/components/OvalCropEditor"), {
-  loading: () => <div className="h-64 flex items-center justify-center text-muted-foreground">Loading editor...</div>,
-});
-import RelatedTools from "@/components/RelatedTools";
+
 import FAQSection from "@/components/FAQSection";
+import RelatedTools from "@/components/RelatedTools";
 import StructuredData from "@/components/StructuredData";
 import { SITE_URL } from "@/lib/siteConfig";
 
+const OvalCropEditor = dynamic(() => import("@/components/OvalCropEditor"), {
+  loading: () => <div className="h-64 flex items-center justify-center text-muted-foreground">Loading editor...</div>,
+});
+
 export const metadata: Metadata = {
-  title: "Free Online Oval Crop Image - Ellipse Cropper",
+  title: "Oval Image Cropper — Free Online, Ellipse Crop | ImageCropKit",
   description: "Free online oval image cropper. Crop images into oval and elliptical shapes. Choose portrait, tall, or round oval presets. Export as PNG with transparency or JPG with white background.",
   alternates: { canonical: `${SITE_URL}/oval-crop-image` },
 };
@@ -33,7 +35,7 @@ export default function OvalCropImagePage() {
   return (
     <div className="max-w-screen-2xl mx-auto px-4 py-16 space-y-16">
       <div className="text-center space-y-4">
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">Oval Crop Image</h1>
+        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">Oval Image Cropper — Free Online</h1>
         <p className="text-lg text-muted-foreground max-w-xl mx-auto">
           Crop images into oval and elliptical shapes. Choose a preset, adjust the crop, and download a transparent PNG or white-background JPG.
         </p>
@@ -70,10 +72,16 @@ export default function OvalCropImagePage() {
 
         <h2>When to choose oval over circle</h2>
         <p>
-          Oval crops can feel more natural for portrait-oriented images because a human face is
-          slightly taller than it is wide. A vertical oval can frame a headshot more comfortably
-          than a square circle crop. Oval shapes are also used in decorative design elements,
-          badges, and stylised avatars.
+          A circle crop is best when the final frame is square, such as a round avatar, app icon,
+          or social profile picture. It keeps the width and height equal, so the result feels
+          balanced in circular UI frames.
+        </p>
+        <p>
+          An oval crop works better when the source image is portrait-oriented or when the design
+          needs a taller frame. A vertical oval can include more hair, shoulders, or product height
+          than a circle without forcing the subject into a tight square. Oval shapes are also useful
+          for decorative badges, editorial portraits, and templates that call for an ellipse rather
+          than a perfect round crop.
         </p>
 
         <h2>Privacy-first oval cropping</h2>
@@ -86,7 +94,7 @@ export default function OvalCropImagePage() {
 
       <RelatedTools tools={related} />
       <FAQSection items={faqItems} />
-      <StructuredData pageTitle="Oval Crop Image - Ellipse Cropper Online" pageUrl={`${SITE_URL}/oval-crop-image`} faqItems={faqItems} />
+      <StructuredData pageTitle="Oval Image Cropper — Free Online" pageUrl={`${SITE_URL}/oval-crop-image`} faqItems={faqItems} />
     </div>
   );
 }
