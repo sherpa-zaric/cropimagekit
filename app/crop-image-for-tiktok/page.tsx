@@ -1,18 +1,21 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
+
+import FAQSection from "@/components/FAQSection";
+import RelatedTools from "@/components/RelatedTools";
+import StructuredData from "@/components/StructuredData";
+import { SITE_URL } from "@/lib/siteConfig";
+import { socialPresets } from "@/lib/presets";
+
 const CropEditor = dynamic(() => import("@/components/CropEditor"), {
   loading: () => <div className="h-64 flex items-center justify-center text-muted-foreground">Loading editor...</div>,
 });
-import RelatedTools from "@/components/RelatedTools";
-import FAQSection from "@/components/FAQSection";
-import StructuredData from "@/components/StructuredData";
-import { socialPresets } from "@/lib/presets";
 
 export const metadata: Metadata = {
-  title: "TikTok Image Cropper — Free Online",
+  title: "TikTok Image Cropper — Free Online, No Upload",
   description:
     "Crop images for TikTok posts and video covers for free. 1080x1920 vertical presets. No upload, no signup, no watermark. Processed locally in your browser.",
-  alternates: { canonical: "https://imagecropkit.com/crop-image-for-tiktok" },
+  alternates: { canonical: `${SITE_URL}/crop-image-for-tiktok` },
 };
 
 const tiktokPresets = socialPresets.filter(
@@ -40,7 +43,7 @@ export default function CropImageForTiktokPage() {
     <div className="max-w-screen-2xl mx-auto px-4 py-24 space-y-24">
       <div className="text-center space-y-4">
         <h1 className="text-3xl sm:text-4xl tracking-tight">
-          Crop Image for TikTok
+          TikTok Image Cropper — Free Online
         </h1>
         <p className="text-lg text-muted-foreground max-w-xl mx-auto">
           Crop photos for TikTok photo posts and video covers. Free, no upload, no watermark. Processed locally in your browser.
@@ -58,15 +61,37 @@ export default function CropImageForTiktokPage() {
         </p>
 
         <h2>TikTok image sizes</h2>
-        <p>All TikTok image content uses the same vertical format:</p>
-        <ul>
-          <li><strong>Photo post</strong>: 1080 × 1920 (9:16)</li>
-          <li><strong>Video cover</strong>: 1080 × 1920 (9:16)</li>
-          <li><strong>Profile picture</strong>: 200 × 200 (displayed as circle)</li>
-        </ul>
+        <p>Use this quick reference when preparing images for TikTok:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Use case</th>
+              <th>Recommended size</th>
+              <th>Aspect ratio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Photo post</td>
+              <td>1080 × 1920 px</td>
+              <td>9:16</td>
+            </tr>
+            <tr>
+              <td>Video cover</td>
+              <td>1080 × 1920 px</td>
+              <td>9:16</td>
+            </tr>
+            <tr>
+              <td>Profile picture</td>
+              <td>200 × 200 px minimum</td>
+              <td>1:1, displayed as a circle</td>
+            </tr>
+          </tbody>
+        </table>
         <p>
-          TikTok is a vertical-first platform. All images display in 9:16
-          format, so your crop should match this ratio for the best result.
+          TikTok is a vertical-first platform, so photo posts and video covers should usually
+          use a 9:16 crop. A square 1:1 crop is still useful for profile pictures because TikTok
+          displays the uploaded profile image inside a circular frame.
         </p>
 
         <h2>Crop TikTok images privately</h2>
@@ -87,8 +112,8 @@ export default function CropImageForTiktokPage() {
       <RelatedTools tools={related} />
       <FAQSection items={faqItems} />
       <StructuredData
-        pageTitle="Crop Image for TikTok"
-        pageUrl="https://imagecropkit.com/crop-image-for-tiktok"
+        pageTitle="TikTok Image Cropper — Free Online"
+        pageUrl={`${SITE_URL}/crop-image-for-tiktok`}
         faqItems={faqItems}
       />
     </div>
