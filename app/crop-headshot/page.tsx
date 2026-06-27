@@ -11,7 +11,7 @@ import { headshotPresets } from "@/lib/presets";
 const defaultPreset = headshotPresets.find((p) => p.id === "headshot-1:1");
 
 export const metadata: Metadata = {
-  title: "Headshot Cropper — LinkedIn, Resume, ID",
+  title: "Headshot Cropper — Free Online, LinkedIn & Profile Photos",
   description: "Free online headshot cropper. Make clean, centered headshots for LinkedIn, resumes, ID-style photos, and team pages. No upload, no signup.",
   alternates: { canonical: "https://imagecropkit.com/crop-headshot" },
 };
@@ -35,7 +35,7 @@ export default function CropHeadshotPage() {
   return (
     <div className="max-w-screen-2xl mx-auto px-4 py-16 space-y-16">
       <div className="text-center space-y-4">
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">Headshot Cropper</h1>
+        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">Headshot Cropper — Free Online</h1>
         <p className="text-lg text-muted-foreground max-w-xl mx-auto">
           Crop clean headshots and profile photos. Upload a portrait, choose a profile or headshot preset, and download a clean cropped image.
         </p>
@@ -87,7 +87,7 @@ export default function CropHeadshotPage() {
 
       <RelatedTools tools={related} />
       <FAQSection items={faqItems} />
-      <StructuredData pageTitle="Headshot Cropper" pageUrl="https://imagecropkit.com/crop-headshot" faqItems={faqItems} />
+      <StructuredData pageTitle="Headshot Cropper — Free Online" pageUrl="https://imagecropkit.com/crop-headshot" faqItems={faqItems} />
     </div>
   );
 }
