@@ -9,7 +9,7 @@ import StructuredData from "@/components/StructuredData";
 import { productPresets } from "@/lib/presets";
 
 export const metadata: Metadata = {
-  title: "Product Image Cropper — Shopify, Etsy, Amazon",
+  title: "Product Image Cropper — Free Online, Shopify, Etsy, Amazon",
   description: "Crop product images online free for Shopify (2048x2048), Etsy, Amazon. No upload, no signup, no watermark. Batch crop and download as ZIP. Browser-based, 100% private.",
   alternates: { canonical: "https://imagecropkit.com/crop-product-images" },
 };
@@ -37,7 +37,7 @@ export default function CropProductImagesPage() {
   return (
     <div className="max-w-screen-2xl mx-auto px-4 py-16 space-y-16">
       <div className="text-center space-y-4">
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">Product Image Cropper</h1>
+        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">Product Image Cropper — Free Online</h1>
         <p className="text-lg text-muted-foreground max-w-xl mx-auto">
           Crop product photos for online stores. Make clean square product images for ecommerce listings, marketplaces, and product catalogs.
         </p>
@@ -108,7 +108,7 @@ export default function CropProductImagesPage() {
 
       <RelatedTools tools={related} />
       <FAQSection items={faqItems} />
-      <StructuredData pageTitle="Product Image Cropper" pageUrl="https://imagecropkit.com/crop-product-images" faqItems={faqItems} />
+      <StructuredData pageTitle="Product Image Cropper — Free Online" pageUrl="https://imagecropkit.com/crop-product-images" faqItems={faqItems} />
     </div>
   );
 }
