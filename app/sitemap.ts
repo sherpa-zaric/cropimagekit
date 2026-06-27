@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     "/",
     "/crop-image",
+    "/smart-crop-image",
     "/crop-screenshot",
     "/trim-screenshot",
     "/ai-dataset-cropper",

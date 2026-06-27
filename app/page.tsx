@@ -31,6 +31,7 @@ const homeRelated = [
   { title: "Crop Image Locally", href: "/crop-image-locally", description: "A private image cropper that runs entirely in your browser." },
   { title: "Crop Image to 1:1", href: "/crop-image-to-1x1", description: "Make a square image at 512, 768, 1024, 1080, or 2000 pixels." },
   { title: "Circle Crop Image", href: "/circle-crop-image", description: "Crop a round profile picture or avatar with a transparent background." },
+  { title: "Smart Image Cropper", href: "/smart-crop-image", description: "Lock the subject with a click and keep it centered when switching aspect ratios." },
 ];
 
 export default function Home() {
@@ -114,6 +115,7 @@ export default function Home() {
           <div>
             <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">More crop shapes and privacy</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <ToolCard href="/smart-crop-image" title="Smart Image Cropper" description="Lock the subject with a click and keep it centered across aspect ratios." />
               <ToolCard href="/oval-crop-image" title="Oval Crop Image" description="Create oval and elliptical profile pictures and shapes." />
               <ToolCard href="/crop-and-resize-image" title="Crop and Resize" description="Crop and resize images to exact output dimensions in one step." />
               <ToolCard href="/crop-image-locally" title="Crop Image Locally" description="Private, browser-based cropping with no upload." />

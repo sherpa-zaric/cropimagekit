@@ -28,6 +28,7 @@ const related = [
   { title: "Bulk Crop Images", href: "/bulk-crop-images", description: "Crop a batch of images with a shared aspect ratio and download a ZIP." },
   { title: "Crop and Resize Image", href: "/crop-and-resize-image", description: "Crop and resize to exact pixel dimensions in one step." },
   { title: "Crop Image to 1:1", href: "/crop-image-to-1x1", description: "Make a square image at 512, 768, 1024, 1080, or 2000 pixels." },
+  { title: "Smart Image Cropper", href: "/smart-crop-image", description: "Lock the subject with a click; the crop stays centered when you switch aspect ratios." },
 ];
 
 export default function CropImagePage() {

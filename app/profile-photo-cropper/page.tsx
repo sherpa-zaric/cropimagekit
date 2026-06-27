@@ -33,6 +33,7 @@ const related = [
   { title: "Passport Photo Cropper", href: "/crop-image-to-passport-size", description: "Crop photos to official passport and ID dimensions." },
   { title: "Circle Crop Image", href: "/circle-crop-image", description: "Create round avatars and transparent PNG circle crops." },
   { title: "Crop Image to 1:1", href: "/crop-image-to-1x1", description: "Make a square profile image at common pixel sizes." },
+  { title: "Smart Image Cropper", href: "/smart-crop-image", description: "Lock the face with a click; the crop stays centered when you switch aspect ratios." },
 ];
 
 export default function ProfilePhotoCropperPage() {

@@ -30,6 +30,7 @@ const related = [
   { title: "Bulk Crop Images", href: "/bulk-crop-images", description: "Crop a batch of social images and download a ZIP." },
   { title: "Crop Image Online", href: "/crop-image", description: "A simple single-image cropper with common aspect ratios." },
   { title: "Circle Crop Image", href: "/circle-crop-image", description: "Create round avatars and transparent PNG circle crops." },
+  { title: "Smart Image Cropper", href: "/smart-crop-image", description: "Lock the subject; the crop stays centered across IG post, story, and reel ratios." },
 ];
 
 export default function CropImageForInstagramPage() {

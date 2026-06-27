@@ -124,6 +124,48 @@ export function calculateInitialCrop(
   };
 }
 
+export function calculateFocalCrop(
+  focalX: number,
+  focalY: number,
+  aspectRatio: number,
+  imageWidth: number,
+  imageHeight: number
+): Crop {
+  if (!imageWidth || !imageHeight || aspectRatio <= 0) {
+    return calculateInitialCrop(aspectRatio, imageWidth, imageHeight);
+  }
+
+  let cropW: number, cropH: number;
+  if (aspectRatio >= 1) {
+    cropW = imageWidth;
+    cropH = cropW / aspectRatio;
+    if (cropH > imageHeight) { cropH = imageHeight; cropW = cropH * aspectRatio; }
+  } else {
+    cropH = imageHeight;
+    cropW = cropH * aspectRatio;
+    if (cropW > imageWidth) { cropW = imageWidth; cropH = cropW / aspectRatio; }
+  }
+
+  const focalPxX = (focalX / 100) * imageWidth;
+  const focalPxY = (focalY / 100) * imageHeight;
+
+  let cropX = focalPxX - cropW / 2;
+  let cropY = focalPxY - cropH / 2;
+
+  if (cropX < 0) cropX = 0;
+  if (cropY < 0) cropY = 0;
+  if (cropX + cropW > imageWidth) cropX = imageWidth - cropW;
+  if (cropY + cropH > imageHeight) cropY = imageHeight - cropH;
+
+  return {
+    unit: "%",
+    x: (cropX / imageWidth) * 100,
+    y: (cropY / imageHeight) * 100,
+    width: (cropW / imageWidth) * 100,
+    height: (cropH / imageHeight) * 100,
+  };
+}
+
 export function percentCropToPixelCrop(
   crop: Crop,
   natW: number,

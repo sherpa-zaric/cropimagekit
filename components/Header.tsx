@@ -17,6 +17,7 @@ const primaryLinks = [
 ];
 
 const moreLinks = [
+  { href: "/smart-crop-image", label: "Smart Crop" },
   { href: "/crop-images-for-lora-training", label: "LoRA Cropper" },
   { href: "/crop-headshot", label: "Headshot" },
   { href: "/crop-product-images", label: "Product" },
