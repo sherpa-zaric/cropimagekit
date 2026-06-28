@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Newsreader } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
+import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 
@@ -60,9 +60,11 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${newsreader.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Header />
-        <main className="flex-1 pt-[56px]">{children}</main>
-        <Footer />
+        <Sidebar />
+        <div className="flex-1 flex flex-col lg:pl-60">
+          <main className="flex-1 pt-14 lg:pt-0">{children}</main>
+          <Footer />
+        </div>
         <GoogleAnalytics />
       </body>
     </html>
