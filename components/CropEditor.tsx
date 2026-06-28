@@ -3,6 +3,7 @@
 import { useState, useCallback, useRef, useEffect } from "react";
 import ReactCrop, { type Crop } from "react-image-crop";
 import "react-image-crop/dist/ReactCrop.css";
+import { Maximize2, Minimize2, ChevronRight, ChevronLeft } from "lucide-react";
 
 import UploadDropzone from "@/components/UploadDropzone";
 import ExportPanel from "@/components/ExportPanel";
@@ -75,6 +76,8 @@ export default function CropEditor({
   const [selectedPreset, setSelectedPreset] = useState<CropPreset | null>(defaultPreset || null);
   const [localCustomWidth, setLocalCustomWidth] = useState(propCustomWidth || 800);
   const [localCustomHeight, setLocalCustomHeight] = useState(propCustomHeight || 600);
+  const [panelCollapsed, setPanelCollapsed] = useState(false);
+  const [fullscreen, setFullscreen] = useState(false);
 
   const imgRef = useRef<HTMLImageElement | null>(null);
 
@@ -203,6 +206,14 @@ export default function CropEditor({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  useEffect(() => {
+    if (!fullscreen) return;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [fullscreen]);
+
   const aspectRatio = selectedPreset?.aspectRatio ? selectedPreset.aspectRatio : undefined;
   const outputWidth = selectedPreset?.width;
   const outputHeight = selectedPreset?.height;
@@ -219,7 +230,7 @@ export default function CropEditor({
   const cropRatioLabel = selectedPreset ? formatRatio(selectedPreset.aspectRatio) : undefined;
 
   return (
-    <div className="space-y-3">
+    <div className={fullscreen ? "fixed inset-0 z-50 bg-background p-4 flex flex-col gap-3" : "space-y-3"}>
       <div className="flex items-center justify-between gap-3">
         <p className="text-sm text-muted-foreground truncate">
           {imageFile?.name}
@@ -229,37 +240,56 @@ export default function CropEditor({
             </span>
           )}
         </p>
-        <button
-          onClick={() => {
-            setImageUrl(null); setImageFile(null); setImageElement(null);
-            if (imageUrl) revokeImageUrl(imageUrl);
-          }}
-          className="text-sm text-muted-foreground hover:text-foreground transition-colors shrink-0 border border-border rounded-md px-3 py-1 hover:bg-muted"
-        >
-          Upload new image
-        </button>
+        <div className="flex items-center gap-2 shrink-0">
+          <button
+            onClick={() => setPanelCollapsed((c) => !c)}
+            className="inline-flex items-center justify-center h-8 w-8 rounded-md border border-border text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+            title={panelCollapsed ? "Show panel" : "Hide panel"}
+            aria-label={panelCollapsed ? "Show panel" : "Hide panel"}
+          >
+            {panelCollapsed ? <ChevronLeft size={16} /> : <ChevronRight size={16} />}
+          </button>
+          <button
+            onClick={() => setFullscreen((f) => !f)}
+            className="inline-flex items-center justify-center h-8 w-8 rounded-md border border-border text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+            title={fullscreen ? "Exit fullscreen" : "Enter fullscreen"}
+            aria-label={fullscreen ? "Exit fullscreen" : "Enter fullscreen"}
+          >
+            {fullscreen ? <Minimize2 size={16} /> : <Maximize2 size={16} />}
+          </button>
+          <button
+            onClick={() => {
+              setImageUrl(null); setImageFile(null); setImageElement(null);
+              if (imageUrl) revokeImageUrl(imageUrl);
+            }}
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors border border-border rounded-md px-3 py-1.5 hover:bg-muted"
+          >
+            Upload new image
+          </button>
+        </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-4">
-        <div className="flex justify-center items-center overflow-hidden min-h-[360px] bg-muted/20 rounded-lg flex-1">
+      <div className={`flex flex-col lg:flex-row gap-4 ${fullscreen ? "flex-1 min-h-0" : ""}`}>
+        <div className={`flex justify-center items-center overflow-hidden bg-muted/20 rounded-lg flex-1 ${fullscreen ? "min-h-0" : "min-h-[360px]"}`}>
           <ReactCrop
             crop={crop}
             onChange={(_, percentCrop) => setCrop(percentCrop)}
             aspect={aspectRatio}
             minWidth={50} minHeight={50}
-            className="max-h-[85vh]"
+            className={fullscreen ? "max-h-[calc(100vh-7rem)]" : "max-h-[85vh]"}
           >
             <img
               ref={imgRef}
               src={imageUrl}
               alt="Crop preview"
-              style={{ maxHeight: "85vh", maxWidth: "100%", width: "auto", height: "auto" }}
+              style={{ maxHeight: fullscreen ? "calc(100vh-7rem)" : "85vh", maxWidth: "100%", width: "auto", height: "auto" }}
               onLoad={(e) => setImageElement(e.currentTarget)}
             />
           </ReactCrop>
         </div>
 
-        <div className="lg:w-64 shrink-0 space-y-4 lg:sticky lg:top-20 lg:self-start">
+        {!panelCollapsed && (
+          <div className={`lg:w-64 shrink-0 space-y-4 ${fullscreen ? "" : "lg:sticky lg:top-20 lg:self-start"}`}>
           {showPresets && showPresets.length > 0 ? (
             <PresetPicker
               presets={showPresets}
@@ -323,9 +353,10 @@ export default function CropEditor({
             fileSize={fileSize}
           />
         </div>
+        )}
       </div>
 
-      {showTrustBadges && (
+      {showTrustBadges && !fullscreen && (
         <div className="pt-1">
           <TrustBadges />
         </div>
