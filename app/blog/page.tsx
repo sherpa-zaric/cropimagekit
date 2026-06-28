@@ -16,7 +16,7 @@ export default function BlogPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-24 space-y-16">
       <div className="text-center space-y-4">
-        <h1 className="text-3xl sm:text-4xl tracking-tight">Blog</h1>
+        <h1 className="text-3xl sm:text-4xl tracking-tight">Image Cropping Guides & Social Media Sizes</h1>
         <p className="text-lg text-muted-foreground max-w-xl mx-auto">
           Guides on image cropping, social media sizes, and privacy-first photo editing.
         </p>
