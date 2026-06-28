@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    default: "Image Cropper & Bulk Crop Tool — Free Online",
+    default: "Image Cropper & Bulk Crop Tool — Free Online | ImageCropKit",
     template: "%s | ImageCropKit",
   },
   alternates: { canonical: "https://imagecropkit.com" },
