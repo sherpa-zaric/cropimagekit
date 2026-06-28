@@ -11,6 +11,10 @@ import StructuredData from "@/components/StructuredData";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title: {
+    default: "Image Cropper & Bulk Crop Tool — Free Online",
+    template: "%s | ImageCropKit",
+  },
   alternates: { canonical: "https://imagecropkit.com" },
 };
 
@@ -39,7 +43,7 @@ export default function Home() {
     <div className="max-w-screen-2xl mx-auto px-4 py-24 space-y-24">
       <section className="text-center space-y-6">
         <h1 className="text-4xl sm:text-5xl tracking-tight">
-          Crop Images Perfectly for Screenshots, AI Datasets, and Profile Photos
+          Image Cropper & Bulk Crop Tool — Free Online
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           Fast browser-based image cropping. No uploads. No watermarks. No signup. Crop one image or batch crop multiple files while keeping your images on your device.
@@ -154,7 +158,7 @@ export default function Home() {
       <RelatedTools tools={homeRelated} />
 
       <FAQSection items={faqItems} />
-      <StructuredData pageTitle="ImageCropKit" pageUrl="https://imagecropkit.com" faqItems={faqItems} includeBreadcrumb={false} includeOrganization={true} includeWebsite={true} />
+      <StructuredData pageTitle="Image Cropper & Bulk Crop Tool — Free Online" pageUrl="https://imagecropkit.com" faqItems={faqItems} includeBreadcrumb={false} includeOrganization={true} includeWebsite={true} />
     </div>
   );
 }

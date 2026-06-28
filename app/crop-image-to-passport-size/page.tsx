@@ -10,7 +10,7 @@ import { passportPresets } from "@/lib/presets";
 import { SITE_URL } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: "Passport Photo Cropper — US, UK, EU, India",
+  title: "Passport Photo Cropper — Free Online, US, UK, EU, India & China",
   description: "Crop passport photos online free. Choose US, UK, EU, India, China, or 1×1 inch ID presets. White background, exact dimensions, no upload, local browser processing.",
   alternates: { canonical: `${SITE_URL}/crop-image-to-passport-size` },
 };
@@ -37,7 +37,7 @@ export default function PassportPhotoCropperPage() {
   return (
     <div className="max-w-screen-2xl mx-auto px-4 py-16 space-y-16">
       <div className="text-center space-y-4">
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">Crop Image to Passport Size</h1>
+        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">Passport Photo Cropper — Free Online</h1>
         <p className="text-lg text-muted-foreground max-w-xl mx-auto">
           Crop your photo to official passport and ID dimensions. Choose a country preset, adjust the crop, and download an exact-size image with a white background.
         </p>
@@ -93,7 +93,7 @@ export default function PassportPhotoCropperPage() {
 
       <RelatedTools tools={related} />
       <FAQSection items={faqItems} />
-      <StructuredData pageTitle="Crop Image to Passport Size - US, UK, EU, India & China" pageUrl={`${SITE_URL}/crop-image-to-passport-size`} faqItems={faqItems} />
+      <StructuredData pageTitle="Passport Photo Cropper — Free Online" pageUrl={`${SITE_URL}/crop-image-to-passport-size`} faqItems={faqItems} />
     </div>
   );
 }

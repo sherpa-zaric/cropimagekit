@@ -22,7 +22,7 @@ export default function BlogPage() {
         </p>
       </div>
 
-      <StructuredData pageTitle="Blog" pageUrl="https://imagecropkit.com/blog" includeWebApp={false} />
+      <StructuredData pageTitle="Image Cropping Guides & Social Media Sizes" pageUrl="https://imagecropkit.com/blog" includeWebApp={false} />
 
       {posts.length === 0 ? (
         <p className="text-center text-muted-foreground">No posts yet.</p>

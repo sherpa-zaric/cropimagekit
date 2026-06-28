@@ -8,7 +8,7 @@ import FAQSection from "@/components/FAQSection";
 import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Crop Image Locally — Zero Server Upload",
+  title: "Image Cropper Locally — Private Browser Cropper, No Upload",
   description:
     "Crop images locally in your browser with zero server upload. Technical explanation of how local processing works, privacy verification steps, and when to choose local vs server-based tools.",
   alternates: { canonical: "https://imagecropkit.com/crop-image-locally" },
@@ -34,7 +34,7 @@ export default function CropImageLocallyPage() {
   return (
     <div className="max-w-screen-2xl mx-auto px-4 py-16 space-y-16">
       <div className="text-center space-y-4">
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">Crop Images Locally in Your Browser</h1>
+        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">Image Cropper Locally — No Upload, No Signup</h1>
         <p className="text-lg text-muted-foreground max-w-xl mx-auto">
           Crop private images without uploading them. ImageCropKit processes your image locally in your browser. Your files stay on your device.
         </p>
@@ -106,7 +106,7 @@ export default function CropImageLocallyPage() {
 
       <RelatedTools tools={related} />
       <FAQSection items={faqItems} />
-      <StructuredData pageTitle="Crop Images Locally in Your Browser" pageUrl="https://imagecropkit.com/crop-image-locally" faqItems={faqItems} />
+      <StructuredData pageTitle="Image Cropper Locally — No Upload, No Signup" pageUrl="https://imagecropkit.com/crop-image-locally" faqItems={faqItems} />
     </div>
   );
 }

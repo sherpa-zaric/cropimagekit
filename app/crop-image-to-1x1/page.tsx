@@ -9,7 +9,7 @@ import StructuredData from "@/components/StructuredData";
 import { squareSizePresets } from "@/lib/presets";
 
 export const metadata: Metadata = {
-  title: "Square Image Cropper — 1:1 Crop",
+  title: "Square Image Cropper — Free Online, 1:1 Crop",
   description:
     "Free online square image cropper. Crop any image to a perfect 1:1 square for profile photos, product photos, social posts, and AI datasets. No upload.",
   alternates: { canonical: "https://imagecropkit.com/crop-image-to-1x1" },
@@ -36,7 +36,7 @@ export default function CropImageTo1x1Page() {
   return (
     <div className="max-w-screen-2xl mx-auto px-4 py-16 space-y-16">
       <div className="text-center space-y-4">
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">Crop Image to 1:1</h1>
+        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">Square Image Cropper — Free Online</h1>
         <p className="text-lg text-muted-foreground max-w-xl mx-auto">
           Make any image square. Upload a photo, adjust the 1:1 crop area, choose a square output preset, and download the final image.
         </p>
@@ -82,7 +82,7 @@ export default function CropImageTo1x1Page() {
 
       <RelatedTools tools={related} />
       <FAQSection items={faqItems} />
-      <StructuredData pageTitle="Crop Image to 1:1" pageUrl="https://imagecropkit.com/crop-image-to-1x1" faqItems={faqItems} />
+      <StructuredData pageTitle="Square Image Cropper — Free Online" pageUrl="https://imagecropkit.com/crop-image-to-1x1" faqItems={faqItems} />
     </div>
   );
 }

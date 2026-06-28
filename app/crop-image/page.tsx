@@ -8,7 +8,7 @@ import FAQSection from "@/components/FAQSection";
 import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Crop Image Online Free — No Upload",
+  title: "Image Cropper Online — Free, No Upload, No Watermark",
   description:
     "Crop images online free without uploading to a server. 100% browser-based, no signup, no watermark. Choose a crop area or aspect ratio and download as PNG, JPG, or WebP.",
   alternates: { canonical: "https://imagecropkit.com/crop-image" },
@@ -35,7 +35,7 @@ export default function CropImagePage() {
   return (
     <div className="max-w-screen-2xl mx-auto px-4 py-24 space-y-24">
       <div className="text-center space-y-4">
-        <h1 className="text-3xl sm:text-4xl tracking-tight">Crop Image Online</h1>
+        <h1 className="text-3xl sm:text-4xl tracking-tight">Image Cropper Online — Free</h1>
         <p className="text-lg text-muted-foreground max-w-xl mx-auto">
           Crop an image online for free. Upload your image, adjust the crop area, choose a common aspect ratio if needed, and download the result as PNG, JPG, or WebP.
         </p>
@@ -168,7 +168,7 @@ export default function CropImagePage() {
 
       <RelatedTools tools={related} />
       <FAQSection items={faqItems} />
-      <StructuredData pageTitle="Crop Image Online" pageUrl="https://imagecropkit.com/crop-image" faqItems={faqItems} />
+      <StructuredData pageTitle="Image Cropper Online — Free" pageUrl="https://imagecropkit.com/crop-image" faqItems={faqItems} />
     </div>
   );
 }

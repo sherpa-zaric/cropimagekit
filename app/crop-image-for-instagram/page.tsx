@@ -9,7 +9,7 @@ import StructuredData from "@/components/StructuredData";
 import { socialPresets } from "@/lib/presets";
 
 export const metadata: Metadata = {
-  title: "Instagram Image Cropper — Free Online",
+  title: "Instagram Image Cropper — Free Online, Posts, Stories, Reels",
   description: "Free online image cropper for Instagram. Crop posts, stories, reels, and profile pictures. Choose square, portrait, story, reel cover, and profile presets. No upload, no signup.",
   alternates: { canonical: "https://imagecropkit.com/crop-image-for-instagram" },
 };
@@ -37,7 +37,7 @@ export default function CropImageForInstagramPage() {
   return (
     <div className="max-w-screen-2xl mx-auto px-4 py-16 space-y-16">
       <div className="text-center space-y-4">
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">Crop Image for Instagram</h1>
+        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">Instagram Image Cropper — Free Online</h1>
         <p className="text-lg text-muted-foreground max-w-xl mx-auto">
           Crop photos for Instagram sizes. Choose a preset for square posts, portrait posts, stories, reels, or profile pictures.
         </p>
@@ -102,7 +102,7 @@ export default function CropImageForInstagramPage() {
 
       <RelatedTools tools={related} />
       <FAQSection items={faqItems} />
-      <StructuredData pageTitle="Crop Image for Instagram" pageUrl="https://imagecropkit.com/crop-image-for-instagram" faqItems={faqItems} />
+      <StructuredData pageTitle="Instagram Image Cropper — Free Online" pageUrl="https://imagecropkit.com/crop-image-for-instagram" faqItems={faqItems} />
     </div>
   );
 }
