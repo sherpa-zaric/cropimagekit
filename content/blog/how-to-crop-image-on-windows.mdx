@@ -1,0 +1,212 @@
+---
+title: "How to Crop an Image on Windows (5 Free Methods)"
+description: "Learn how to crop an image on Windows 10/11 using Photos, Paint, Snipping Tool, or a free browser tool. Step-by-step guide for every method."
+date: "2026-07-02"
+tags: ["crop image on Windows", "Windows photo editing", "Photos app", "Paint", "free tool"]
+author: "ImageCropKit"
+---
+
+# How to Crop an Image on Windows
+
+You need to crop an image on Windows — maybe a screenshot, a product photo, or a profile picture. Windows has several built-in tools that can do this, plus a browser option when you need exact dimensions.
+
+Here are five free methods, from fastest to most precise.
+
+## Method 1: Photos App (Best Built-In Option)
+
+The Photos app in Windows 10 and 11 has a clean cropping tool with aspect ratio presets.
+
+### Steps:
+
+1. **Double-click** your image — it opens in Photos by default
+2. Click the **Edit image** button (pencil icon) or press `Ctrl + E`
+3. Click the **Crop** tab in the toolbar
+4. **Drag the handles** on the crop box to select your area
+5. Use the **aspect ratio dropdown** (Free, 1:1, 4:3, 16:9, 3:2, etc.)
+6. Click **Save a copy** (to keep the original) or **Save** (to overwrite)
+
+### When to use Photos:
+
+- Quick crop with a visual preview
+- You want built-in aspect ratio presets
+- You're editing a single photo
+
+### Limitations:
+
+- Can't enter exact pixel dimensions (e.g., "1080×1080")
+- No social media presets
+- No WebP export
+
+## Method 2: Paint (Classic — Still Works)
+
+Paint has been on Windows since 1985, and it still gets the job done.
+
+### Steps:
+
+1. Right-click your image → **Open with** → **Paint**
+2. Click the **Select** tool in the toolbar
+3. **Drag** to select the area you want to keep
+4. Click **Crop** in the toolbar (or press `Ctrl + Shift + X` in Windows 11 Paint)
+5. **Save** with `Ctrl + S` or **Save As** with `Ctrl + Shift + S`
+
+### When to use Paint:
+
+- You need pixel-level control over the selection
+- You're on an older version of Windows
+- You want to combine cropping with simple annotations (text, arrows)
+
+### Limitations:
+
+- No aspect ratio lock — you have to eyeball it
+- No presets
+- The new Paint (Windows 11) is better but still basic
+
+## Method 3: Snipping Tool (Best for Screenshots)
+
+If you're cropping a screenshot, the Snipping Tool lets you capture just the area you need — no post-cropping required.
+
+### Steps:
+
+1. Press `Win + Shift + S` to open the snipping toolbar
+2. Choose **Rectangle** mode
+3. **Drag** to select the area you want
+4. The screenshot is copied to your clipboard — paste it into any app
+5. Or click the notification to open it in Snipping Tool, then **Save**
+
+### When to use Snipping Tool:
+
+- You're cropping a screenshot (not a saved photo)
+- You want to capture a specific area of your screen directly
+- You need a quick grab without opening any app
+
+### Limitations:
+
+- Only works for what's currently on your screen
+- Can't crop an existing image file
+- No aspect ratio constraints
+
+## Method 4: Browser-Based Tool (Best for Exact Sizes)
+
+When you need a specific pixel size — for Instagram, LinkedIn, a passport photo, or a product listing — a browser tool is more precise than any built-in Windows app.
+
+### Steps:
+
+1. Open [ImageCropKit](https://imagecropkit.com) in Edge or Chrome
+2. **Drag your image** onto the page (nothing uploads — it stays on your PC)
+3. Choose a **preset** (Instagram square, LinkedIn, passport, etc.) or enter custom dimensions
+4. **Adjust the crop area** by dragging
+5. Click **Export** to download
+
+### When to use a browser tool:
+
+- You need an exact pixel size (e.g., 1080×1080 for Instagram)
+- You want social media or document presets
+- You need to crop multiple images at once (bulk crop)
+- You want WebP or PNG export with quality control
+
+### Why it's safe:
+
+Your images never leave your computer. Everything runs in the browser. No account, no upload, no watermark.
+
+## Method 5: PowerShell (For Automation)
+
+If you're cropping many images with the same dimensions, PowerShell can automate it.
+
+### Basic crop script:
+
+```powershell
+Add-Type -AssemblyName System.Drawing
+
+$image = [System.Drawing.Image]::FromFile("C:\Photos\input.jpg")
+$cropped = New-Object System.Drawing.Bitmap(1080, 1080)
+$graphics = [System.Drawing.Graphics]::FromImage($cropped)
+
+$srcRect = New-Object System.Drawing.Rectangle(100, 50, 1080, 1080)
+$destRect = New-Object System.Drawing.Rectangle(0, 0, 1080, 1080)
+
+$graphics.DrawImage($image, $destRect, $srcRect, [System.Drawing.GraphicsUnit]::Pixel)
+
+$cropped.Save("C:\Photos\cropped.jpg", [System.Drawing.Imaging.ImageFormat]::Jpeg)
+
+$graphics.Dispose()
+$cropped.Dispose()
+$image.Dispose()
+```
+
+### When to use PowerShell:
+
+- You're cropping 50+ images with the same dimensions
+- You need to automate a workflow
+- You're comfortable with scripting
+
+### Limitations:
+
+- No visual preview
+- You need to calculate coordinates manually
+- Scripting overhead for a one-time crop
+
+## Which Method Should You Use?
+
+| Need | Best Method |
+|------|------------|
+| Quick one-off crop | Photos app |
+| Screenshot cropping | Snipping Tool (`Win + Shift + S`) |
+| Pixel-level control | Paint |
+| Exact size for social media | Browser tool (ImageCropKit) |
+| Batch automation | PowerShell |
+| Crop without losing quality | Browser tool |
+| WebP export | Browser tool |
+
+## Common Cropping Sizes for Windows Users
+
+| Use Case | Dimensions | Ratio |
+|----------|-----------|-------|
+| Instagram post | 1080 × 1080 | 1:1 |
+| Instagram story | 1080 × 1920 | 9:16 |
+| Facebook cover | 820 × 312 | ~2.6:1 |
+| LinkedIn profile | 400 × 400 | 1:1 |
+| Twitter/X header | 1500 × 500 | 3:1 |
+| YouTube thumbnail | 1280 × 720 | 16:9 |
+| Passport (US) | 600 × 600 | 1:1 |
+| Passport (UK/EU) | 413 × 531 | 7:9 |
+| Windows wallpaper | 1920 × 1080 (varies) | 16:9 |
+
+## Tips for Better Crops on Windows
+
+### Save a copy first
+
+Photos app and Paint both overwrite the original when you hit Save. Always use **Save As** or **Save a copy** to keep the original intact.
+
+### Check the output dimensions
+
+After cropping, right-click the file → **Properties** → **Details** to see the pixel dimensions. If you needed 1080×1080 and got 1076×1084, re-crop.
+
+### Use the grid for composition
+
+Photos app shows a rule-of-thirds grid while cropping. Place the subject at one of the intersection points for a more balanced image.
+
+### Don't crop too tight
+
+Leave breathing room around your subject. A headshot cropped at the hairline looks cramped. A product photo cropped to the edge loses context.
+
+## Frequently Asked Questions
+
+### How do I crop a screenshot on Windows?
+
+Press `Win + Shift + S` to open the Snipping Tool, then drag to select the area. The screenshot is copied to your clipboard. For existing screenshot files, open them in Photos and crop from there.
+
+### How do I crop an image to a circle on Windows?
+
+Built-in Windows tools only support rectangular crops. For a circle crop, use a browser-based tool like ImageCropKit's [circle crop feature](https://imagecropkit.com/circle-crop-image).
+
+### How do I crop an image to exact dimensions on Windows?
+
+Photos and Paint don't support entering exact pixel sizes. Use a browser tool: type in your target width and height, and the crop box locks to that ratio.
+
+### Can I crop images in bulk on Windows?
+
+Not with built-in tools. Use a browser tool with bulk crop support, or write a PowerShell script for batch processing.
+
+### How do I crop an image without losing quality?
+
+The key is to crop (remove pixels) rather than resize (compress pixels). Use a tool that exports at the original resolution. Avoid tools that re-compress on export — browser-based tools like ImageCropKit preserve the original quality.

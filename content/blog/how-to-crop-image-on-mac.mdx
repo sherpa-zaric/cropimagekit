@@ -1,0 +1,181 @@
+---
+title: "How to Crop an Image on Mac (4 Free Methods — No App Needed)"
+description: "Learn how to crop an image on Mac using Preview, Photos, or a free browser-based tool. Step-by-step guide with screenshots for every method."
+date: "2026-07-02"
+tags: ["crop image on Mac", "Mac photo editing", "Preview app", "free tool", "tutorial"]
+author: "ImageCropKit"
+---
+
+# How to Crop an Image on Mac
+
+You need to crop a photo on your Mac — maybe for a profile picture, a product listing, or a social media post. The good news: macOS has built-in cropping in two apps you already have, plus a browser-based option if you need more control.
+
+Here are four free methods, ranked by speed.
+
+## Method 1: Preview (Fastest — Built Into Every Mac)
+
+Preview is macOS's default image viewer, and it has a hidden cropping tool most people never find.
+
+### Steps:
+
+1. **Double-click** your image — it opens in Preview by default
+2. Click the **Markup toolbar** button (pencil icon in the top bar, or press `Shift + Cmd + A`)
+3. Click the **Selection** dropdown and choose **Rectangle Selection**
+4. **Drag** to select the area you want to keep
+5. Go to **Tools → Crop** (or press `Cmd + K`)
+6. **Save** with `Cmd + S`
+
+### When to use Preview:
+
+- You need a quick crop with exact pixel control
+- You want to crop to a specific aspect ratio (hold `Shift` while dragging for a fixed ratio)
+- You're already looking at the image
+
+### Limitations:
+
+- No presets for Instagram, LinkedIn, or passport sizes
+- No way to enter exact dimensions (e.g., "make this 1080×1080")
+- Can't export to WebP
+
+## Method 2: Photos App (Best for iPhone Photos)
+
+If your photos are in iCloud, the Photos app is the easiest option.
+
+### Steps:
+
+1. Open **Photos** from your Dock or Applications
+2. **Double-click** the photo you want to crop
+3. Click **Edit** in the top-right corner
+4. Click the **Crop** tab
+5. **Drag the corners** of the crop box to resize
+6. Use the **aspect ratio lock** (chain icon) to constrain to a ratio like 1:1, 16:9, or 4:3
+7. Click **Done**
+
+### When to use Photos:
+
+- Your photos are synced from iPhone via iCloud
+- You want built-in aspect ratio presets
+- You're editing multiple photos in a batch
+
+### Limitations:
+
+- Preset ratios only — can't enter custom pixel dimensions
+- No social media-specific presets
+- Edits are non-destructive but stay in Photos (you need to export the cropped version)
+
+## Method 3: Browser-Based Tool (Best for Precise Sizes)
+
+When you need an exact size — 1080×1080 for Instagram, 360×360 for LinkedIn, 2×2 inches for a passport — a browser-based cropper is more precise than Preview or Photos.
+
+### Steps:
+
+1. Open [ImageCropKit](https://imagecropkit.com) in Safari or Chrome
+2. **Drag your image** onto the page (it stays on your Mac — nothing uploads)
+3. Choose a **preset** (Instagram, LinkedIn, passport, etc.) or enter custom dimensions
+4. **Adjust the crop area** by dragging
+5. Click **Export** to download the cropped image
+
+### When to use a browser tool:
+
+- You need an exact pixel size (e.g., 1080×1080 for Instagram)
+- You want social media presets without memorizing dimensions
+- You need to crop multiple images at once (bulk crop)
+- You want WebP export for smaller file sizes
+
+### Why it's safe:
+
+Everything happens in your browser. Your photos never leave your Mac. No account, no upload, no watermark.
+
+## Method 4: Terminal (For Power Users)
+
+If you're comfortable with the command line, `sips` (Scriptable Image Processing System) can crop images without opening any app.
+
+### Basic crop:
+
+```bash
+sips --cropToHeightWidth 1080 1080 photo.jpg --out cropped.jpg
+```
+
+### Crop a specific region:
+
+```bash
+sips --cropOffset 100 200 500 500 photo.jpg --out cropped.jpg
+```
+
+The four numbers are: `leftOffset topOffset cropWidth cropHeight` in pixels.
+
+### When to use sips:
+
+- You're scripting batch crops
+- You need to automate image processing
+- You're cropping 100+ images with the same dimensions
+
+### Limitations:
+
+- No visual preview — you're flying blind
+- Coordinates are in pixels, so you need to know the exact numbers
+- No WebP support
+
+## Which Method Should You Use?
+
+| Need | Best Method |
+|------|------------|
+| Quick one-off crop | Preview |
+| iPhone photos synced to iCloud | Photos |
+| Exact size for social media | Browser tool (ImageCropKit) |
+| Batch automation | Terminal (sips) |
+| Crop without losing quality | Browser tool |
+| Crop to WebP format | Browser tool |
+
+## Common Cropping Sizes for Mac Users
+
+| Use Case | Dimensions | Ratio |
+|----------|-----------|-------|
+| Instagram post | 1080 × 1080 | 1:1 |
+| Instagram story | 1080 × 1920 | 9:16 |
+| LinkedIn profile | 400 × 400 | 1:1 |
+| Twitter/X header | 1500 × 500 | 3:1 |
+| YouTube thumbnail | 1280 × 720 | 16:9 |
+| Passport (US) | 600 × 600 (2×2 inches) | 1:1 |
+| Passport (UK/EU) | 413 × 531 (35×45mm) | 7:9 |
+| Mac wallpaper | 2560 × 1600 (varies) | 16:10 |
+
+## Tips for Better Crops on Mac
+
+### Don't crop too tight
+
+Leave a small margin around your subject. A headshot cropped right at the hairline looks cramped. A product photo cropped to the edge of the box loses context.
+
+### Use the rule of thirds
+
+Most crop tools (including Preview) can show a 3×3 grid. Place the subject at one of the intersection points for a more natural composition.
+
+### Check the output size
+
+After cropping, verify the pixel dimensions. Preview shows this in **Tools → Adjust Size**. If you need 1080×1080 and you got 1078×1082, re-crop.
+
+### Save a copy, not the original
+
+Preview overwrites the original when you save. Use **File → Export** (or `Cmd + Shift + S`) to save a copy instead.
+
+## Frequently Asked Questions
+
+### How do I crop a screenshot on Mac?
+
+Open the screenshot in Preview (double-click it), then follow the Preview method above. Alternatively, use `Cmd + Shift + 4` to take a screenshot of just the area you need — no cropping required.
+
+### How do I crop an image to a circle on Mac?
+
+Preview and Photos only support rectangular crops. For a circle crop, use a browser-based tool like ImageCropKit's [circle crop feature](https://imagecropkit.com/circle-crop-image).
+
+### How do I crop an image to exact dimensions on Mac?
+
+Preview doesn't support entering exact pixel dimensions. Use a browser tool: enter your target width and height, and the crop box locks to that ratio.
+
+### Can I crop a PDF on Mac?
+
+Yes — Preview can crop PDFs too. Open the PDF, use the rectangle selection tool, then **Tools → Crop**. The same keyboard shortcuts work.
+
+### How do I crop multiple images at once on Mac?
+
+Use Terminal with `sips` for batch processing, or use a browser tool with bulk crop support. Preview and Photos don't have batch crop.
