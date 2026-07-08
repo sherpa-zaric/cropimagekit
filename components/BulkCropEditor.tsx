@@ -366,14 +366,14 @@ export default function BulkCropEditor({
             )}
           </div>
           <div className="flex flex-col lg:flex-row gap-4">
-            <div className="flex justify-center items-center overflow-hidden min-h-[360px] bg-muted/20 rounded-lg flex-1">
+            <div className="flex justify-center items-center overflow-hidden min-h-[420px] border-2 border-foreground/25 rounded-lg checkerboard flex-1">
               <ReactCrop
                 crop={selectedImage.reactCrop}
                 onChange={(_, percentCrop) => updateCrop(selectedIdx, percentCrop)}
                 aspect={aspectRatio} minWidth={50} minHeight={50} className="max-h-[85vh]"
               >
                 <img ref={imgRef} src={selectedImage.url} alt={selectedImage.file.name}
-                  style={{ maxHeight: "85vh", maxWidth: "100%", width: "auto", height: "auto" }} />
+                  style={{ maxHeight: "85vh", maxWidth: "100%", width: "auto", height: "auto", filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.25))" }} />
               </ReactCrop>
             </div>
 

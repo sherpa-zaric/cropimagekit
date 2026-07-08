@@ -154,3 +154,18 @@
   scrollbar-width: thin;
   scrollbar-color: var(--muted-foreground) var(--muted);
 }
+
+/* Transparency checkerboard for image crop canvases.
+   Uses distinctly grey tones so white/light images stay visible against it
+   and the canvas is clearly separated from the page background. */
+.checkerboard {
+  background-color: #d6d6d6;
+  background-image:
+    conic-gradient(#c2c2c2 0 25%, #e0e0e0 0 50%, #c2c2c2 0 75%, #e0e0e0 0);
+  background-size: 16px 16px;
+}
+.dark .checkerboard {
+  background-color: #2c2c2c;
+  background-image:
+    conic-gradient(#343434 0 25%, #242424 0 50%, #343434 0 75%, #242424 0);
+}

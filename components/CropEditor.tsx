@@ -270,7 +270,7 @@ export default function CropEditor({
       </div>
 
       <div className={`flex flex-col lg:flex-row gap-4 ${fullscreen ? "flex-1 min-h-0" : ""}`}>
-        <div className={`flex justify-center items-center overflow-hidden bg-muted/20 rounded-lg flex-1 ${fullscreen ? "min-h-0" : "min-h-[360px]"}`}>
+        <div className={`flex justify-center items-center overflow-hidden border-2 border-foreground/25 rounded-lg checkerboard flex-1 ${fullscreen ? "min-h-0" : "min-h-[420px]"}`}>
           <ReactCrop
             crop={crop}
             onChange={(_, percentCrop) => setCrop(percentCrop)}
@@ -282,7 +282,7 @@ export default function CropEditor({
               ref={imgRef}
               src={imageUrl}
               alt="Crop preview"
-              style={{ maxHeight: fullscreen ? "calc(100vh-7rem)" : "85vh", maxWidth: "100%", width: "auto", height: "auto" }}
+              style={{ maxHeight: fullscreen ? "calc(100vh-7rem)" : "85vh", maxWidth: "100%", width: "auto", height: "auto", filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.25))" }}
               onLoad={(e) => setImageElement(e.currentTarget)}
             />
           </ReactCrop>
