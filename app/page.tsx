@@ -1,9 +1,8 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
-const CropEditor = dynamic(() => import("@/components/CropEditor"), {
-  loading: () => <div className="h-64 flex items-center justify-center text-muted-foreground">Loading editor...</div>,
+const ExportPackEditor = dynamic(() => import("@/components/ExportPackEditor"), {
+  loading: () => <div className="h-64 flex items-center justify-center text-muted-foreground">Loading export pack...</div>,
 });
-import TrustBadges from "@/components/TrustBadges";
 import ToolCard from "@/components/ToolCard";
 import RelatedTools from "@/components/RelatedTools";
 import FAQSection from "@/components/FAQSection";
@@ -11,17 +10,13 @@ import StructuredData from "@/components/StructuredData";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: {
-    default: "Image Cropper & Bulk Crop Tool — Free Online | ImageCropKit",
-    template: "%s | ImageCropKit",
-  },
   alternates: { canonical: "https://imagecropkit.com" },
 };
 
 const faqItems = [
   { question: "Is ImageCropKit free?", answer: "Yes. ImageCropKit is completely free — there are no premium tiers, no watermarks on exported images, and no limits on the number of images you can crop. Every feature including bulk cropping, all presets, and all export formats is available to everyone." },
   { question: "Are my images uploaded to a server?", answer: "No. ImageCropKit processes all images locally in your browser using the Canvas API. Your files are loaded into browser memory and never sent to any server. You can verify this by opening your browser DevTools and watching the Network tab during processing." },
-  { question: "Can I crop multiple images at once?", answer: "Yes. Use the Bulk Crop Images tool to upload multiple images, apply a shared crop ratio or adjust individual crops, and download all results as a single ZIP file. You can also add a file name prefix for organized exports." },
+  { question: "Can I create multiple sizes from one image?", answer: "Yes. The export pack lets you select several output sizes, set a focal point once, and download all cropped files as a single ZIP. You can also adjust any selected output on its own." },
   { question: "What formats can I export?", answer: "You can export cropped images as PNG, JPG, or WebP. JPG is best for photographs with smaller file sizes. PNG preserves transparency and is ideal for graphics. WebP offers the best compression ratio for web use, producing files 25-35% smaller than JPG." },
   { question: "Do I need to create an account?", answer: "No. You can crop images without signing up, providing an email, or creating a password. Open the tool, upload your image, crop it, and download — the entire process takes under a minute with no account required." },
 ];
@@ -36,6 +31,7 @@ const homeRelated = [
   { title: "Crop Image to 1:1", href: "/crop-image-to-1x1", description: "Make a square image at 512, 768, 1024, 1080, or 2000 pixels." },
   { title: "Circle Crop Image", href: "/circle-crop-image", description: "Crop a round profile picture or avatar with a transparent background." },
   { title: "Smart Image Cropper", href: "/smart-crop-image", description: "Lock the subject with a click and keep it centered when switching aspect ratios." },
+  { title: "Social Media Image Pack", href: "/social-media-image-pack", description: "Export several social-ready sizes from one image in a single ZIP." },
 ];
 
 export default function Home() {
@@ -43,39 +39,36 @@ export default function Home() {
     <div className="max-w-screen-2xl mx-auto px-4 py-24 space-y-24">
       <section className="text-center space-y-6">
         <h1 className="text-4xl sm:text-5xl tracking-tight">
-          Image Cropper & Bulk Crop Tool — Free Online
+          One image. Every crop you need.
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Fast browser-based image cropping. No uploads. No watermarks. No signup. Crop one image or batch crop multiple files while keeping your images on your device.
+          Set the subject once, then export social, store, or AI-ready sizes together. No uploads, no watermark, and no account.
         </p>
         <div className="flex items-center justify-center gap-4 flex-wrap">
-          <Link href="/crop-image" className="inline-flex items-center justify-center rounded-md bg-primary text-primary-foreground h-10 px-6 text-sm font-medium hover:opacity-90 transition-opacity">
-            Crop Image Now
+          <Link href="/social-media-image-pack" className="inline-flex items-center justify-center rounded-md bg-primary text-primary-foreground h-10 px-6 text-sm font-medium hover:opacity-90 transition-opacity">
+            Create an Export Pack
           </Link>
           <Link href="/crop-screenshot" className="inline-flex items-center justify-center rounded-md border border-border h-10 px-6 text-sm font-medium hover:bg-muted transition-colors">
-            Try Screenshot Cropper
+            Crop One Image
           </Link>
         </div>
       </section>
 
       <section>
-        <CropEditor />
-        <div className="mt-4"><TrustBadges /></div>
+        <ExportPackEditor />
       </section>
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
-        <h2 className="text-center">A specialist image cropping platform</h2>
+        <h2 className="text-center">A cropper built for the next step</h2>
         <p>
-          ImageCropKit is a free browser-based image cropping platform specializing in
-          screenshot cropping, AI dataset cropping, and passport/profile photo cropping.
-          You can upload an image, choose a crop area, select a common aspect ratio or
-          output size, and download the cropped result as PNG, JPG, or WebP.
+          ImageCropKit starts with a practical publishing workflow: one source image can become
+          several correctly sized crops without repeatedly finding the subject in every frame.
+          Select a pack, keep the important part of the image in view, and download the outputs
+          as one ZIP.
         </p>
         <p>
-          Your images are processed locally in your browser. That means your files are not
-          uploaded to a server, and you can crop private screenshots, training images,
-          passport-style photos, profile pictures, or social media graphics without creating
-          an account.
+          The specialist tools remain available for screenshots, AI datasets, product photos,
+          and profile images. All processing stays local in your browser, including ZIP creation.
         </p>
       </section>
 
@@ -89,7 +82,7 @@ export default function Home() {
           <div>
             <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">Core workflows</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              <ToolCard href="/crop-screenshot" title="Screenshot Cropper" description="Crop screenshots, trim edges, remove extra whitespace, and export privately." />
+              <ToolCard href="/social-media-image-pack" title="Social Media Image Pack" description="Set a subject once and export multiple platform sizes as a ZIP." />
               <ToolCard href="/ai-dataset-cropper" title="AI Dataset Cropper" description="Batch crop images for LoRA, Stable Diffusion, Flux, and dataset prep." />
               <ToolCard href="/profile-photo-cropper" title="Profile Photo Cropper" description="Crop headshots, passport photos, LinkedIn pictures, and avatars." />
               <ToolCard href="/bulk-crop-images" title="Bulk Crop Images" description="Batch crop many images and download the results as a ZIP file." />
@@ -133,8 +126,8 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
           {[
             { step: "1", title: "Upload your image", desc: "Drag, click, or paste an image directly into the browser-based cropper." },
-            { step: "2", title: "Choose a crop area", desc: "Use free crop, a common aspect ratio, or a page-specific preset." },
-            { step: "3", title: "Download your cropped image", desc: "Export the result as PNG, JPG, or WebP. Bulk tools can download a ZIP file." },
+            { step: "2", title: "Set the subject and outputs", desc: "Click the important subject, then choose the platform sizes you need." },
+            { step: "3", title: "Download your export pack", desc: "Get every selected PNG, JPG, or WebP crop together in a ZIP." },
           ].map((item) => (
             <div key={item.step}>
               <div className="text-xs uppercase tracking-widest text-muted-foreground mb-3">Step {item.step}</div>
@@ -158,7 +151,7 @@ export default function Home() {
       <RelatedTools tools={homeRelated} />
 
       <FAQSection items={faqItems} />
-      <StructuredData pageTitle="Image Cropper & Bulk Crop Tool — Free Online" pageUrl="https://imagecropkit.com" faqItems={faqItems} includeBreadcrumb={false} includeOrganization={true} includeWebsite={true} />
+      <StructuredData pageTitle="ImageCropKit" pageUrl="https://imagecropkit.com" faqItems={faqItems} includeBreadcrumb={false} includeOrganization={true} includeWebsite={true} />
     </div>
   );
 }

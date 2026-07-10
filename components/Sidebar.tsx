@@ -13,6 +13,7 @@ const navGroups = [
       { href: "/crop-image", label: "Crop Image" },
       { href: "/crop-screenshot", label: "Screenshot" },
       { href: "/smart-crop-image", label: "Smart Crop" },
+      { href: "/social-media-image-pack", label: "Export Pack" },
       { href: "/bulk-crop-images", label: "Bulk Crop" },
     ],
   },
