@@ -196,6 +196,7 @@ export default function YouTubeVerticalThumbnailEditor() {
     return (
       <div className="space-y-4">
         <UploadDropzone onFilesSelected={handleFilesSelected} />
+        <p className="text-center text-sm text-muted-foreground">Upload once to prepare both 16:9 and 4:5 thumbnail previews.</p>
         <TrustBadges />
       </div>
     );
@@ -248,6 +249,11 @@ export default function YouTubeVerticalThumbnailEditor() {
 
       <div className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_20rem]">
         <div className="space-y-3">
+          <ol className="grid gap-2 text-sm sm:grid-cols-3" aria-label="Thumbnail editing steps">
+            <li className="rounded-md border bg-muted/30 px-3 py-2"><span className="mr-2 font-mono text-xs text-muted-foreground">1</span>Choose a preview</li>
+            <li className="rounded-md border bg-muted/30 px-3 py-2"><span className="mr-2 font-mono text-xs text-muted-foreground">2</span>Adjust its crop</li>
+            <li className="rounded-md border bg-muted/30 px-3 py-2"><span className="mr-2 font-mono text-xs text-muted-foreground">3</span>Download the size you need</li>
+          </ol>
           <div className="flex flex-wrap items-center gap-2 rounded-md border bg-muted/30 p-3">
             <Button variant={focalMode ? "default" : "outline"} size="sm" onClick={() => setFocalMode((value) => !value)}>
               <CircleDot />
