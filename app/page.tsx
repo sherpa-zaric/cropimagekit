@@ -33,6 +33,7 @@ const homeRelated = [
   { title: "Smart Image Cropper", href: "/smart-crop-image", description: "Lock the subject with a click and keep it centered when switching aspect ratios." },
   { title: "Social Media Image Pack", href: "/social-media-image-pack", description: "Export several social-ready sizes from one image in a single ZIP." },
   { title: "Social Media Safe Zone Checker", href: "/social-media-safe-zone", description: "Preview practical platform crop guides before publishing." },
+  { title: "YouTube Vertical Thumbnail Checker", href: "/youtube-vertical-thumbnail-checker", description: "Compare 16:9 and 4:5 YouTube thumbnail crops before publishing." },
 ];
 
 export default function Home() {
@@ -108,6 +109,7 @@ export default function Home() {
               <ToolCard href="/crop-image-for-instagram" title="Instagram Image Cropper" description="Instagram post, story, reel, and profile presets." />
               <ToolCard href="/crop-image-by-dimensions" title="Custom Size Cropper" description="Crop to any exact pixel width and height you need." />
               <ToolCard href="/social-media-safe-zone" title="Social Media Safe Zone" description="Preview subject placement inside practical platform crop guides." />
+              <ToolCard href="/youtube-vertical-thumbnail-checker" title="YouTube Thumbnail Checker" description="Compare 16:9 and 4:5 vertical-video thumbnail crops." />
             </div>
           </div>
 

@@ -29,6 +29,7 @@ const related = [
   { title: "Instagram Image Cropper", href: "/crop-image-for-instagram", description: "Crop one image for Instagram posts, stories, and reels." },
   { title: "Product Image Cropper", href: "/crop-product-images", description: "Prepare individual product crops for online storefronts." },
   { title: "AI Dataset Cropper", href: "/ai-dataset-cropper", description: "Batch crop images for AI training datasets." },
+  { title: "YouTube Vertical Thumbnail Checker", href: "/youtube-vertical-thumbnail-checker", description: "Compare 16:9 and 4:5 crops for vertical YouTube videos." },
 ];
 
 export default function SocialMediaImagePackPage() {

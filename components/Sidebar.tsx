@@ -22,6 +22,7 @@ const navGroups = [
     links: [
       { href: "/crop-image-for-instagram", label: "Instagram" },
       { href: "/crop-image-for-tiktok", label: "TikTok" },
+      { href: "/youtube-vertical-thumbnail-checker", label: "YouTube" },
       { href: "/social-media-safe-zone", label: "Safe Zone" },
     ],
   },

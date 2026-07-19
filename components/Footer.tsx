@@ -9,6 +9,7 @@ const toolLinks = [
   { href: "/crop-image", label: "Crop Image" },
   { href: "/social-media-image-pack", label: "Social Media Image Pack" },
   { href: "/social-media-safe-zone", label: "Social Media Safe Zone Checker" },
+  { href: "/youtube-vertical-thumbnail-checker", label: "YouTube Thumbnail Checker" },
   { href: "/bulk-crop-images", label: "Bulk Crop Images" },
   { href: "/crop-image-locally", label: "Crop Image Locally" },
   { href: "/crop-image-to-1x1", label: "Crop Image to 1:1" },

@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/smart-crop-image",
     "/social-media-image-pack",
     "/social-media-safe-zone",
+    "/youtube-vertical-thumbnail-checker",
     "/crop-screenshot",
     "/trim-screenshot",
     "/ai-dataset-cropper",

@@ -29,6 +29,7 @@ const related = [
   { title: "Smart Image Cropper", href: "/smart-crop-image", description: "Keep a clicked subject centered while changing aspect ratios." },
   { title: "Instagram Image Cropper", href: "/crop-image-for-instagram", description: "Make an Instagram post, story, reel cover, or profile crop." },
   { title: "TikTok Image Cropper", href: "/crop-image-for-tiktok", description: "Crop vertical TikTok images and cover frames." },
+  { title: "YouTube Vertical Thumbnail Checker", href: "/youtube-vertical-thumbnail-checker", description: "Compare 16:9 and 4:5 YouTube thumbnail crops before publishing." },
 ];
 
 const howToSteps = [
