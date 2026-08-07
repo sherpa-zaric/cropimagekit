@@ -12,6 +12,7 @@ interface StructuredDataProps {
   howToSteps?: HowToStep[];
   includeBreadcrumb?: boolean;
   includeWebApp?: boolean;
+  appName?: string;
   article?: {
     headline: string;
     datePublished: string;
@@ -30,6 +31,7 @@ export default function StructuredData({
   pageTitle, pageUrl, faqItems, howToSteps,
   includeBreadcrumb = true,
   includeWebApp = true,
+  appName = "ImageCropKit",
   article,
   includeOrganization = false,
   includeWebsite = false,
@@ -46,7 +48,7 @@ export default function StructuredData({
   const webAppJson = includeWebApp ? {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    name: "ImageCropKit",
+    name: appName,
     url: pageUrl,
     description: siteDescription,
     applicationCategory: "DesignApplication",

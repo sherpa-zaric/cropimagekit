@@ -93,7 +93,18 @@ export default function PassportPhotoCropperPage() {
 
       <RelatedTools tools={related} />
       <FAQSection items={faqItems} />
-      <StructuredData pageTitle="Passport Photo Cropper — Free Online" pageUrl={`${SITE_URL}/crop-image-to-passport-size`} faqItems={faqItems} />
+      <StructuredData
+        pageTitle="Passport Photo Cropper — Free Online"
+        pageUrl={`${SITE_URL}/crop-image-to-passport-size`}
+        faqItems={faqItems}
+        howToSteps={[
+          { name: "Upload your photo", text: "Drag and drop or click to upload a front-facing photo taken against a plain background." },
+          { name: "Choose your country preset", text: "Select the passport size preset for your country, such as 2x2 inch for the US or 35x45 mm for most of Europe." },
+          { name: "Adjust the crop to face guidelines", text: "Position the crop frame so your head is centered with the right head height and spacing for official passport requirements." },
+          { name: "Choose a format", text: "Pick JPG for smaller upload sizes or PNG if you need lossless quality for printing." },
+          { name: "Download the passport photo", text: "Save the cropped photo and print it or upload it to your passport application." },
+        ]}
+      />
     </div>
   );
 }

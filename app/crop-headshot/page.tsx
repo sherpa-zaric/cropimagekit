@@ -87,7 +87,18 @@ export default function CropHeadshotPage() {
 
       <RelatedTools tools={related} />
       <FAQSection items={faqItems} />
-      <StructuredData pageTitle="Headshot Cropper — Free Online" pageUrl="https://imagecropkit.com/crop-headshot" faqItems={faqItems} />
+      <StructuredData
+        pageTitle="Headshot Cropper — Free Online"
+        pageUrl="https://imagecropkit.com/crop-headshot"
+        faqItems={faqItems}
+        howToSteps={[
+          { name: "Upload your photo", text: "Drag and drop or click to upload a front-facing portrait for your headshot." },
+          { name: "Choose a headshot preset", text: "Select a preset that matches LinkedIn, resume, or studio headshot proportions (commonly 8x10 or 2x2)." },
+          { name: "Adjust the crop frame", text: "Position the crop so the subject's face is centered and fills the frame with natural headroom." },
+          { name: "Pick an output format", text: "Choose JPG for resume uploads or PNG for higher quality with cleaner edges." },
+          { name: "Download the headshot", text: "Save the cropped headshot ready for LinkedIn, resumes, or business cards." },
+        ]}
+      />
     </div>
   );
 }

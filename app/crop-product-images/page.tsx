@@ -108,7 +108,18 @@ export default function CropProductImagesPage() {
 
       <RelatedTools tools={related} />
       <FAQSection items={faqItems} />
-      <StructuredData pageTitle="Product Image Cropper — Free Online" pageUrl="https://imagecropkit.com/crop-product-images" faqItems={faqItems} />
+      <StructuredData
+        pageTitle="Product Image Cropper — Free Online"
+        pageUrl="https://imagecropkit.com/crop-product-images"
+        faqItems={faqItems}
+        howToSteps={[
+          { name: "Upload your product photo", text: "Drag and drop, click to browse, or paste a product image from your clipboard." },
+          { name: "Choose a marketplace preset", text: "Select the right preset for your storefront, such as square (1:1) for Shopify or Amazon, or the ratio for eBay or Etsy listings." },
+          { name: "Adjust the crop area", text: "Resize and center the crop so the product fills the frame with consistent padding and stays aligned across catalog images." },
+          { name: "Choose an output format", text: "Pick JPG for smaller product photos or PNG if you need a transparent or higher-quality background." },
+          { name: "Download the cropped image", text: "Save the cropped product image and upload it to your marketplace or store." },
+        ]}
+      />
     </div>
   );
 }

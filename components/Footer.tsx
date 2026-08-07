@@ -4,6 +4,7 @@ import BrandWordmark from "@/components/BrandWordmark";
 
 const toolLinks = [
   { href: "/crop-screenshot", label: "Screenshot Cropper" },
+  { href: "/trim-screenshot", label: "Trim Screenshot" },
   { href: "/ai-dataset-cropper", label: "AI Dataset Cropper" },
   { href: "/profile-photo-cropper", label: "Profile Photo Cropper" },
   { href: "/crop-image", label: "Crop Image" },
@@ -22,6 +23,14 @@ const toolLinks = [
   { href: "/crop-image-to-passport-size", label: "Passport Photo Cropper" },
   { href: "/crop-image-by-dimensions", label: "Custom Size Cropper" },
   { href: "/oval-crop-image", label: "Oval Crop Image" },
+  { href: "/crop-image-to-og-image-1200x630", label: "OG Image Cropper" },
+  { href: "/twitter-header-resizer", label: "Twitter Header Resizer" },
+  { href: "/linkedin-background-photo-resizer", label: "LinkedIn Banner Resizer" },
+  { href: "/facebook-cover-photo-resizer", label: "Facebook Cover Resizer" },
+  { href: "/discord-profile-picture-resizer", label: "Discord PFP Resizer" },
+  { href: "/twitch-profile-picture-resizer", label: "Twitch PFP Resizer" },
+  { href: "/resize-image-to-1080x1080", label: "Resize to 1080×1080" },
+  { href: "/resize-image-to-1920x1080", label: "Resize to 1920×1080" },
 ];
 
 const companyLinks = [

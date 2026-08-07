@@ -1,6 +1,11 @@
 import type { MetadataRoute } from "next";
 import { getAllSlugs } from "@/lib/blog";
 
+// Update this date when content meaningfully changes. Using a fixed date
+// instead of new Date() gives search engines a real modification signal —
+// new Date() on every build makes Google ignore the signal entirely.
+const LAST_UPDATED = new Date("2026-08-07");
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://imagecropkit.com";
 
@@ -28,6 +33,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/crop-image-by-dimensions",
     "/crop-and-resize-image",
     "/oval-crop-image",
+    "/crop-image-to-og-image-1200x630",
+    "/twitter-header-resizer",
+    "/linkedin-background-photo-resizer",
+    "/discord-profile-picture-resizer",
+    "/twitch-profile-picture-resizer",
+    "/resize-image-to-1080x1080",
+    "/resize-image-to-1920x1080",
+    "/facebook-cover-photo-resizer",
     "/blog",
     "/about",
     "/contact",
@@ -39,7 +52,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [...routes, ...blogRoutes].map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date(),
+    lastModified: LAST_UPDATED,
     changeFrequency: "monthly" as const,
     priority: route === "/" ? 1.0 : 0.8,
   }));

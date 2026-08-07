@@ -8,7 +8,7 @@ import FAQSection from "@/components/FAQSection";
 import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Circle Image Cropper — Free Online, Round Crop | ImageCropKit",
+  title: "Circle Image Cropper — Free Online, Round Crop",
   description:
     "Crop an image into a circle online for free. Make round profile pictures, avatars, and logos. Export as PNG with transparency or JPG with a white background.",
   alternates: { canonical: "https://imagecropkit.com/circle-crop-image" },
@@ -94,7 +94,17 @@ export default function CircleCropImagePage() {
 
       <RelatedTools tools={related} />
       <FAQSection items={faqItems} />
-      <StructuredData pageTitle="Circle Image Cropper — Free Online" pageUrl="https://imagecropkit.com/circle-crop-image" faqItems={faqItems} />
+      <StructuredData
+        pageTitle="Circle Image Cropper — Free Online"
+        pageUrl="https://imagecropkit.com/circle-crop-image"
+        faqItems={faqItems}
+        howToSteps={[
+          { name: "Upload your image", text: "Drag and drop, click to browse, or paste the image you want to turn into a circle." },
+          { name: "Adjust the circular crop area", text: "Move and resize the circular crop overlay so your subject sits in the center of the circle." },
+          { name: "Choose an output format", text: "Pick PNG to keep a transparent background outside the circle, or JPG for a smaller file with a solid background." },
+          { name: "Download the circular image", text: "Save the cropped circle and use it as a profile picture, avatar, or sticker." },
+        ]}
+      />
     </div>
   );
 }

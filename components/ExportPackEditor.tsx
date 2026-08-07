@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState, type ChangeEvent, ty
 import ReactCrop, { type Crop } from "react-image-crop";
 import "react-image-crop/dist/ReactCrop.css";
 import { Check, CircleDot, Download, RotateCcw, X } from "lucide-react";
+import { toast } from "sonner";
 
 import UploadDropzone from "@/components/UploadDropzone";
 import TrustBadges from "@/components/TrustBadges";
@@ -135,7 +136,7 @@ export default function ExportPackEditor() {
       })
       .catch((error) => {
         console.error("Failed to load image:", error);
-        alert("Failed to load image. Please try a different file.");
+        toast.error("Failed to load image. Please try a different file.");
       });
   }, [imageUrl, resetCrops, selectedPresetIds]);
 
@@ -202,9 +203,10 @@ export default function ExportPackEditor() {
         };
       }));
       await downloadAsZip(entries, `${fileBaseName(imageFile.name)}-export-pack.zip`);
+      toast.success("Export pack downloaded");
     } catch (error) {
       console.error("Failed to export pack:", error);
-      alert("The export pack could not be created. Please try again.");
+      toast.error("The export pack could not be created. Please try again.");
     } finally {
       setIsExporting(false);
     }

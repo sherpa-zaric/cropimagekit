@@ -102,7 +102,18 @@ export default function CropImageForInstagramPage() {
 
       <RelatedTools tools={related} />
       <FAQSection items={faqItems} />
-      <StructuredData pageTitle="Instagram Image Cropper — Free Online" pageUrl="https://imagecropkit.com/crop-image-for-instagram" faqItems={faqItems} />
+      <StructuredData
+        pageTitle="Instagram Image Cropper — Free Online"
+        pageUrl="https://imagecropkit.com/crop-image-for-instagram"
+        faqItems={faqItems}
+        howToSteps={[
+          { name: "Upload your photo", text: "Drag and drop or click to upload the image you want to post on Instagram." },
+          { name: "Choose an Instagram preset", text: "Select the right preset for your post: square (1:1) for feed, portrait (4:5) for feed, or story (9:16) for Stories and Reels covers." },
+          { name: "Adjust the crop", text: "Drag and resize the crop frame to compose the part of the image you want visible on Instagram." },
+          { name: "Pick an output format", text: "Choose JPG for smaller file sizes or PNG if you need higher quality with sharper edges." },
+          { name: "Download and post", text: "Download the cropped image and upload it to your Instagram post or story." },
+        ]}
+      />
     </div>
   );
 }
