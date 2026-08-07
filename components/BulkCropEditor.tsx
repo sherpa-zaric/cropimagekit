@@ -9,7 +9,9 @@ import ExportPanel from "@/components/ExportPanel";
 import AspectRatioPicker from "@/components/AspectRatioPicker";
 import PresetPicker from "@/components/PresetPicker";
 import TrustBadges from "@/components/TrustBadges";
+import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Plus } from "lucide-react";
+import { toast } from "sonner";
 
 import { getImageUrl, loadImageFromFile, revokeImageUrl } from "@/lib/imageUtils";
 import { calculateInitialCrop, exportCroppedImage, getOutputFileName, percentCropToPixelCrop, isValidCrop } from "@/lib/cropImage";
@@ -176,10 +178,14 @@ export default function BulkCropEditor({
     })));
   }, [images, selectedIdx]);
 
+  const aspectRatio = selectedPreset?.aspectRatio ? selectedPreset.aspectRatio : undefined;
+  const croppedCount = images.filter((img) => isValidCrop(img.reactCrop)).length;
+
   const handleDownload = useCallback(async () => {
     const entries: { name: string; blob: Blob }[] = [];
     const usePrefix = filePrefix.trim().length > 0;
     let seq = 0;
+    let failed = 0;
     for (const img of images) {
       if (!isValidCrop(img.reactCrop)) continue;
       try {
@@ -194,13 +200,22 @@ export default function BulkCropEditor({
           ? `${filePrefix.trim()}-${String(seq).padStart(2, "0")}.${format === "jpg" ? "jpg" : format}`
           : getOutputFileName(img.file.name, format);
         entries.push({ name, blob });
-      } catch { /* skip */ }
+      } catch (err) {
+        console.error("Failed to export image:", err);
+        failed++;
+      }
     }
-    if (entries.length > 0) await downloadAsZip(entries, "cropped-images.zip");
-  }, [images, format, quality, selectedPreset, filePrefix]);
-
-  const aspectRatio = selectedPreset?.aspectRatio ? selectedPreset.aspectRatio : undefined;
-  const croppedCount = images.filter((img) => isValidCrop(img.reactCrop)).length;
+    if (entries.length > 0) {
+      await downloadAsZip(entries, "cropped-images.zip");
+      if (failed > 0) {
+        toast.error(`${failed} image${failed > 1 ? "s" : ""} failed to export. ZIP contains ${entries.length} of ${croppedCount} cropped image${croppedCount > 1 ? "s" : ""}.`);
+      } else {
+        toast.success(`ZIP downloaded (${entries.length} image${entries.length > 1 ? "s" : ""})`);
+      }
+    } else {
+      toast.error("No images could be exported. Please try again.");
+    }
+  }, [images, format, quality, selectedPreset, filePrefix, croppedCount]);
 
   useEffect(() => {
     return () => {
@@ -222,7 +237,7 @@ export default function BulkCropEditor({
   const cropRatioLabel = selectedPreset ? formatRatio(selectedPreset.aspectRatio) : undefined;
 
   return (
-    <div className="space-y-3">
+    <div className="space-y-3 pb-20 lg:pb-0">
       <div className="flex items-center justify-between gap-3 text-sm">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
           {selectedPreset && (
@@ -443,6 +458,14 @@ export default function BulkCropEditor({
       {showTrustBadges && (
         <div className="pt-2">
           <TrustBadges />
+        </div>
+      )}
+
+      {selectedImage && croppedCount > 0 && (
+        <div className="fixed bottom-0 inset-x-0 z-40 lg:hidden border-t border-border bg-background p-3">
+          <Button onClick={handleDownload} className="w-full h-11 text-base font-medium">
+            Download ZIP ({croppedCount})
+          </Button>
         </div>
       )}
     </div>

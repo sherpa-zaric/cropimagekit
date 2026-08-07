@@ -93,7 +93,7 @@ export default function AiDatasetCropperPage() {
 
       <RelatedTools tools={related} />
       <FAQSection items={faqItems} />
-      <StructuredData pageTitle="AI Dataset Cropper" pageUrl={`${SITE_URL}/ai-dataset-cropper`} faqItems={faqItems} />
+      <StructuredData pageTitle="AI Dataset Cropper" pageUrl={`${SITE_URL}/ai-dataset-cropper`} appName="AI Dataset Cropper" faqItems={faqItems} />
     </div>
   );
 }

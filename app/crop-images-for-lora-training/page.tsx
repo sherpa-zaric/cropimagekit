@@ -10,7 +10,7 @@ const BulkCropEditor = dynamic(() => import("@/components/BulkCropEditor"), {
 });
 
 export const metadata: Metadata = {
-  title: "AI Dataset Cropper — LoRA Training Sizes",
+  title: "LoRA Training Image Cropper — 512, 768, 1024 Batch Crop",
   description: "Free online image cropper for LoRA training and AI datasets. Batch crop images to 512x512, 768x768, or 1024x1024 locally in your browser. No upload.",
   alternates: { canonical: "https://imagecropkit.com/crop-images-for-lora-training" },
 };
@@ -83,7 +83,7 @@ export default function CropImagesForLoRATrainingPage() {
 
       <RelatedTools tools={related} />
       <FAQSection items={faqItems} />
-      <StructuredData pageTitle="Crop Images for LoRA Training" pageUrl="https://imagecropkit.com/crop-images-for-lora-training" faqItems={faqItems} />
+      <StructuredData pageTitle="Crop Images for LoRA Training" pageUrl="https://imagecropkit.com/crop-images-for-lora-training" appName="LoRA Training Image Cropper" faqItems={faqItems} />
     </div>
   );
 }

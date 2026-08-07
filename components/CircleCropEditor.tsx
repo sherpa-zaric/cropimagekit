@@ -3,11 +3,13 @@
 import { useState, useCallback, useRef, useEffect } from "react";
 import ReactCrop, { type Crop } from "react-image-crop";
 import "react-image-crop/dist/ReactCrop.css";
+import { toast } from "sonner";
 
 import UploadDropzone from "@/components/UploadDropzone";
 import ExportPanel from "@/components/ExportPanel";
 import PresetPicker from "@/components/PresetPicker";
 import TrustBadges from "@/components/TrustBadges";
+import { Button } from "@/components/ui/button";
 
 import { getImageUrl, loadImageFromFile, revokeImageUrl } from "@/lib/imageUtils";
 import { calculateInitialCrop, exportCroppedCircleImage, getOutputFileName, percentCropToPixelCrop, isValidCrop } from "@/lib/cropImage";
@@ -77,7 +79,7 @@ export default function CircleCropEditor({
         })
         .catch((err) => {
           console.error("Failed to load image:", err);
-          alert("Failed to load image. Please try a different file.");
+          toast.error("Failed to load image. Please try a different file.");
         });
     },
     [imageUrl]
@@ -103,8 +105,10 @@ export default function CircleCropEditor({
         ? getOutputFileName(imageFile.name, format)
         : `circle-crop.${format}`;
       saveAs(blob, fileName);
+      toast.success("Image downloaded");
     } catch (err) {
       console.error("Failed to export image:", err);
+      toast.error("Export failed. Please try a different format or image.");
     }
   }, [imageElement, crop, format, quality, imageFile, selectedPreset]);
 
@@ -128,7 +132,7 @@ export default function CircleCropEditor({
   }
 
   return (
-    <div className="space-y-3">
+    <div className="space-y-3 pb-20 lg:pb-0">
       <div className="flex items-center justify-between gap-3">
         <p className="text-sm text-muted-foreground truncate">
           {imageFile?.name}
@@ -206,6 +210,14 @@ export default function CircleCropEditor({
       {showTrustBadges && (
         <div className="pt-1">
           <TrustBadges />
+        </div>
+      )}
+
+      {imageUrl && isValidCrop(crop) && (
+        <div className="fixed bottom-0 inset-x-0 z-40 lg:hidden border-t border-border bg-background p-3">
+          <Button onClick={handleDownload} className="w-full h-11 text-base font-medium">
+            Download {format.toUpperCase()}
+          </Button>
         </div>
       )}
     </div>

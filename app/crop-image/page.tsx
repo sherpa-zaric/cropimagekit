@@ -168,7 +168,18 @@ export default function CropImagePage() {
 
       <RelatedTools tools={related} />
       <FAQSection items={faqItems} />
-      <StructuredData pageTitle="Image Cropper Online — Free" pageUrl="https://imagecropkit.com/crop-image" faqItems={faqItems} />
+      <StructuredData
+        pageTitle="Image Cropper Online — Free"
+        pageUrl="https://imagecropkit.com/crop-image"
+        faqItems={faqItems}
+        howToSteps={[
+          { name: "Upload your image", text: "Drag and drop, click to browse, or paste an image from your clipboard to load it into the cropper." },
+          { name: "Choose a crop preset", text: "Select a common aspect ratio like square, 4:3, or 16:9, or drag the crop handles to define a custom region." },
+          { name: "Adjust the crop area", text: "Move and resize the crop rectangle to frame the part of the image you want to keep." },
+          { name: "Choose an output format", text: "Pick PNG, JPG, or WebP depending on whether you need transparency, small file size, or web optimization." },
+          { name: "Download the cropped image", text: "Click download to save the cropped image to your device." },
+        ]}
+      />
     </div>
   );
 }

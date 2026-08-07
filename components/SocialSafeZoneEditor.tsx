@@ -5,6 +5,7 @@ import ReactCrop, { type Crop } from "react-image-crop";
 import "react-image-crop/dist/ReactCrop.css";
 import { CircleDot, Info, MonitorSmartphone, RotateCcw, ShieldCheck, X } from "lucide-react";
 import { saveAs } from "file-saver";
+import { toast } from "sonner";
 
 import ExportPanel from "@/components/ExportPanel";
 import TrustBadges from "@/components/TrustBadges";
@@ -146,7 +147,7 @@ export default function SocialSafeZoneEditor() {
       })
       .catch((error) => {
         console.error("Failed to load image:", error);
-        alert("Failed to load image. Please try a different file.");
+        toast.error("Failed to load image. Please try a different file.");
       });
   }, [imageUrl, target]);
 
@@ -184,8 +185,10 @@ export default function SocialSafeZoneEditor() {
         height: target.height,
       });
       saveAs(blob, targetFileName(imageFile.name, target, format));
+      toast.success("Image downloaded");
     } catch (error) {
       console.error("Failed to export image:", error);
+      toast.error("Export failed. Please try a different format or image.");
     }
   }, [crop, format, imageElement, imageFile, quality, target]);
 

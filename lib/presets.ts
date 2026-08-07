@@ -35,6 +35,12 @@ export const socialPresets: CropPreset[] = [
   { id: "facebook-cover", name: "Facebook Cover", width: 1640, height: 924, aspectRatio: 1640 / 924, category: "social", description: "Page cover photo" },
   { id: "twitter-header", name: "X/Twitter Header", width: 1500, height: 500, aspectRatio: 1500 / 500, category: "social", description: "Profile header image" },
   { id: "pinterest-pin", name: "Pinterest Pin", width: 1000, height: 1500, aspectRatio: 1000 / 1500, category: "social", description: "Vertical pin image" },
+  { id: "og-image", name: "OG Image (1200×630)", width: 1200, height: 630, aspectRatio: 1200 / 630, category: "social", description: "Open Graph / social share card" },
+  { id: "discord-pfp", name: "Discord Profile (128×128)", width: 128, height: 128, aspectRatio: 1, category: "social", description: "Discord profile picture" },
+  { id: "discord-pfp-hd", name: "Discord Profile HD (512×512)", width: 512, height: 512, aspectRatio: 1, category: "social", description: "High-resolution Discord avatar" },
+  { id: "twitch-pfp", name: "Twitch Profile (256×256)", width: 256, height: 256, aspectRatio: 1, category: "social", description: "Twitch profile picture" },
+  { id: "facebook-cover-820", name: "Facebook Cover (820×312)", width: 820, height: 312, aspectRatio: 820 / 312, category: "social", description: "Facebook page cover photo" },
+  { id: "fhd-1920x1080", name: "Full HD (1920×1080)", width: 1920, height: 1080, aspectRatio: 1920 / 1080, category: "social", description: "1080p 16:9 wallpaper / background" },
 ];
 
 export const productPresets: CropPreset[] = [

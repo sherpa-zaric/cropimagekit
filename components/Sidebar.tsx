@@ -12,6 +12,7 @@ const navGroups = [
     links: [
       { href: "/crop-image", label: "Crop Image" },
       { href: "/crop-screenshot", label: "Screenshot" },
+      { href: "/trim-screenshot", label: "Trim Screenshot" },
       { href: "/smart-crop-image", label: "Smart Crop" },
       { href: "/social-media-image-pack", label: "Export Pack" },
       { href: "/bulk-crop-images", label: "Bulk Crop" },
@@ -24,6 +25,12 @@ const navGroups = [
       { href: "/crop-image-for-tiktok", label: "TikTok" },
       { href: "/youtube-vertical-thumbnail-checker", label: "YouTube" },
       { href: "/social-media-safe-zone", label: "Safe Zone" },
+      { href: "/twitter-header-resizer", label: "Twitter Header" },
+      { href: "/linkedin-background-photo-resizer", label: "LinkedIn Banner" },
+      { href: "/facebook-cover-photo-resizer", label: "Facebook Cover" },
+      { href: "/discord-profile-picture-resizer", label: "Discord PFP" },
+      { href: "/twitch-profile-picture-resizer", label: "Twitch PFP" },
+      { href: "/crop-image-to-og-image-1200x630", label: "OG Image" },
     ],
   },
   {
@@ -49,6 +56,8 @@ const navGroups = [
       { href: "/oval-crop-image", label: "Oval Crop" },
       { href: "/crop-image-by-dimensions", label: "By Dimensions" },
       { href: "/crop-and-resize-image", label: "Resize" },
+      { href: "/resize-image-to-1080x1080", label: "1080×1080" },
+      { href: "/resize-image-to-1920x1080", label: "1920×1080" },
     ],
   },
   {

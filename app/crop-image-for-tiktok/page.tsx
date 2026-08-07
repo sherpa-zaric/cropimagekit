@@ -115,6 +115,13 @@ export default function CropImageForTiktokPage() {
         pageTitle="TikTok Image Cropper — Free Online"
         pageUrl={`${SITE_URL}/crop-image-for-tiktok`}
         faqItems={faqItems}
+        howToSteps={[
+          { name: "Upload your image", text: "Drag and drop, click to browse, or paste the image you want to use for TikTok." },
+          { name: "Choose a TikTok preset", text: "Select the 9:16 preset for full-screen videos or the 1:1 preset for profile pictures and carousel slides." },
+          { name: "Adjust the crop area", text: "Move and resize the crop frame so the subject stays within TikTok's safe zones and isn't covered by captions or buttons." },
+          { name: "Choose a format", text: "Pick PNG for sharp graphics or JPG for smaller photo file sizes." },
+          { name: "Download the cropped image", text: "Save the cropped result and use it in your TikTok video, carousel, or profile." },
+        ]}
       />
     </div>
   );

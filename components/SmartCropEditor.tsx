@@ -4,11 +4,13 @@ import { useState, useCallback, useRef, useEffect, type MouseEvent } from "react
 import ReactCrop, { type Crop } from "react-image-crop";
 import "react-image-crop/dist/ReactCrop.css";
 import { Maximize2, Minimize2, ChevronRight, ChevronLeft } from "lucide-react";
+import { toast } from "sonner";
 
 import UploadDropzone from "@/components/UploadDropzone";
 import ExportPanel from "@/components/ExportPanel";
 import PresetPicker from "@/components/PresetPicker";
 import TrustBadges from "@/components/TrustBadges";
+import { Button } from "@/components/ui/button";
 
 import { getImageUrl, loadImageFromFile, revokeImageUrl } from "@/lib/imageUtils";
 import {
@@ -115,7 +117,7 @@ export default function SmartCropEditor({
         })
         .catch((err) => {
           console.error("Failed to load image:", err);
-          alert("Failed to load image. Please try a different file.");
+          toast.error("Failed to load image. Please try a different file.");
         });
     },
     [imageUrl, selectedPreset]
@@ -166,8 +168,10 @@ export default function SmartCropEditor({
       });
       const fileName = imageFile ? getOutputFileName(imageFile.name, format) : `cropped-image.${format}`;
       saveAs(blob, fileName);
+      toast.success("Image downloaded");
     } catch (err) {
       console.error("Failed to export image:", err);
+      toast.error("Export failed. Please try a different format or image.");
     }
   }, [imageElement, crop, format, quality, imageFile, selectedPreset]);
 
@@ -201,7 +205,7 @@ export default function SmartCropEditor({
   }
 
   return (
-    <div className={fullscreen ? "fixed inset-0 z-50 bg-background p-4 flex flex-col gap-3" : "space-y-3"}>
+    <div className={fullscreen ? "fixed inset-0 z-50 bg-background p-4 flex flex-col gap-3" : "space-y-3 pb-20 lg:pb-0"}>
       <div className="flex items-center justify-between gap-3">
         <p className="text-sm text-muted-foreground truncate">
           {imageFile?.name}
@@ -214,7 +218,7 @@ export default function SmartCropEditor({
         <div className="flex items-center gap-2 shrink-0">
           <button
             onClick={() => setPanelCollapsed((c) => !c)}
-            className="inline-flex items-center justify-center h-8 w-8 rounded-md border border-border text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+            className="inline-flex items-center justify-center h-10 w-10 rounded-md border border-border text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
             title={panelCollapsed ? "Show panel" : "Hide panel"}
             aria-label={panelCollapsed ? "Show panel" : "Hide panel"}
           >
@@ -222,7 +226,7 @@ export default function SmartCropEditor({
           </button>
           <button
             onClick={() => setFullscreen((f) => !f)}
-            className="inline-flex items-center justify-center h-8 w-8 rounded-md border border-border text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+            className="inline-flex items-center justify-center h-10 w-10 rounded-md border border-border text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
             title={fullscreen ? "Exit fullscreen" : "Enter fullscreen"}
             aria-label={fullscreen ? "Exit fullscreen" : "Enter fullscreen"}
           >
@@ -347,6 +351,14 @@ export default function SmartCropEditor({
       {showTrustBadges && !fullscreen && (
         <div className="pt-1">
           <TrustBadges />
+        </div>
+      )}
+
+      {imageUrl && isValidCrop(crop) && !fullscreen && (
+        <div className="fixed bottom-0 inset-x-0 z-40 lg:hidden border-t border-border bg-background p-3">
+          <Button onClick={handleDownload} className="w-full h-11 text-base font-medium">
+            Download {format.toUpperCase()}
+          </Button>
         </div>
       )}
     </div>
