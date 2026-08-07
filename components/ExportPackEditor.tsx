@@ -252,7 +252,7 @@ export default function ExportPackEditor() {
         </Button>
       </div>
 
-      <div className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_19rem]">
+      <div className="grid gap-4">
         <div className="space-y-3">
           <div className="flex flex-wrap items-center gap-2 rounded-md border bg-muted/30 p-3">
             <Button variant={focalMode ? "default" : "outline"} size="sm" onClick={() => setFocalMode((value) => !value)}>
@@ -302,7 +302,7 @@ export default function ExportPackEditor() {
           {activePreset && <p className="text-center text-xs text-muted-foreground">Adjusting {activePreset.name} only. Other outputs continue to use the shared focal point.</p>}
         </div>
 
-        <aside className="space-y-4 xl:sticky xl:top-20 xl:self-start">
+        <aside className="space-y-4">
           <div>
             <p className="mb-2 text-xs font-medium uppercase tracking-widest text-muted-foreground">Start with a pack</p>
             <div className="grid gap-2">
