@@ -275,60 +275,50 @@ export default function SmartCropEditor({
       </div>
 
       <div className={`flex flex-col lg:flex-row gap-4 ${fullscreen ? "flex-1 min-h-0" : ""}`}>
-        <div className={`flex justify-center items-center overflow-hidden border-2 border-foreground/25 rounded-lg checkerboard flex-1 ${fullscreen ? "min-h-0" : "min-h-[420px]"}`}>
-          <div className="relative inline-block">
-            <ReactCrop
-              crop={crop}
-              onChange={(_, percentCrop) => setCrop(percentCrop)}
-              aspect={aspectRatio}
-              minWidth={50}
-              minHeight={50}
-              className={fullscreen ? "max-h-[calc(100vh-7rem)]" : "max-h-[85vh]"}
-              disabled={focalMode}
-            >
-              <img
-                ref={imgRef}
-                src={imageUrl}
-                alt="Crop preview"
-                style={{ maxHeight: fullscreen ? "calc(100vh-7rem)" : "85vh", maxWidth: "100%", width: "auto", height: "auto", filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.25))" }}
-                onLoad={(e) => setImageElement(e.currentTarget)}
-              />
-            </ReactCrop>
-            {focalMode && (
-              <div
-                className="absolute inset-0 z-10"
-                style={{ cursor: "crosshair" }}
-                onClick={handleImageClick}
-              />
-            )}
-            {focal && !focalMode && (
-              <div
-                className="absolute pointer-events-none z-10"
-                style={{
-                  left: `${focal.x}%`,
-                  top: `${focal.y}%`,
-                  transform: "translate(-50%, -50%)",
-                }}
+        <div className="flex flex-col gap-3 flex-1 min-w-0">
+          <div className={`flex justify-center items-center overflow-hidden border-2 border-foreground/25 rounded-lg checkerboard flex-1 ${fullscreen ? "min-h-0" : "min-h-[420px]"}`}>
+            <div className="relative inline-block">
+              <ReactCrop
+                crop={crop}
+                onChange={(_, percentCrop) => setCrop(percentCrop)}
+                aspect={aspectRatio}
+                minWidth={50}
+                minHeight={50}
+                className={fullscreen ? "max-h-[calc(100vh-7rem)]" : "max-h-[85vh]"}
+                disabled={focalMode}
               >
-                <div className="relative w-6 h-6 rounded-full border-2 border-primary bg-primary/30">
-                  <div className="absolute top-1/2 left-1/2 w-3 h-px bg-primary -translate-x-1/2 -translate-y-1/2" />
-                  <div className="absolute top-1/2 left-1/2 h-3 w-px bg-primary -translate-x-1/2 -translate-y-1/2" />
+                <img
+                  ref={imgRef}
+                  src={imageUrl}
+                  alt="Crop preview"
+                  style={{ maxHeight: fullscreen ? "calc(100vh-7rem)" : "85vh", maxWidth: "100%", width: "auto", height: "auto", filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.25))" }}
+                  onLoad={(e) => setImageElement(e.currentTarget)}
+                />
+              </ReactCrop>
+              {focalMode && (
+                <div
+                  className="absolute inset-0 z-10"
+                  style={{ cursor: "crosshair" }}
+                  onClick={handleImageClick}
+                />
+              )}
+              {focal && !focalMode && (
+                <div
+                  className="absolute pointer-events-none z-10"
+                  style={{
+                    left: `${focal.x}%`,
+                    top: `${focal.y}%`,
+                    transform: "translate(-50%, -50%)",
+                  }}
+                >
+                  <div className="relative w-6 h-6 rounded-full border-2 border-primary bg-primary/30">
+                    <div className="absolute top-1/2 left-1/2 w-3 h-px bg-primary -translate-x-1/2 -translate-y-1/2" />
+                    <div className="absolute top-1/2 left-1/2 h-3 w-px bg-primary -translate-x-1/2 -translate-y-1/2" />
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
+            </div>
           </div>
-        </div>
-
-        {!panelCollapsed && (
-        <div className={`lg:w-64 shrink-0 space-y-4 ${fullscreen ? "" : "lg:sticky lg:top-20 lg:self-start"}`}>
-          {showPresets && showPresets.length > 0 ? (
-            <PresetPicker
-              presets={showPresets}
-              selectedPreset={selectedPreset}
-              onSelect={handlePresetSelect}
-              label="Choose a preset"
-            />
-          ) : null}
 
           <ExportPanel
             format={format}
@@ -344,6 +334,18 @@ export default function SmartCropEditor({
             cropRatio={cropRatioLabel}
             fileSize={fileSize}
           />
+        </div>
+
+        {!panelCollapsed && (
+        <div className="lg:w-64 shrink-0 space-y-4">
+          {showPresets && showPresets.length > 0 ? (
+            <PresetPicker
+              presets={showPresets}
+              selectedPreset={selectedPreset}
+              onSelect={handlePresetSelect}
+              label="Choose a preset"
+            />
+          ) : null}
         </div>
         )}
       </div>

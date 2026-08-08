@@ -252,8 +252,8 @@ export default function ExportPackEditor() {
         </Button>
       </div>
 
-      <div className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_19rem]">
-        <div className="space-y-3">
+      <div className="flex flex-col lg:flex-row gap-4">
+        <div className="flex flex-col gap-3 flex-1 min-w-0">
           <div className="flex flex-wrap items-center gap-2 rounded-md border bg-muted/30 p-3">
             <Button variant={focalMode ? "default" : "outline"} size="sm" onClick={() => setFocalMode((value) => !value)}>
               <CircleDot />
@@ -300,9 +300,32 @@ export default function ExportPackEditor() {
             </div>
           </div>
           {activePreset && <p className="text-center text-xs text-muted-foreground">Adjusting {activePreset.name} only. Other outputs continue to use the shared focal point.</p>}
+
+          <div className="space-y-3 rounded-md border bg-muted/30 p-3">
+            <div className="flex items-center justify-between gap-2">
+              <p className="text-sm font-medium">Export {selectedPresets.length} files as ZIP</p>
+              <span className="font-mono text-xs text-muted-foreground">{format.toUpperCase()}</span>
+            </div>
+            <div className="flex overflow-hidden rounded-md border border-border">
+              {formats.map((item) => (
+                <button key={item.value} type="button" onClick={() => setFormat(item.value)} className={`flex-1 px-2 py-1.5 text-xs font-medium ${format === item.value ? "bg-foreground text-background" : "bg-background text-muted-foreground hover:text-foreground"}`}>
+                  {item.label}
+                </button>
+              ))}
+            </div>
+            {format !== "png" && (
+              <label className="flex items-center gap-2 text-xs text-muted-foreground">
+                Quality <input type="range" min={10} max={100} value={quality} onChange={(event) => setQuality(Number(event.target.value))} className="min-w-0 flex-1 accent-foreground" /> {quality}%
+              </label>
+            )}
+            <Button className="w-full" size="lg" onClick={handleDownload} disabled={!canDownload || isExporting}>
+              <Download />
+              {isExporting ? "Creating export pack..." : "Download export pack"}
+            </Button>
+          </div>
         </div>
 
-        <aside className="space-y-4 xl:sticky xl:top-20 xl:self-start">
+        <aside className="space-y-4 lg:w-80 shrink-0">
           <div>
             <p className="mb-2 text-xs font-medium uppercase tracking-widest text-muted-foreground">Start with a pack</p>
             <div className="grid gap-2">
@@ -352,29 +375,6 @@ export default function ExportPackEditor() {
                 );
               })}
             </div>
-          </div>
-
-          <div className="space-y-3 rounded-md border bg-muted/30 p-3">
-            <div className="flex items-center justify-between gap-2">
-              <p className="text-sm font-medium">Export {selectedPresets.length} files as ZIP</p>
-              <span className="font-mono text-xs text-muted-foreground">{format.toUpperCase()}</span>
-            </div>
-            <div className="flex overflow-hidden rounded-md border border-border">
-              {formats.map((item) => (
-                <button key={item.value} type="button" onClick={() => setFormat(item.value)} className={`flex-1 px-2 py-1.5 text-xs font-medium ${format === item.value ? "bg-foreground text-background" : "bg-background text-muted-foreground hover:text-foreground"}`}>
-                  {item.label}
-                </button>
-              ))}
-            </div>
-            {format !== "png" && (
-              <label className="flex items-center gap-2 text-xs text-muted-foreground">
-                Quality <input type="range" min={10} max={100} value={quality} onChange={(event) => setQuality(Number(event.target.value))} className="min-w-0 flex-1 accent-foreground" /> {quality}%
-              </label>
-            )}
-            <Button className="w-full" size="lg" onClick={handleDownload} disabled={!canDownload || isExporting}>
-              <Download />
-              {isExporting ? "Creating export pack..." : "Download export pack"}
-            </Button>
           </div>
         </aside>
       </div>

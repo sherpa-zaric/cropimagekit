@@ -179,40 +179,24 @@ export default function OvalCropEditor({
       </div>
 
       <div className="flex flex-col lg:flex-row gap-4">
-        <div className="flex justify-center items-center overflow-hidden min-h-[420px] border-2 border-foreground/25 rounded-lg checkerboard flex-1">
-          <ReactCrop
-            crop={crop}
-            onChange={(_, percentCrop) => setCrop(percentCrop)}
-            aspect={aspectRatio > 0 ? aspectRatio : undefined}
-            minWidth={50} minHeight={50}
-            circularCrop
-            className="max-h-[85vh]"
-          >
-            <img
-              ref={imgRef}
-              src={imageUrl}
-              alt="Crop preview"
-              style={{ maxHeight: "85vh", maxWidth: "100%", width: "auto", height: "auto", filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.25))" }}
-              onLoad={(e) => setImageElement(e.currentTarget)}
-            />
-          </ReactCrop>
-        </div>
-
-        <div className="lg:w-64 shrink-0 space-y-4 lg:sticky lg:top-20 lg:self-start">
-          <PresetPicker
-            presets={ovalPresets}
-            selectedPreset={selectedPreset}
-            onSelect={handlePresetSelect}
-            label="Oval shape"
-          />
-
-          <div className="flex items-center gap-3">
-            <canvas
-              ref={previewCanvasRef}
-              className="rounded-full border border-border bg-transparent"
-              style={{ width: 60, height: 60 }}
-            />
-            <span className="text-xs text-muted-foreground">Preview</span>
+        <div className="flex flex-col gap-3 flex-1 min-w-0">
+          <div className="flex justify-center items-center overflow-hidden min-h-[420px] border-2 border-foreground/25 rounded-lg checkerboard flex-1">
+            <ReactCrop
+              crop={crop}
+              onChange={(_, percentCrop) => setCrop(percentCrop)}
+              aspect={aspectRatio > 0 ? aspectRatio : undefined}
+              minWidth={50} minHeight={50}
+              circularCrop
+              className="max-h-[85vh]"
+            >
+              <img
+                ref={imgRef}
+                src={imageUrl}
+                alt="Crop preview"
+                style={{ maxHeight: "85vh", maxWidth: "100%", width: "auto", height: "auto", filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.25))" }}
+                onLoad={(e) => setImageElement(e.currentTarget)}
+              />
+            </ReactCrop>
           </div>
 
           <ExportPanel
@@ -230,6 +214,24 @@ export default function OvalCropEditor({
             note="Oval crop"
             fileSize={fileSize}
           />
+        </div>
+
+        <div className="lg:w-64 shrink-0 space-y-4">
+          <PresetPicker
+            presets={ovalPresets}
+            selectedPreset={selectedPreset}
+            onSelect={handlePresetSelect}
+            label="Oval shape"
+          />
+
+          <div className="flex items-center gap-3">
+            <canvas
+              ref={previewCanvasRef}
+              className="rounded-full border border-border bg-transparent"
+              style={{ width: 60, height: 60 }}
+            />
+            <span className="text-xs text-muted-foreground">Preview</span>
+          </div>
         </div>
       </div>
 

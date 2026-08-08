@@ -381,26 +381,17 @@ export default function BulkCropEditor({
             )}
           </div>
           <div className="flex flex-col lg:flex-row gap-4">
-            <div className="flex justify-center items-center overflow-hidden min-h-[420px] border-2 border-foreground/25 rounded-lg checkerboard flex-1">
-              <ReactCrop
-                crop={selectedImage.reactCrop}
-                onChange={(_, percentCrop) => updateCrop(selectedIdx, percentCrop)}
-                aspect={aspectRatio} minWidth={50} minHeight={50} className="max-h-[85vh]"
-              >
-                <img ref={imgRef} src={selectedImage.url} alt={selectedImage.file.name}
-                  style={{ maxHeight: "85vh", maxWidth: "100%", width: "auto", height: "auto", filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.25))" }} />
-              </ReactCrop>
-            </div>
-
-            <div className="lg:w-64 shrink-0 space-y-4 lg:sticky lg:top-20 lg:self-start">
-              {showPresets && showPresets.length > 0 ? (
-                <PresetPicker presets={showPresets} selectedPreset={selectedPreset} onSelect={handlePresetSelect} label="Presets" />
-              ) : (
-                <div>
-                  <p className="text-xs text-muted-foreground mb-2">Aspect ratio</p>
-                  <AspectRatioPicker selectedPreset={selectedPreset} onSelect={handlePresetSelect} />
-                </div>
-              )}
+            <div className="flex flex-col gap-3 flex-1 min-w-0">
+              <div className="flex justify-center items-center overflow-hidden min-h-[420px] border-2 border-foreground/25 rounded-lg checkerboard flex-1">
+                <ReactCrop
+                  crop={selectedImage.reactCrop}
+                  onChange={(_, percentCrop) => updateCrop(selectedIdx, percentCrop)}
+                  aspect={aspectRatio} minWidth={50} minHeight={50} className="max-h-[85vh]"
+                >
+                  <img ref={imgRef} src={selectedImage.url} alt={selectedImage.file.name}
+                    style={{ maxHeight: "85vh", maxWidth: "100%", width: "auto", height: "auto", filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.25))" }} />
+                </ReactCrop>
+              </div>
 
               <ExportPanel
                 format={format}
@@ -416,6 +407,17 @@ export default function BulkCropEditor({
                 cropRatio={cropRatioLabel}
                 fileSize={fileSize}
               />
+            </div>
+
+            <div className="lg:w-64 shrink-0 space-y-4">
+              {showPresets && showPresets.length > 0 ? (
+                <PresetPicker presets={showPresets} selectedPreset={selectedPreset} onSelect={handlePresetSelect} label="Presets" />
+              ) : (
+                <div>
+                  <p className="text-xs text-muted-foreground mb-2">Aspect ratio</p>
+                  <AspectRatioPicker selectedPreset={selectedPreset} onSelect={handlePresetSelect} />
+                </div>
+              )}
             </div>
           </div>
 

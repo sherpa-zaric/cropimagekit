@@ -243,8 +243,8 @@ export default function SocialSafeZoneEditor() {
         </Button>
       </div>
 
-      <div className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_20rem]">
-        <div className="space-y-3">
+      <div className="flex flex-col lg:flex-row gap-4">
+        <div className="flex flex-col gap-3 flex-1 min-w-0">
           <div className="flex flex-wrap items-center gap-2 rounded-md border bg-muted/30 p-3">
             <Button variant={focalMode ? "default" : "outline"} size="sm" onClick={() => setFocalMode((value) => !value)}>
               <CircleDot />
@@ -286,9 +286,23 @@ export default function SocialSafeZoneEditor() {
               {focal && !focalMode && <div className="pointer-events-none absolute z-10 size-6 rounded-full border-2 border-primary bg-primary/30" style={{ left: `${focal.x}%`, top: `${focal.y}%`, transform: "translate(-50%, -50%)" }} />}
             </div>
           </div>
+
+          <ExportPanel
+            format={format}
+            quality={quality}
+            onFormatChange={setFormat}
+            onQualityChange={setQuality}
+            onDownload={handleDownload}
+            disabled={!isValidCrop(crop)}
+            outputWidth={target.width}
+            outputHeight={target.height}
+            presetName={target.name}
+            cropRatio={target.placement}
+            fileSize={fileSize}
+          />
         </div>
 
-        <aside className="space-y-4 xl:sticky xl:top-20 xl:self-start">
+        <aside className="space-y-4 lg:w-80 shrink-0">
           <div>
             <p className="mb-2 text-xs font-medium uppercase tracking-widest text-muted-foreground">Preview platform</p>
             <div className="grid gap-2">
@@ -305,20 +319,6 @@ export default function SocialSafeZoneEditor() {
               ))}
             </div>
           </div>
-
-          <ExportPanel
-            format={format}
-            quality={quality}
-            onFormatChange={setFormat}
-            onQualityChange={setQuality}
-            onDownload={handleDownload}
-            disabled={!isValidCrop(crop)}
-            outputWidth={target.width}
-            outputHeight={target.height}
-            presetName={target.name}
-            cropRatio={target.placement}
-            fileSize={fileSize}
-          />
         </aside>
       </div>
 

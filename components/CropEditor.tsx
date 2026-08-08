@@ -274,26 +274,43 @@ export default function CropEditor({
       </div>
 
       <div className={`flex flex-col lg:flex-row gap-4 ${fullscreen ? "flex-1 min-h-0" : ""}`}>
-        <div className={`flex justify-center items-center overflow-hidden border-2 border-foreground/25 rounded-lg checkerboard flex-1 ${fullscreen ? "min-h-0" : "min-h-[420px]"}`}>
-          <ReactCrop
-            crop={crop}
-            onChange={(_, percentCrop) => setCrop(percentCrop)}
-            aspect={aspectRatio}
-            minWidth={50} minHeight={50}
-            className={fullscreen ? "max-h-[calc(100vh-7rem)]" : "max-h-[85vh]"}
-          >
-            <img
-              ref={imgRef}
-              src={imageUrl}
-              alt="Crop preview"
-              style={{ maxHeight: fullscreen ? "calc(100vh-7rem)" : "85vh", maxWidth: "100%", width: "auto", height: "auto", filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.25))" }}
-              onLoad={(e) => setImageElement(e.currentTarget)}
-            />
-          </ReactCrop>
+        <div className="flex flex-col gap-3 flex-1 min-w-0">
+          <div className={`flex justify-center items-center overflow-hidden border-2 border-foreground/25 rounded-lg checkerboard flex-1 ${fullscreen ? "min-h-0" : "min-h-[420px]"}`}>
+            <ReactCrop
+              crop={crop}
+              onChange={(_, percentCrop) => setCrop(percentCrop)}
+              aspect={aspectRatio}
+              minWidth={50} minHeight={50}
+              className={fullscreen ? "max-h-[calc(100vh-7rem)]" : "max-h-[85vh]"}
+            >
+              <img
+                ref={imgRef}
+                src={imageUrl}
+                alt="Crop preview"
+                style={{ maxHeight: fullscreen ? "calc(100vh-7rem)" : "85vh", maxWidth: "100%", width: "auto", height: "auto", filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.25))" }}
+                onLoad={(e) => setImageElement(e.currentTarget)}
+              />
+            </ReactCrop>
+          </div>
+
+          <ExportPanel
+            format={format}
+            quality={quality}
+            onFormatChange={setFormat}
+            onQualityChange={setQuality}
+            onDownload={handleDownload}
+            disabled={!isValidCrop(crop)}
+            outputWidth={outputWidth}
+            outputHeight={outputHeight}
+            outputIsCropArea={!outputWidth && !outputHeight}
+            presetName={selectedPreset?.name}
+            cropRatio={cropRatioLabel}
+            fileSize={fileSize}
+          />
         </div>
 
         {!panelCollapsed && (
-          <div className={`lg:w-64 shrink-0 space-y-4 ${fullscreen ? "" : "lg:sticky lg:top-20 lg:self-start"}`}>
+          <div className="lg:w-64 shrink-0 space-y-4">
           {showPresets && showPresets.length > 0 ? (
             <PresetPicker
               presets={showPresets}
@@ -341,21 +358,6 @@ export default function CropEditor({
               </p>
             </div>
           )}
-
-          <ExportPanel
-            format={format}
-            quality={quality}
-            onFormatChange={setFormat}
-            onQualityChange={setQuality}
-            onDownload={handleDownload}
-            disabled={!isValidCrop(crop)}
-            outputWidth={outputWidth}
-            outputHeight={outputHeight}
-            outputIsCropArea={!outputWidth && !outputHeight}
-            presetName={selectedPreset?.name}
-            cropRatio={cropRatioLabel}
-            fileSize={fileSize}
-          />
         </div>
         )}
       </div>
