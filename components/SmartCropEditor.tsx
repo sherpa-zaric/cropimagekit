@@ -274,7 +274,7 @@ export default function SmartCropEditor({
         </span>
       </div>
 
-      <div className={`flex flex-col gap-4 ${fullscreen ? "flex-1 min-h-0" : ""}`}>
+      <div className={`flex flex-col lg:flex-row gap-4 ${fullscreen ? "flex-1 min-h-0" : ""}`}>
         <div className={`flex justify-center items-center overflow-hidden border-2 border-foreground/25 rounded-lg checkerboard flex-1 ${fullscreen ? "min-h-0" : "min-h-[420px]"}`}>
           <div className="relative inline-block">
             <ReactCrop
@@ -320,7 +320,7 @@ export default function SmartCropEditor({
         </div>
 
         {!panelCollapsed && (
-        <div className="space-y-4">
+        <div className={`lg:w-64 shrink-0 space-y-4 ${fullscreen ? "" : "lg:sticky lg:top-20 lg:self-start"}`}>
           {showPresets && showPresets.length > 0 ? (
             <PresetPicker
               presets={showPresets}

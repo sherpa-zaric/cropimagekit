@@ -178,7 +178,7 @@ export default function OvalCropEditor({
         </button>
       </div>
 
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col lg:flex-row gap-4">
         <div className="flex justify-center items-center overflow-hidden min-h-[420px] border-2 border-foreground/25 rounded-lg checkerboard flex-1">
           <ReactCrop
             crop={crop}
@@ -198,7 +198,7 @@ export default function OvalCropEditor({
           </ReactCrop>
         </div>
 
-        <div className="space-y-4">
+        <div className="lg:w-64 shrink-0 space-y-4 lg:sticky lg:top-20 lg:self-start">
           <PresetPicker
             presets={ovalPresets}
             selectedPreset={selectedPreset}
