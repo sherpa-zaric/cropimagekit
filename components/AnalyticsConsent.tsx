@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 
-const CONSENT_KEY = "imagecropkit_analytics_consent";
+import { ANALYTICS_CONSENT_EVENT, ANALYTICS_CONSENT_KEY } from "@/lib/analytics";
 
 function readConsent(): "accepted" | "rejected" | null {
   if (typeof window === "undefined") return null;
   try {
-    const v = localStorage.getItem(CONSENT_KEY);
+    const v = localStorage.getItem(ANALYTICS_CONSENT_KEY);
     return v === "accepted" || v === "rejected" ? v : null;
   } catch {
     return null;
@@ -19,7 +19,8 @@ export default function AnalyticsConsent() {
 
   const decide = (value: "accepted" | "rejected") => {
     try {
-      localStorage.setItem(CONSENT_KEY, value);
+      localStorage.setItem(ANALYTICS_CONSENT_KEY, value);
+      window.dispatchEvent(new Event(ANALYTICS_CONSENT_EVENT));
     } catch {
       // best-effort — localStorage may be unavailable
     }

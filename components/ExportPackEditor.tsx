@@ -17,6 +17,7 @@ import {
   percentCropToPixelCrop,
 } from "@/lib/cropImage";
 import { getImageUrl, loadImageFromFile, revokeImageUrl } from "@/lib/imageUtils";
+import { trackAnalyticsEvent } from "@/lib/analytics";
 import { type CropPreset, aiPresets, productPresets, socialPresets } from "@/lib/presets";
 import type { ExportFormat } from "@/lib/siteConfig";
 import { downloadAsZip } from "@/lib/zipImages";
@@ -128,6 +129,7 @@ export default function ExportPackEditor() {
     setImageElement(null);
     setFocal(null);
     setFocalMode(false);
+    trackAnalyticsEvent("export_pack_image_uploaded", { pack_id: activePackId, output_count: selectedPresetIds.length });
 
     loadImageFromFile(file)
       .then((image) => {
@@ -138,20 +140,23 @@ export default function ExportPackEditor() {
         console.error("Failed to load image:", error);
         toast.error("Failed to load image. Please try a different file.");
       });
-  }, [imageUrl, resetCrops, selectedPresetIds]);
+  }, [activePackId, imageUrl, resetCrops, selectedPresetIds]);
 
   const handlePackSelect = useCallback((pack: ExportPack) => {
     const ids = pack.presets.map((preset) => preset.id);
     setActivePackId(pack.id);
     setSelectedPresetIds(ids);
     setActivePresetId(ids[0]);
+    trackAnalyticsEvent("export_pack_pack_selected", { pack_id: pack.id, output_count: ids.length });
     if (imageElement) resetCrops(imageElement, ids, focal);
   }, [focal, imageElement, resetCrops]);
 
   const handlePresetToggle = useCallback((preset: CropPreset, checked: boolean) => {
-    setSelectedPresetIds((current) => {
-      return checked ? [...current, preset.id] : current.filter((id) => id !== preset.id);
-    });
+    const nextIds = checked
+      ? Array.from(new Set([...selectedPresetIds, preset.id]))
+      : selectedPresetIds.filter((id) => id !== preset.id);
+    setSelectedPresetIds(nextIds);
+    trackAnalyticsEvent("export_pack_outputs_changed", { pack_id: activePackId, output_count: nextIds.length });
     if (checked) setActivePresetId(preset.id);
     else if (activePresetId === preset.id) {
       setActivePresetId(selectedPresetIds.find((id) => id !== preset.id) ?? "");
@@ -159,7 +164,7 @@ export default function ExportPackEditor() {
     if (checked && imageElement) {
       setCropsByPreset((crops) => ({ ...crops, [preset.id]: getCropForPreset(preset, imageElement, focal) }));
     }
-  }, [activePresetId, focal, imageElement, selectedPresetIds]);
+  }, [activePackId, activePresetId, focal, imageElement, selectedPresetIds]);
 
   const handleImageClick = useCallback((event: MouseEvent<HTMLDivElement>) => {
     if (!focalMode || !imgRef.current || !imageElement) return;
@@ -172,7 +177,8 @@ export default function ExportPackEditor() {
     setFocal(nextFocal);
     setFocalMode(false);
     resetCrops(imageElement, selectedPresetIds, nextFocal);
-  }, [focalMode, imageElement, resetCrops, selectedPresetIds]);
+    trackAnalyticsEvent("export_pack_focal_point_set", { pack_id: activePackId, output_count: selectedPresetIds.length });
+  }, [activePackId, focalMode, imageElement, resetCrops, selectedPresetIds]);
 
   const handleClearFocal = useCallback(() => {
     setFocal(null);
@@ -203,6 +209,7 @@ export default function ExportPackEditor() {
         };
       }));
       await downloadAsZip(entries, `${fileBaseName(imageFile.name)}-export-pack.zip`);
+      trackAnalyticsEvent("export_pack_downloaded", { pack_id: activePackId, output_count: selectedPresets.length, format });
       toast.success("Export pack downloaded");
     } catch (error) {
       console.error("Failed to export pack:", error);
@@ -210,7 +217,7 @@ export default function ExportPackEditor() {
     } finally {
       setIsExporting(false);
     }
-  }, [cropsByPreset, focal, format, imageElement, imageFile, quality, selectedPresets]);
+  }, [activePackId, cropsByPreset, focal, format, imageElement, imageFile, quality, selectedPresets]);
 
   useEffect(() => () => {
     if (imageUrl) revokeImageUrl(imageUrl);

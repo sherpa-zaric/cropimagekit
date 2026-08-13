@@ -1,6 +1,6 @@
 # ImageCropKit Growth Implementation Plan
 
-**Last updated:** 2026-07-11
+**Last updated:** 2026-08-14
 
 ## Product thesis
 
@@ -28,6 +28,18 @@ The new flow is:
 4. Download a named ZIP export pack.
 
 The first useful metric is not page views; it is **export-pack completion rate**: completed ZIP downloads divided by users who upload an image into the export-pack editor. Track secondary indicators after analytics events are added: selected-output count, focal-point use, and repeat usage within seven days.
+
+### Measurement implementation
+
+GA4 tracking for the export-pack funnel is enabled only after a visitor accepts analytics. It records anonymous interaction metadata only:
+
+- `export_pack_image_uploaded`
+- `export_pack_pack_selected`
+- `export_pack_outputs_changed`
+- `export_pack_focal_point_set`
+- `export_pack_downloaded`
+
+Events include the selected pack, output count, and export format where relevant. They never include image bytes, filenames, dimensions, crop coordinates, or focal-point coordinates.
 
 ## Priority order
 
