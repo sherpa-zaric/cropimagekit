@@ -1,5 +1,7 @@
 # ImageCropKit Growth Implementation Plan
 
+Ongoing SEO execution, cycle reviews and the next actionable backlog are maintained in [SEO_OPERATIONS.md](SEO_OPERATIONS.md). Complete and review each cycle before creating its successor; preserve this document as the product strategy.
+
 **Last updated:** 2026-08-14
 
 ## Product thesis
