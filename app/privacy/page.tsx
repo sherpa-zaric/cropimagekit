@@ -45,19 +45,12 @@ export default function PrivacyPage() {
 
       <h2>Cookies and analytics</h2>
       <p>
-        ImageCropKit uses Google Analytics only if you accept analytics cookies. Analytics
-        helps us understand which pages and tools are used so we can improve the website.
+        ImageCropKit uses Google Analytics to understand which pages and tools are used so we
+        can improve the website.
       </p>
       <p>
         The core image cropping tools work in your browser. Your images are not uploaded to
         our servers, and analytics does not include your image files.
-      </p>
-      <p>
-        You can reject analytics cookies and still use all image cropping tools.
-      </p>
-      <p>
-        We may store your analytics consent choice in your browser so we do not need to ask
-        again on every visit.
       </p>
 
       <h2>Related pages</h2>

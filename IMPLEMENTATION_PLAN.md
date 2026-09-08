@@ -31,7 +31,7 @@ The first useful metric is not page views; it is **export-pack completion rate**
 
 ### Measurement implementation
 
-GA4 tracking for the export-pack funnel is enabled only after a visitor accepts analytics. It records anonymous interaction metadata only:
+GA4 tracking for the export-pack funnel records anonymous interaction metadata only:
 
 - `export_pack_image_uploaded`
 - `export_pack_pack_selected`
