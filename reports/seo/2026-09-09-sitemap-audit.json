@@ -1,0 +1,3004 @@
+{
+  "checked_at": "2026-09-08T19:39:03.104967+00:00",
+  "scope": "Server HTML of sitemap URLs; not rendered UI, GSC indexation, schema eligibility or field performance",
+  "robots_txt": "User-Agent: *\nAllow: /\n\nSitemap: https://imagecropkit.com/sitemap.xml\n",
+  "page_count": 51,
+  "pages": [
+    {
+      "url": "https://imagecropkit.com/",
+      "status": 200,
+      "titles": [
+        "ImageCropKit - Crop Images for Screenshots, AI Datasets, and Profile Photos"
+      ],
+      "descriptions": [
+        "Crop images online for screenshots, AI datasets, passport photos, and profile pictures. Browser-based image cropping with no upload, no signup, and no watermark."
+      ],
+      "h1": [
+        "One image. Every crop you need."
+      ],
+      "canonicals": [
+        "https://imagecropkit.com"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 4,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/crop-image",
+      "status": 200,
+      "titles": [
+        "Image Cropper Online — Free, No Upload, No Watermark | ImageCropKit"
+      ],
+      "descriptions": [
+        "Crop images online free without uploading to a server. 100% browser-based, no signup, no watermark. Choose a crop area or aspect ratio and download as PNG, JPG, or WebP."
+      ],
+      "h1": [
+        "Image Cropper Online — Free"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/crop-image"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 4,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/smart-crop-image",
+      "status": 200,
+      "titles": [
+        "Smart Image Cropper — Free Online, Keep Subject Centered | ImageCropKit"
+      ],
+      "descriptions": [
+        "Smart focal-point image cropper. Click to lock the subject, switch aspect ratios, and the crop stays centered on what matters. Free, no upload, no signup, no watermark. Processed locally in your browser."
+      ],
+      "h1": [
+        "Smart Image Cropper — Free Online"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/smart-crop-image"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 3,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/social-media-image-pack",
+      "status": 200,
+      "titles": [
+        "Social Media Image Pack - Export Multiple Sizes | ImageCropKit"
+      ],
+      "descriptions": [
+        "Create a social media image pack from one source image. Set a focal point once, export Instagram, story, YouTube, and Pinterest sizes together as a ZIP. Free and local."
+      ],
+      "h1": [
+        "One image. Every social size."
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/social-media-image-pack"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 3,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/social-media-safe-zone",
+      "status": 200,
+      "titles": [
+        "Social Media Safe Zone Checker - Preview Image Crops | ImageCropKit"
+      ],
+      "descriptions": [
+        "Preview whether your image subject stays inside practical Instagram, TikTok, YouTube, and LinkedIn crop safe zones. Crop and export locally with no upload."
+      ],
+      "h1": [
+        "See what your audience will actually see."
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/social-media-safe-zone"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 4,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/youtube-vertical-thumbnail-checker",
+      "status": 200,
+      "titles": [
+        "YouTube Vertical Thumbnail Checker - 16:9 vs 4:5 | ImageCropKit"
+      ],
+      "descriptions": [
+        "Preview how a vertical YouTube video image can crop as a 16:9 custom thumbnail and a 4:5 Home, Explore, or Subscriptions fallback. Free, local, and no upload."
+      ],
+      "h1": [
+        "Will your YouTube subject survive the crop?"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 4,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/crop-screenshot",
+      "status": 200,
+      "titles": [
+        "Screenshot Cropper — Crop Screenshots Online | ImageCropKit"
+      ],
+      "descriptions": [
+        "Crop screenshots online without uploading them. Trim browser screenshots, chat screenshots, mobile screenshots, and work screenshots locally in your browser."
+      ],
+      "h1": [
+        "Crop Screenshot Online"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/crop-screenshot"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 3,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/trim-screenshot",
+      "status": 200,
+      "titles": [
+        "Trim Screenshot — Remove Edges and Whitespace | ImageCropKit"
+      ],
+      "descriptions": [
+        "Trim screenshots online without uploading them. Remove browser chrome, empty margins, desktop background, and extra whitespace locally in your browser."
+      ],
+      "h1": [
+        "Trim Screenshot Online"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/trim-screenshot"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 3,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/ai-dataset-cropper",
+      "status": 200,
+      "titles": [
+        "AI Dataset Cropper — 512, 768, 1024 Training Sizes | ImageCropKit"
+      ],
+      "descriptions": [
+        "Batch crop images for AI datasets, LoRA training, Stable Diffusion, and Flux. Export 512x512, 768x768, 1024x1024, portrait, and landscape sizes locally."
+      ],
+      "h1": [
+        "AI Dataset Cropper"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/ai-dataset-cropper"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 3,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/profile-photo-cropper",
+      "status": 200,
+      "titles": [
+        "Profile Photo Cropper — Headshots, Passport, Avatars | ImageCropKit"
+      ],
+      "descriptions": [
+        "Crop profile photos online for LinkedIn, resumes, passport-style photos, square profile pictures, and round avatars. No upload, no signup, no watermark."
+      ],
+      "h1": [
+        "Profile Photo Cropper"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/profile-photo-cropper"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 3,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/bulk-crop-images",
+      "status": 200,
+      "titles": [
+        "Bulk Crop Images Online — Batch Crop | ImageCropKit"
+      ],
+      "descriptions": [
+        "Bulk crop images online in your browser. Crop multiple images to the same aspect ratio, adjust crops individually, and download all results as a ZIP file. Supports JPG, PNG, and WebP."
+      ],
+      "h1": [
+        "Bulk Crop Images Online"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/bulk-crop-images"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 4,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/blog/social-media-image-sizes-2026",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/crop-image-locally",
+      "status": 200,
+      "titles": [
+        "Image Cropper Locally — Private Browser Cropper, No Upload | ImageCropKit"
+      ],
+      "descriptions": [
+        "Crop images locally in your browser with zero server upload. Technical explanation of how local processing works, privacy verification steps, and when to choose local vs server-based tools."
+      ],
+      "h1": [
+        "Image Cropper Locally — No Upload, No Signup"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/crop-image-locally"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 3,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/crop-image-to-1x1",
+      "status": 200,
+      "titles": [
+        "Square Image Cropper — Free Online, 1:1 Crop | ImageCropKit"
+      ],
+      "descriptions": [
+        "Free online square image cropper. Crop any image to a perfect 1:1 square for profile photos, product photos, social posts, and AI datasets. No upload."
+      ],
+      "h1": [
+        "Square Image Cropper — Free Online"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/crop-image-to-1x1"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 3,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/crop-product-images",
+      "status": 200,
+      "titles": [
+        "Product Image Cropper — Free Online, Shopify, Etsy, Amazon | ImageCropKit"
+      ],
+      "descriptions": [
+        "Crop product images online free for Shopify (2048x2048), Etsy, Amazon. No upload, no signup, no watermark. Batch crop and download as ZIP. Browser-based, 100% private."
+      ],
+      "h1": [
+        "Product Image Cropper — Free Online"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/crop-product-images"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 4,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/crop-image-for-instagram",
+      "status": 200,
+      "titles": [
+        "Instagram Image Cropper — Free Online, Posts, Stories, Reels | ImageCropKit"
+      ],
+      "descriptions": [
+        "Free online image cropper for Instagram. Crop posts, stories, reels, and profile pictures. Choose square, portrait, story, reel cover, and profile presets. No upload, no signup."
+      ],
+      "h1": [
+        "Instagram Image Cropper — Free Online"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/crop-image-for-instagram"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 4,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/crop-image-for-tiktok",
+      "status": 200,
+      "titles": [
+        "TikTok Image Cropper — Free Online, No Upload | ImageCropKit"
+      ],
+      "descriptions": [
+        "Crop images for TikTok posts and video covers for free. 1080x1920 vertical presets. No upload, no signup, no watermark. Processed locally in your browser."
+      ],
+      "h1": [
+        "TikTok Image Cropper — Free Online"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/crop-image-for-tiktok"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 4,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/crop-headshot",
+      "status": 200,
+      "titles": [
+        "Headshot Cropper — Free Online, LinkedIn & Profile Photos | ImageCropKit"
+      ],
+      "descriptions": [
+        "Free online headshot cropper. Make clean, centered headshots for LinkedIn, resumes, ID-style photos, and team pages. No upload, no signup."
+      ],
+      "h1": [
+        "Headshot Cropper — Free Online"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/crop-headshot"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 4,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/crop-images-for-lora-training",
+      "status": 200,
+      "titles": [
+        "LoRA Training Image Cropper — 512, 768, 1024 Batch Crop | ImageCropKit"
+      ],
+      "descriptions": [
+        "Free online image cropper for LoRA training and AI datasets. Batch crop images to 512x512, 768x768, or 1024x1024 locally in your browser. No upload."
+      ],
+      "h1": [
+        "Crop Images for LoRA Training"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/crop-images-for-lora-training"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 3,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/circle-crop-image",
+      "status": 200,
+      "titles": [
+        "Circle Image Cropper — Free Online, Round Crop | ImageCropKit"
+      ],
+      "descriptions": [
+        "Crop an image into a circle online for free. Make round profile pictures, avatars, and logos. Export as PNG with transparency or JPG with a white background."
+      ],
+      "h1": [
+        "Circle Image Cropper — Free Online"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/circle-crop-image"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 4,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/crop-image-to-passport-size",
+      "status": 200,
+      "titles": [
+        "Passport Photo Cropper — Free Online, US, UK, EU, India & China | ImageCropKit"
+      ],
+      "descriptions": [
+        "Crop passport photos online free. Choose US, UK, EU, India, China, or 1×1 inch ID presets. White background, exact dimensions, no upload, local browser processing."
+      ],
+      "h1": [
+        "Passport Photo Cropper — Free Online"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/crop-image-to-passport-size"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 4,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/crop-image-by-dimensions",
+      "status": 200,
+      "titles": [
+        "Crop by Dimensions — Custom Pixels | ImageCropKit"
+      ],
+      "descriptions": [
+        "Crop an image online free to any exact width and height in pixels. Enter custom dimensions, choose from common presets, and download the precise size you need. No upload."
+      ],
+      "h1": [
+        "Crop Image by Exact Dimensions"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/crop-image-by-dimensions"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 3,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/crop-and-resize-image",
+      "status": 200,
+      "titles": [
+        "Crop and Resize — Custom Dimensions | ImageCropKit"
+      ],
+      "descriptions": [
+        "Crop and resize images online free. Enter exact width and height, choose aspect ratios, and download the precise size you need. No upload, no signup, browser-based."
+      ],
+      "h1": [
+        "Crop and Resize Image Online"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/crop-and-resize-image"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 3,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/oval-crop-image",
+      "status": 200,
+      "titles": [
+        "Oval Image Cropper — Free Online, Ellipse Crop | ImageCropKit"
+      ],
+      "descriptions": [
+        "Free online oval image cropper. Crop images into oval and elliptical shapes. Choose portrait, tall, or round oval presets. Export as PNG with transparency or JPG with white background."
+      ],
+      "h1": [
+        "Oval Image Cropper — Free Online"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/oval-crop-image"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 3,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+      "status": 200,
+      "titles": [
+        "Crop Image to OG Image (1200×630) — Free Open Graph Resizer | ImageCropKit"
+      ],
+      "descriptions": [
+        "Crop any image to 1200×630 for Open Graph (OG) social share cards. Free browser-based tool — no upload, no signup, no watermark. Works for Twitter, Facebook, LinkedIn, and Slack previews."
+      ],
+      "h1": [
+        "Crop Image to OG Image (1200×630)"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 4,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/twitter-header-resizer",
+      "status": 200,
+      "titles": [
+        "Twitter Header Resizer — Crop to 1500×500 Free Online | ImageCropKit"
+      ],
+      "descriptions": [
+        "Resize and crop images to 1500×500 for your Twitter/X profile header. Free browser-based tool — no upload, no signup, no watermark. Keeps your header sharp on desktop and mobile."
+      ],
+      "h1": [
+        "Twitter Header Resizer — 1500×500"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/twitter-header-resizer"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 4,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/linkedin-background-photo-resizer",
+      "status": 200,
+      "titles": [
+        "LinkedIn Background Photo Resizer — 1584×396 Free Online | ImageCropKit"
+      ],
+      "descriptions": [
+        "Resize and crop images to 1584×396 for your LinkedIn background banner. Free browser-based tool — no upload, no signup, no watermark. Keeps your banner sharp on desktop and mobile."
+      ],
+      "h1": [
+        "LinkedIn Background Photo Resizer — 1584×396"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/linkedin-background-photo-resizer"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 4,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/discord-profile-picture-resizer",
+      "status": 200,
+      "titles": [
+        "Discord Profile Picture Resizer — 128×128 Free Online | ImageCropKit"
+      ],
+      "descriptions": [
+        "Resize and crop images to 128×128 (or 512×512 HD) for your Discord profile picture. Free browser-based tool — no upload, no signup, no watermark. PNG with transparency supported."
+      ],
+      "h1": [
+        "Discord Profile Picture Resizer — 128×128"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/discord-profile-picture-resizer"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 4,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/twitch-profile-picture-resizer",
+      "status": 200,
+      "titles": [
+        "Twitch Profile Picture Resizer — 256×256 Free Online | ImageCropKit"
+      ],
+      "descriptions": [
+        "Resize and crop images to 256×256 (or 800×800 upload) for your Twitch profile picture. Free browser-based tool — no upload, no signup, no watermark. JPG and PNG supported."
+      ],
+      "h1": [
+        "Twitch Profile Picture Resizer — 256×256"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/twitch-profile-picture-resizer"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 4,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/resize-image-to-1080x1080",
+      "status": 200,
+      "titles": [
+        "Resize Image to 1080×1080 — Free Online Square Resizer | ImageCropKit"
+      ],
+      "descriptions": [
+        "Resize and crop any image to 1080×1080 pixels — the Instagram square post size. Free browser-based tool — no upload, no signup, no watermark. Also exports 512, 768, 1024, and 2000 square sizes."
+      ],
+      "h1": [
+        "Resize Image to 1080×1080"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/resize-image-to-1080x1080"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 4,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/resize-image-to-1920x1080",
+      "status": 200,
+      "titles": [
+        "Resize Image to 1920×1080 — Free Full HD Resizer Online | ImageCropKit"
+      ],
+      "descriptions": [
+        "Resize and crop any image to 1920×1080 (Full HD, 16:9). Free browser-based tool — no upload, no signup, no watermark. Works for wallpapers, YouTube thumbnails, desktop backgrounds, and presentations."
+      ],
+      "h1": [
+        "Resize Image to 1920×1080 (Full HD)"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/resize-image-to-1920x1080"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 4,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/facebook-cover-photo-resizer",
+      "status": 200,
+      "titles": [
+        "Facebook Cover Photo Resizer — 820×312 Free Online | ImageCropKit"
+      ],
+      "descriptions": [
+        "Resize and crop images to 820×312 for your Facebook page cover photo. Free browser-based tool — no upload, no signup, no watermark. Keeps your cover sharp on desktop and mobile."
+      ],
+      "h1": [
+        "Facebook Cover Photo Resizer — 820×312"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/facebook-cover-photo-resizer"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 4,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/blog",
+      "status": 200,
+      "titles": [
+        "Blog - Image Crop Guides & Social Media Sizes | ImageCropKit"
+      ],
+      "descriptions": [
+        "Guides on image cropping, social media image sizes, product photo requirements, and privacy-first photo editing tips."
+      ],
+      "h1": [
+        "Image Cropping Guides & Social Media Sizes"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/blog"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 1,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/blog/best-free-image-cropper-no-watermark",
+        "https://imagecropkit.com/blog/bulk-crop-images-guide",
+        "https://imagecropkit.com/blog/crop-ai-generated-images-for-social-media",
+        "https://imagecropkit.com/blog/crop-image-without-losing-quality",
+        "https://imagecropkit.com/blog/ecommerce-product-image-size-guide",
+        "https://imagecropkit.com/blog/free-online-image-cropper-vs-desktop-software",
+        "https://imagecropkit.com/blog/how-to-crop-circle-image-online",
+        "https://imagecropkit.com/blog/how-to-crop-headshot-for-linkedin",
+        "https://imagecropkit.com/blog/how-to-crop-image-on-mac",
+        "https://imagecropkit.com/blog/how-to-crop-image-on-windows",
+        "https://imagecropkit.com/blog/how-to-crop-image-online",
+        "https://imagecropkit.com/blog/how-to-crop-images-for-instagram",
+        "https://imagecropkit.com/blog/how-to-make-passport-photo-at-home",
+        "https://imagecropkit.com/blog/online-image-cropper-and-resizer",
+        "https://imagecropkit.com/blog/social-media-image-sizes-2026",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/about",
+      "status": 200,
+      "titles": [
+        "About ImageCropKit | ImageCropKit"
+      ],
+      "descriptions": [
+        "ImageCropKit is a browser-based image cropping platform for screenshots, AI datasets, and passport/profile photos. No upload, no signup, no watermark."
+      ],
+      "h1": [
+        "About ImageCropKit"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/about"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 2,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/contact",
+      "status": 200,
+      "titles": [
+        "Contact ImageCropKit | ImageCropKit"
+      ],
+      "descriptions": [
+        "Get in touch with the ImageCropKit team. Report bugs, request features, or ask questions about the free online image cropper."
+      ],
+      "h1": [
+        "Contact Us"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/contact"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 1,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/privacy",
+      "status": 200,
+      "titles": [
+        "Privacy Policy - ImageCropKit | ImageCropKit"
+      ],
+      "descriptions": [
+        "Read the ImageCropKit privacy policy. Learn how images are processed locally in your browser without server uploads."
+      ],
+      "h1": [
+        "Privacy Policy"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/privacy"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 1,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/terms",
+      "status": 200,
+      "titles": [
+        "Terms of Use - ImageCropKit | ImageCropKit"
+      ],
+      "descriptions": [
+        "Read the terms of use for ImageCropKit, a free browser-based image cropping tool."
+      ],
+      "h1": [
+        "Terms of Use"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/terms"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 1,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/blog/best-free-image-cropper-no-watermark",
+      "status": 200,
+      "titles": [
+        "Best Free Image Croppers With No Watermark (2026 Comparison) | ImageCropKit"
+      ],
+      "descriptions": [
+        "Looking for a free image cropper that doesn't add a watermark? Compare the best options — browser tools, desktop apps, and mobile apps — with pros and cons."
+      ],
+      "h1": [
+        "Best Free Image Croppers With No Watermark"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/blog/best-free-image-cropper-no-watermark"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 2,
+      "internal_links": [
+        "https://imagecropkit.com",
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/blog/bulk-crop-images-guide",
+      "status": 200,
+      "titles": [
+        "How to Bulk Crop Images Without Losing Your Mind | ImageCropKit"
+      ],
+      "descriptions": [
+        "Practical guide to bulk cropping images for ecommerce, social media, and AI datasets. Covers aspect ratios, file formats, batch workflows, and quality preservation."
+      ],
+      "h1": [
+        "How to Bulk Crop Images Without Losing Your Mind"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/blog/bulk-crop-images-guide"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 2,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/blog/ecommerce-product-image-size-guide",
+        "https://imagecropkit.com/blog/social-media-image-sizes-2026",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/blog/crop-ai-generated-images-for-social-media",
+      "status": 200,
+      "titles": [
+        "Crop AI-Generated Images for Social Media | ImageCropKit"
+      ],
+      "descriptions": [
+        "Step-by-step guide to cropping AI-generated images for Instagram, TikTok, YouTube, and every social platform. Includes size charts for Midjourney, DALL-E 3, FLUX, and SDXL outputs."
+      ],
+      "h1": [
+        "How to Crop AI-Generated Images for Social Media"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/blog/crop-ai-generated-images-for-social-media"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 2,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/blog/crop-image-without-losing-quality",
+      "status": 200,
+      "titles": [
+        "How to Crop an Image Without Losing Quality (Free Online) | ImageCropKit"
+      ],
+      "descriptions": [
+        "Learn how to crop images without losing quality using a free online tool. Explains why cropping preserves quality, how to avoid compression artifacts, and which export settings to use."
+      ],
+      "h1": [
+        "How to Crop an Image Without Losing Quality"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/blog/crop-image-without-losing-quality"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 2,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/blog/ecommerce-product-image-size-guide",
+      "status": 200,
+      "titles": [
+        "E-commerce Product Image Sizes 2026 | ImageCropKit"
+      ],
+      "descriptions": [
+        "Exact image dimensions, background rules, and file format requirements for Amazon, Shopify, and Etsy product listings. Includes comparison table and batch cropping workflow."
+      ],
+      "h1": [
+        "E-commerce Product Image Size Guide 2026"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/blog/ecommerce-product-image-size-guide"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 2,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/blog/free-online-image-cropper-vs-desktop-software",
+      "status": 200,
+      "titles": [
+        "Free Online Image Cropper vs Desktop Software: Which Should You Use? | ImageCropKit"
+      ],
+      "descriptions": [
+        "Compare free online image croppers with desktop software like Photoshop and GIMP. Privacy, speed, quality, and cost breakdown for every use case."
+      ],
+      "h1": [
+        "Free Online Image Cropper vs Desktop Software: Which Should You Use?"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/blog/free-online-image-cropper-vs-desktop-software"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 2,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/blog/how-to-crop-circle-image-online",
+      "status": 200,
+      "titles": [
+        "How to Crop a Circle Image Online (Free, No Signup) | ImageCropKit"
+      ],
+      "descriptions": [
+        "Learn how to crop a circle image online for free. Step-by-step guide to creating round profile pictures for Zoom, LinkedIn, Discord, and social media. No upload, no quality loss."
+      ],
+      "h1": [
+        "How to Crop a Circle Image Online"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/blog/how-to-crop-circle-image-online"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 2,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/blog/crop-ai-generated-images-for-social-media",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/blog/how-to-crop-headshot-for-linkedin",
+      "status": 200,
+      "titles": [
+        "How to Crop a Headshot for LinkedIn, Resume, and ID Photos | ImageCropKit"
+      ],
+      "descriptions": [
+        "Learn how to crop a professional headshot for LinkedIn, resumes, and ID photos using a free online tool. Covers exact dimensions, framing rules, and common mistakes."
+      ],
+      "h1": [
+        "How to Crop a Headshot for LinkedIn, Resume, and ID Photos"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/blog/how-to-crop-headshot-for-linkedin"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 2,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/blog/how-to-crop-image-on-mac",
+      "status": 200,
+      "titles": [
+        "How to Crop an Image on Mac (4 Free Methods — No App Needed) | ImageCropKit"
+      ],
+      "descriptions": [
+        "Learn how to crop an image on Mac using Preview, Photos, or a free browser-based tool. Step-by-step guide with screenshots for every method."
+      ],
+      "h1": [
+        "How to Crop an Image on Mac"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/blog/how-to-crop-image-on-mac"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 2,
+      "internal_links": [
+        "https://imagecropkit.com",
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/blog/how-to-crop-image-on-windows",
+      "status": 200,
+      "titles": [
+        "How to Crop an Image on Windows (5 Free Methods) | ImageCropKit"
+      ],
+      "descriptions": [
+        "Learn how to crop an image on Windows 10/11 using Photos, Paint, Snipping Tool, or a free browser tool. Step-by-step guide for every method."
+      ],
+      "h1": [
+        "How to Crop an Image on Windows"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/blog/how-to-crop-image-on-windows"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 2,
+      "internal_links": [
+        "https://imagecropkit.com",
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/blog/how-to-crop-image-online",
+      "status": 200,
+      "titles": [
+        "How to Crop an Image Online for Free (Step-by-Step Guide) | ImageCropKit"
+      ],
+      "descriptions": [
+        "Learn how to crop an image online for free in seconds. Step-by-step guide using a browser-based tool with no upload, no signup, and no quality loss. Works on any device."
+      ],
+      "h1": [
+        "How to Crop an Image Online for Free"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/blog/how-to-crop-image-online"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 2,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/blog/bulk-crop-images-guide",
+        "https://imagecropkit.com/blog/crop-ai-generated-images-for-social-media",
+        "https://imagecropkit.com/blog/free-online-image-cropper-vs-desktop-software",
+        "https://imagecropkit.com/blog/online-image-cropper-and-resizer",
+        "https://imagecropkit.com/blog/social-media-image-sizes-2026",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/blog/how-to-crop-images-for-instagram",
+      "status": 200,
+      "titles": [
+        "How to Crop Images for Instagram: Posts, Stories, Reels, and Profile | ImageCropKit"
+      ],
+      "descriptions": [
+        "Learn how to crop images for Instagram posts, stories, reels, and profile pictures using a free online tool. Covers exact dimensions, aspect ratios, and common mistakes."
+      ],
+      "h1": [
+        "How to Crop Images for Instagram: Posts, Stories, Reels, and Profile"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/blog/how-to-crop-images-for-instagram"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 2,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/blog/how-to-make-passport-photo-at-home",
+      "status": 200,
+      "titles": [
+        "Make a Passport Photo at Home for Free | ImageCropKit"
+      ],
+      "descriptions": [
+        "Step-by-step guide to taking compliant passport photos at home. Covers US, UK, EU, India, China, and 50+ countries. Free browser-based tool with no upload."
+      ],
+      "h1": [
+        "How to Make a Passport Photo at Home for Free"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/blog/how-to-make-passport-photo-at-home"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 2,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/blog/online-image-cropper-and-resizer",
+      "status": 200,
+      "titles": [
+        "Online Image Cropper and Resizer: When You Need Both | ImageCropKit"
+      ],
+      "descriptions": [
+        "Learn when to crop and resize images online for free. Practical guide covering social media, ecommerce, web design, and print with a free browser-based tool."
+      ],
+      "h1": [
+        "Online Image Cropper and Resizer: When You Need Both"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/blog/online-image-cropper-and-resizer"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 2,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/blog/ecommerce-product-image-size-guide",
+        "https://imagecropkit.com/blog/social-media-image-sizes-2026",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    },
+    {
+      "url": "https://imagecropkit.com/blog/social-media-image-sizes-2026",
+      "status": 200,
+      "titles": [
+        "Social Media Image Sizes 2026 | ImageCropKit"
+      ],
+      "descriptions": [
+        "Complete guide to social media image sizes for 2026. Instagram, TikTok, Facebook, YouTube, LinkedIn, Pinterest, and X/Twitter dimensions with free cropping tools."
+      ],
+      "h1": [
+        "Social Media Image Sizes Cheat Sheet 2026"
+      ],
+      "canonicals": [
+        "https://imagecropkit.com/blog/social-media-image-sizes-2026"
+      ],
+      "robots": [],
+      "x_robots_tag": [],
+      "json_ld_count": 2,
+      "internal_links": [
+        "https://imagecropkit.com/",
+        "https://imagecropkit.com/about",
+        "https://imagecropkit.com/ai-dataset-cropper",
+        "https://imagecropkit.com/blog",
+        "https://imagecropkit.com/blog/bulk-crop-images-guide",
+        "https://imagecropkit.com/blog/ecommerce-product-image-size-guide",
+        "https://imagecropkit.com/blog/free-online-image-cropper-vs-desktop-software",
+        "https://imagecropkit.com/blog/how-to-crop-image-online",
+        "https://imagecropkit.com/bulk-crop-images",
+        "https://imagecropkit.com/circle-crop-image",
+        "https://imagecropkit.com/contact",
+        "https://imagecropkit.com/crop-and-resize-image",
+        "https://imagecropkit.com/crop-headshot",
+        "https://imagecropkit.com/crop-image",
+        "https://imagecropkit.com/crop-image-by-dimensions",
+        "https://imagecropkit.com/crop-image-for-instagram",
+        "https://imagecropkit.com/crop-image-for-tiktok",
+        "https://imagecropkit.com/crop-image-locally",
+        "https://imagecropkit.com/crop-image-to-1x1",
+        "https://imagecropkit.com/crop-image-to-og-image-1200x630",
+        "https://imagecropkit.com/crop-image-to-passport-size",
+        "https://imagecropkit.com/crop-images-for-lora-training",
+        "https://imagecropkit.com/crop-product-images",
+        "https://imagecropkit.com/crop-screenshot",
+        "https://imagecropkit.com/discord-profile-picture-resizer",
+        "https://imagecropkit.com/facebook-cover-photo-resizer",
+        "https://imagecropkit.com/linkedin-background-photo-resizer",
+        "https://imagecropkit.com/oval-crop-image",
+        "https://imagecropkit.com/privacy",
+        "https://imagecropkit.com/profile-photo-cropper",
+        "https://imagecropkit.com/resize-image-to-1080x1080",
+        "https://imagecropkit.com/resize-image-to-1920x1080",
+        "https://imagecropkit.com/smart-crop-image",
+        "https://imagecropkit.com/social-media-image-pack",
+        "https://imagecropkit.com/social-media-safe-zone",
+        "https://imagecropkit.com/terms",
+        "https://imagecropkit.com/trim-screenshot",
+        "https://imagecropkit.com/twitch-profile-picture-resizer",
+        "https://imagecropkit.com/twitter-header-resizer",
+        "https://imagecropkit.com/youtube-vertical-thumbnail-checker"
+      ],
+      "issues": []
+    }
+  ],
+  "duplicates": {
+    "titles": {},
+    "descriptions": {}
+  },
+  "no_inbound_link_from_audited_pages": []
+}

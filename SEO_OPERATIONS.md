@@ -36,9 +36,9 @@ Windows are planning targets, not reasons to delay ready work or declare unfinis
 | ID | Priority | Task | Status |
 | --- | --- | --- | --- |
 | A01 | P0 | Establish baseline and recurring operating plan | Done: initial observations below; full crawl still A02 |
-| A02 | P0 | Audit all sitemap URLs; save structured status/canonical/title/H1/robots results and rank actual defects | Next |
+| A02 | P0 | Audit all sitemap URLs; save structured status/canonical/title/H1/robots results and rank actual defects | Done: 2026-09-09, 51 pages; report below |
 | A03 | P0 | Verify GA event receipt and obtain GSC/GA reporting access | Blocked: no reporting connector found; script presence alone insufficient |
-| A04 | P1 | Audit sitemap lastmod against real content changes | Pending: all observed entries share 2026-08-07; do not mass-update to today |
+| A04 | P1 | Audit sitemap lastmod against real content changes | Next: all observed entries share 2026-08-07; do not mass-update to today |
 | B01 | P1 | Audit existing social-media-image-sizes-2026 guide and its tool links | Pending: unsupported 17-30% engagement statement identified |
 | B02 | P1 | Verify or implement preset-specific guide-to-export-pack links | Pending |
 | C01 | P2 | Prepare three creator demos and distribution drafts | Pending |
@@ -55,3 +55,14 @@ Windows are planning targets, not reasons to delay ready work or declare unfinis
 - Existing guide includes an unsourced claim of 17-30% higher engagement for 4:5 posts. Review the evidence or remove the claim during B01.
 - No GA/GSC reporting tool was available in tool discovery. Clicks, impressions, indexing coverage and conversion baseline are unknown.
 - This run creates the persistent cycle, backlog and automation continuation rules. No ranking improvement is claimed. Next run starts A02 and continues independently of the A03 access dependency.
+
+### 2026-09-09: A02 sitemap audit completed
+
+- Evidence: [structured page results](reports/seo/2026-09-09-sitemap-audit.json); repeatable command: `python3 scripts/audit_sitemap.py`.
+- 51/51 sitemap URLs returned final HTTP 200 after allowing up to three redirects. All have one matching canonical (root slash normalized), one nonempty title, one H1 and one nonempty description.
+- No duplicate titles/descriptions, detected noindex directives, or JSON-LD syntax errors. This does not validate structured-data eligibility or whether Google selects those canonicals.
+- Every sitemap page has an incoming link in the audited HTML set. Internal destinations outside the sitemap, redirect chains, robots policies beyond the observed permissive file, and client-rendered content were not exhaustively audited.
+- Production robots.txt permits crawling. Prior production commit status was successful. No page edits were warranted by these checks; only the audit utility, public-page evidence and this log changed.
+- GA/GSC access remains blocked as recorded in A03; search traffic, actual indexation and conversion trends remain unknown. No health score or ranking gain is inferred from this technical pass.
+- Next actionable task is A04: verify lastmod provenance against real content revisions; then B01 source/claim review. Do not repeat A02 on every heartbeat unless a change or incident warrants it.
+- Validation: production crawl completed; pnpm build passed; lint passed with six existing image warnings. Publication blocked: two gh auth status checks reported invalid credentials for the active sherpa-zaric account. Keep this run as a local commit until authentication works, then push and verify deployment before further publication.
