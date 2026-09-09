@@ -38,8 +38,8 @@ Windows are planning targets, not reasons to delay ready work or declare unfinis
 | A01 | P0 | Establish baseline and recurring operating plan | Done: initial observations below; full crawl still A02 |
 | A02 | P0 | Audit all sitemap URLs; save structured status/canonical/title/H1/robots results and rank actual defects | Done: 2026-09-09, 51 pages; report below |
 | A03 | P0 | Verify GA event receipt and obtain GSC/GA reporting access | Blocked: no reporting connector found; script presence alone insufficient |
-| A04 | P1 | Audit sitemap lastmod against real content changes | Next: all observed entries share 2026-08-07; do not mass-update to today |
-| B01 | P1 | Audit existing social-media-image-sizes-2026 guide and its tool links | Pending: unsupported 17-30% engagement statement identified |
+| A04 | P1 | Audit sitemap lastmod against real content changes | Implemented locally: inaccurate global date removed; publication blocked by GitHub authentication |
+| B01 | P1 | Audit existing social-media-image-sizes-2026 guide and its tool links | Next: unsupported 17-30% engagement statement identified |
 | B02 | P1 | Verify or implement preset-specific guide-to-export-pack links | Pending |
 | C01 | P2 | Prepare three creator demos and distribution drafts | Pending |
 | D01 | P1 | Review Cycle 1 outcomes and create Cycle 2 | Pending |
@@ -66,3 +66,12 @@ Windows are planning targets, not reasons to delay ready work or declare unfinis
 - GA/GSC access remains blocked as recorded in A03; search traffic, actual indexation and conversion trends remain unknown. No health score or ranking gain is inferred from this technical pass.
 - Next actionable task is A04: verify lastmod provenance against real content revisions; then B01 source/claim review. Do not repeat A02 on every heartbeat unless a change or incident warrants it.
 - Validation: production crawl completed; pnpm build passed; lint passed with six existing image warnings. Publication blocked: two gh auth status checks reported invalid credentials for the active sherpa-zaric account. Keep this run as a local commit until authentication works, then push and verify deployment before further publication.
+
+### 2026-09-09: A04 lastmod provenance
+
+- Production homepage returned 200. Active sherpa-zaric authentication still reports invalid credentials; previous local audit commit remains unpublished.
+- app/sitemap.ts sets every entry to a single LAST_UPDATED value of 2026-08-07. Commit a75039f changed the privacy page's analytics policy on 2026-09-08, proving that the shared date no longer describes all pages.
+- Removed the optional global lastModified value. All sitemap URLs, priorities and frequencies remain unchanged. No build timestamps or speculative per-page dates added.
+- Basis: [Google sitemap guidance](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap?hl=en) requires consistently verifiable lastmod accuracy; the installed Next.js sitemap type permits omission. Restore dates only when a maintained per-page significant-revision source is available.
+- Next: publish and verify the pending sitemap fix once authentication works; B01 content review can proceed independently. GA/GSC metrics remain unknown.
+- Validation: pnpm build passed; lint passed with six existing image warnings. Parsed the generated sitemap XML and compared its URL set with A02 evidence: all 51 URLs unchanged and no lastmod elements. Production verification remains pending publication.
