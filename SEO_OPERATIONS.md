@@ -39,7 +39,7 @@ Windows are planning targets, not reasons to delay ready work or declare unfinis
 | A02 | P0 | Audit all sitemap URLs; save structured status/canonical/title/H1/robots results and rank actual defects | Done: 2026-09-09, 51 pages; report below |
 | A03 | P0 | Verify GA event receipt and obtain GSC/GA reporting access | Blocked: no reporting connector found; script presence alone insufficient |
 | A04 | P1 | Audit sitemap lastmod against real content changes | Implemented locally: inaccurate global date removed; publication blocked by GitHub authentication |
-| B01 | P1 | Audit existing social-media-image-sizes-2026 guide and its tool links | Next: unsupported 17-30% engagement statement identified |
+| B01 | P1 | Audit existing social-media-image-sizes-2026 guide and its tool links | In progress: removed unsupported performance claims; sourced YouTube/Pinterest; remaining platform tables need review |
 | B02 | P1 | Verify or implement preset-specific guide-to-export-pack links | Pending |
 | C01 | P2 | Prepare three creator demos and distribution drafts | Pending |
 | D01 | P1 | Review Cycle 1 outcomes and create Cycle 2 | Pending |
@@ -75,3 +75,11 @@ Windows are planning targets, not reasons to delay ready work or declare unfinis
 - Basis: [Google sitemap guidance](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap?hl=en) requires consistently verifiable lastmod accuracy; the installed Next.js sitemap type permits omission. Restore dates only when a maintained per-page significant-revision source is available.
 - Next: publish and verify the pending sitemap fix once authentication works; B01 content review can proceed independently. GA/GSC metrics remain unknown.
 - Validation: pnpm build passed; lint passed with six existing image warnings. Parsed the generated sitemap XML and compared its URL set with A02 evidence: all 51 URLs unchanged and no lastmod elements. Production verification remains pending publication.
+
+### 2026-09-09: B01 first editorial pass
+
+- Production guide returned 200. GitHub keyring authentication recovered with sherpa-zaric active; pending A02/A04 commits can now publish together with this run.
+- Removed unsupported Instagram engagement percentages, Pinterest distribution guarantees, and absolute TikTok/LinkedIn display claims. Added a contextual link to the existing creator export pack.
+- Checked YouTube official help: current recommendation is 3840x2160 for video and 2160x3840 for Shorts. Guide distinguishes these from the checker's existing output sizes and links to exact-size cropping. Pinterest creator FAQ search evidence recommends 2:3 images and 9:16 videos; direct FAQ fetch timed out. Sources linked in the guide.
+- Preserved original publication date and added a scoped editorial update date. B01 remains incomplete: Instagram, TikTok, Facebook, LinkedIn and X tables still need primary-source review; no fresh all-platform verification claimed.
+- GA/GSC reporting remains unavailable. Next task: continue B01 remaining specifications, then B02 preset-specific entry behavior. No measured traffic impact yet.
