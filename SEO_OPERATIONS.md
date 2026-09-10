@@ -91,3 +91,12 @@ Windows are planning targets, not reasons to delay ready work or declare unfinis
 - Labeled the post canvas as an example, removed unsupported fixed four-image grid and summary-card dimensions, and limited the editorial review claim to verified formats.
 - Next: review Instagram specifications against primary sources, then TikTok, Facebook and LinkedIn. Continue B01, not a new cycle; no measured traffic impact or GA/GSC receipt claimed.
 - Validation: pnpm build passed; pnpm lint passed with six existing image warnings; git diff --check passed. Five-hour heartbeat continuation now follows the unfinished backlog without a stale A02 priority.
+
+### 2026-09-10: B01 Instagram source-access limitation
+
+- Production homepage returned HTTP 200; previous commit 1377681 has successful deployment status. Working tree was clean before this run.
+- Instagram photo-resolution and Reel-size help pages returned HTTP 429; Facebook help mirrors redirected to blocked/login pages. The agent-reach Jina reader returned 401. No authenticated access or access-control workaround attempted.
+- Secondary search results suggest a newer 3:4 feed option, but no accessible primary source was verified. Do not promote those results into an official specification or mark Instagram review complete.
+- Clarified that Instagram table entries are example canvases, not exhaustive formats or official minimums. Removed the unsourced universal Reel-cover row and linked official help with an explicit verification caveat. Existing crop presets and publication date are unchanged.
+- Next: review TikTok against primary sources; retain Instagram source verification as blocked until an accessible official source is available. Facebook and LinkedIn remain pending. GA/GSC reporting and traffic impact remain unknown.
+- Validation: pnpm build and git diff --check passed; pnpm lint completed with zero errors and six existing image warnings.
