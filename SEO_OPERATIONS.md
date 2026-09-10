@@ -39,7 +39,7 @@ Windows are planning targets, not reasons to delay ready work or declare unfinis
 | A02 | P0 | Audit all sitemap URLs; save structured status/canonical/title/H1/robots results and rank actual defects | Done: 2026-09-09, 51 pages; report below |
 | A03 | P0 | Verify GA event receipt and obtain GSC/GA reporting access | Blocked: no reporting connector found; script presence alone insufficient |
 | A04 | P1 | Audit sitemap lastmod against real content changes | Done: published with 064a37e; production sitemap has 51 URLs without inaccurate lastmod |
-| B01 | P1 | Audit existing social-media-image-sizes-2026 guide and its tool links | In progress: sourced YouTube/Pinterest and X profile/header guidance; Instagram, TikTok, Facebook and LinkedIn remain |
+| B01 | P1 | Audit existing social-media-image-sizes-2026 guide and its tool links | In progress: sourced YouTube/Pinterest and X profile/header guidance; Instagram/TikTok source access blocked; LinkedIn next, Facebook pending |
 | B02 | P1 | Verify or implement preset-specific guide-to-export-pack links | Pending |
 | C01 | P2 | Prepare three creator demos and distribution drafts | Pending |
 | D01 | P1 | Review Cycle 1 outcomes and create Cycle 2 | Pending |
@@ -100,3 +100,12 @@ Windows are planning targets, not reasons to delay ready work or declare unfinis
 - Clarified that Instagram table entries are example canvases, not exhaustive formats or official minimums. Removed the unsourced universal Reel-cover row and linked official help with an explicit verification caveat. Existing crop presets and publication date are unchanged.
 - Next: review TikTok against primary sources; retain Instagram source verification as blocked until an accessible official source is available. Facebook and LinkedIn remain pending. GA/GSC reporting and traffic impact remain unknown.
 - Validation: pnpm build and git diff --check passed; pnpm lint completed with zero errors and six existing image warnings.
+
+### 2026-09-10: B01 TikTok source check
+
+- Homepage returned HTTP 200. Previous commit 125fe92 has successful deployment status. Working tree was clean and sherpa-zaric authentication is active.
+- Official profile-photo and editing/posting help URLs returned no article body through web extraction. A direct request to the profile-photo URL redirected to TikTok's new support FAQ route; following it returned an application shell without readable specification text. Jina reader returned 401. Search results did not provide usable primary-source evidence.
+- No avatar minimum, photo-post dimensions or cover-upload behavior was verified. Existing starting-point guidance is unchanged; no speculative specification or fresh verification date published. TikTok verification remains blocked, not complete.
+- Next actionable task: review LinkedIn profile/banner guidance against accessible primary sources. Facebook remains pending; revisit Instagram/TikTok when source access changes rather than retrying unchanged failures every heartbeat. B02 can proceed independently if remaining sources stay unavailable.
+- GA/GSC reporting remains unavailable; no new traffic, indexing or conversion measurement. This run records evidence only and makes no user-facing website changes.
+- Validation: pnpm build and git diff --check passed; pnpm lint passed with six existing image warnings.
