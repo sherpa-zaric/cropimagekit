@@ -1,6 +1,7 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState, type ChangeEvent, type MouseEvent } from "react";
+import { Suspense, useCallback, useEffect, useMemo, useRef, useState, type ChangeEvent, type MouseEvent } from "react";
+import { useSearchParams } from "next/navigation";
 import ReactCrop, { type Crop } from "react-image-crop";
 import "react-image-crop/dist/ReactCrop.css";
 import { Check, CircleDot, Download, RotateCcw, X } from "lucide-react";
@@ -87,12 +88,26 @@ function fileBaseName(name: string): string {
 }
 
 export default function ExportPackEditor() {
+  return (
+    <Suspense fallback={<div className="min-h-64" role="status" aria-label="Loading image editor" />}>
+      <LinkedExportPackEditor />
+    </Suspense>
+  );
+}
+
+function LinkedExportPackEditor() {
+  const searchParams = useSearchParams();
+  const pack = exportPacks.find((item) => item.id === searchParams.get("pack")) ?? exportPacks[0];
+  return <PackEditor key={pack.id} initialPack={pack} />;
+}
+
+function PackEditor({ initialPack }: { initialPack: ExportPack }) {
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [imageUrl, setImageUrl] = useState<string | null>(null);
   const [imageElement, setImageElement] = useState<HTMLImageElement | null>(null);
-  const [activePackId, setActivePackId] = useState(exportPacks[0].id);
-  const [selectedPresetIds, setSelectedPresetIds] = useState<string[]>(creatorPresetIds);
-  const [activePresetId, setActivePresetId] = useState(creatorPresetIds[0]);
+  const [activePackId, setActivePackId] = useState(initialPack.id);
+  const [selectedPresetIds, setSelectedPresetIds] = useState<string[]>(() => initialPack.presets.map((preset) => preset.id));
+  const [activePresetId, setActivePresetId] = useState(initialPack.presets[0].id);
   const [cropsByPreset, setCropsByPreset] = useState<Record<string, Crop>>({});
   const [focal, setFocal] = useState<FocalPoint | null>(null);
   const [focalMode, setFocalMode] = useState(false);
@@ -341,6 +356,7 @@ export default function ExportPackEditor() {
                   key={pack.id}
                   type="button"
                   onClick={() => handlePackSelect(pack)}
+                  aria-pressed={activePackId === pack.id}
                   className={`rounded-md border p-3 text-left transition-colors ${activePackId === pack.id ? "border-foreground bg-muted" : "border-border hover:bg-muted/50"}`}
                 >
                   <span className="block text-sm font-medium">{pack.name}</span>

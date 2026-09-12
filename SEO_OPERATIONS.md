@@ -4,7 +4,7 @@ Started: 2026-09-08. Owner: Codex, with user authorization to test, commit, push
 
 ## Operating model
 
-Work in rolling 12-week cycles. Run every five hours, continuing the current backlog rather than inventing a new plan each run. A run may deliver a verified improvement, collect evidence, or record a blocked dependency. Do not publish merely to fill a schedule.
+Work in rolling 12-week cycles. Run once daily at 09:00 Asia/Shanghai, continuing the current backlog rather than inventing a new plan each run. Deliver a verified functional improvement or a complete actionable analysis, not isolated checks or log commits. Do not publish merely to fill a schedule.
 
 The product thesis and exclusions remain in IMPLEMENTATION_PLAN.md and CLAUDE.md. Prioritize creators and the multi-size export workflow. Preserve unrelated work. Never commit credentials or user analytics exports to this public repository.
 
@@ -37,10 +37,10 @@ Windows are planning targets, not reasons to delay ready work or declare unfinis
 | --- | --- | --- | --- |
 | A01 | P0 | Establish baseline and recurring operating plan | Done: initial observations below; full crawl still A02 |
 | A02 | P0 | Audit all sitemap URLs; save structured status/canonical/title/H1/robots results and rank actual defects | Done: 2026-09-09, 51 pages; report below |
-| A03 | P0 | Verify GA event receipt and obtain GSC/GA reporting access | Blocked: no reporting connector found; script presence alone insufficient |
+| A03 | P0 | Verify GA event receipt and obtain GSC/GA reporting access | In progress: browser reporting access verified; export-event receipt and full comparative analysis pending; private evidence outside git |
 | A04 | P1 | Audit sitemap lastmod against real content changes | Done: published with 064a37e; production sitemap has 51 URLs without inaccurate lastmod |
 | B01 | P1 | Audit existing social-media-image-sizes-2026 guide and its tool links | In progress: sourced YouTube/Pinterest and X profile/header guidance; Instagram/TikTok source access blocked; LinkedIn next, Facebook pending |
-| B02 | P1 | Verify or implement preset-specific guide-to-export-pack links | Pending |
+| B02 | P1 | Verify or implement preset-specific guide-to-export-pack links | Implemented: creator/store/ai links; desktop/mobile ZIP verification passed |
 | C01 | P2 | Prepare three creator demos and distribution drafts | Pending |
 | D01 | P1 | Review Cycle 1 outcomes and create Cycle 2 | Pending |
 
@@ -109,3 +109,10 @@ Windows are planning targets, not reasons to delay ready work or declare unfinis
 - Next actionable task: review LinkedIn profile/banner guidance against accessible primary sources. Facebook remains pending; revisit Instagram/TikTok when source access changes rather than retrying unchanged failures every heartbeat. B02 can proceed independently if remaining sources stay unavailable.
 - GA/GSC reporting remains unavailable; no new traffic, indexing or conversion measurement. This run records evidence only and makes no user-facing website changes.
 - Validation: pnpm build and git diff --check passed; pnpm lint passed with six existing image warnings.
+
+### 2026-09-12: B02 preset entry implementation
+
+- Added validated pack query selection to the editor with Creator fallback and a Suspense boundary. Guide now links to Creator, Store and AI export workflows. Canonical remains query-free; no new sitemap URLs.
+- Playwright on local production build at widths 1280 and 390 verified guide navigation, selected pack and output counts, switching crop previews, ZIP download and decoded image dimensions for all three packs. No page errors or horizontal overflow; screenshots saved outside git. Browser skill unavailable, regular Playwright used.
+- Build passed; lint passed with six existing warnings. Other uncommitted page/showcase work was preserved and excluded from this commit. Tests used that working-tree build; production must independently verify the scoped commit.
+- Next: A03 indexing diagnosis and export-event receipt. Source-verification blockers must not replace implementation work. Private analytics evidence stays outside the public repository.
