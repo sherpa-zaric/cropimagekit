@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import FAQSection from "@/components/FAQSection";
 import RelatedTools from "@/components/RelatedTools";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 import { SITE_URL } from "@/lib/siteConfig";
 import { basicPresets } from "@/lib/presets";
 
@@ -53,6 +54,8 @@ export default function SmartCropImagePage() {
       </div>
 
       <SmartCropEditor defaultPreset={defaultPreset} showPresets={smartPresets} showTrustBadges />
+
+      <ToolShowcase mode="smart" ratio="4 / 5" outputLabel="Subject stays centered" caption="Lock the subject once — every ratio keeps it centered." />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>Smart focal-point image cropper</h2>

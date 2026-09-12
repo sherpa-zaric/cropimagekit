@@ -6,6 +6,7 @@ const CropEditor = dynamic(() => import("@/components/CropEditor"), {
 import RelatedTools from "@/components/RelatedTools";
 import FAQSection from "@/components/FAQSection";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 import { socialPresets } from "@/lib/presets";
 
 export const metadata: Metadata = {
@@ -44,6 +45,8 @@ export default function OGImagePage() {
       </div>
 
       <CropEditor defaultPreset={defaultPreset} showPresets={ogPresets} showTrustBadges />
+
+      <ToolShowcase ratio="1200 / 630" outputLabel="1200 × 630" caption="The share-card size every platform accepts." />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>What is an OG image and why 1200×630?</h2>

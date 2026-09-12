@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import FAQSection from "@/components/FAQSection";
 import RelatedTools from "@/components/RelatedTools";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 import { SITE_URL } from "@/lib/siteConfig";
 
 const OvalCropEditor = dynamic(() => import("@/components/OvalCropEditor"), {
@@ -42,6 +43,8 @@ export default function OvalCropImagePage() {
       </div>
 
       <OvalCropEditor showTrustBadges />
+
+      <ToolShowcase shape="oval" ratio="4 / 5" outputLabel="Oval PNG · transparent" caption="Soft oval crops with transparent corners." />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>Oval image cropper</h2>

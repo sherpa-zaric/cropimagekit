@@ -3,6 +3,7 @@ import DimensionsCropClient from "../crop-image-by-dimensions/DimensionsCropClie
 import RelatedTools from "@/components/RelatedTools";
 import FAQSection from "@/components/FAQSection";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 import { SITE_URL } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
@@ -37,6 +38,8 @@ export default function CropAndResizeImagePage() {
       </div>
 
       <DimensionsCropClient />
+
+      <ToolShowcase ratio="3 / 2" outputLabel="Exact W × H" caption="Crop and resize to exact pixel dimensions in one step." />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>Crop and resize images online free</h2>

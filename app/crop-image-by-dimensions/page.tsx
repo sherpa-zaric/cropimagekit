@@ -3,6 +3,7 @@ import DimensionsCropClient from "./DimensionsCropClient";
 import RelatedTools from "@/components/RelatedTools";
 import FAQSection from "@/components/FAQSection";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 import { SITE_URL } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
@@ -37,6 +38,8 @@ export default function CropImageByDimensionsPage() {
       </div>
 
       <DimensionsCropClient />
+
+      <ToolShowcase ratio="3 / 2" outputLabel="Exact pixels" caption="Type the width and height; the crop locks to it." />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>Exact dimension image cropper</h2>

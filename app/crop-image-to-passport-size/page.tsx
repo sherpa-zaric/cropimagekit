@@ -6,6 +6,7 @@ const CropEditor = dynamic(() => import("@/components/CropEditor"), {
 import RelatedTools from "@/components/RelatedTools";
 import FAQSection from "@/components/FAQSection";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 import { passportPresets } from "@/lib/presets";
 import { SITE_URL } from "@/lib/siteConfig";
 
@@ -44,6 +45,8 @@ export default function PassportPhotoCropperPage() {
       </div>
 
       <CropEditor defaultPreset={defaultPreset} showPresets={passportPresets} showTrustBadges fillBackground="#ffffff" />
+
+      <ToolShowcase ratio="35 / 45" outputLabel="Official ID sizes" caption="Head framed to passport and visa requirements." />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>Passport photo cropper</h2>

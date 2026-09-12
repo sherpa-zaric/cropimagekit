@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import RelatedTools from "@/components/RelatedTools";
 import FAQSection from "@/components/FAQSection";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 import { SITE_URL } from "@/lib/siteConfig";
 
 const CropEditor = dynamic(() => import("@/components/CropEditor"), {
@@ -44,6 +45,8 @@ export default function TrimScreenshotPage() {
       </div>
 
       <CropEditor showTrustBadges />
+
+      <ToolShowcase ratio="16 / 9" outputLabel="Edges trimmed" caption="Trim empty borders and keep the content." />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>Trim screenshots without uploading them</h2>

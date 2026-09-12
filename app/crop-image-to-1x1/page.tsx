@@ -6,6 +6,7 @@ const CropEditor = dynamic(() => import("@/components/CropEditor"), {
 import RelatedTools from "@/components/RelatedTools";
 import FAQSection from "@/components/FAQSection";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 import { squareSizePresets } from "@/lib/presets";
 
 export const metadata: Metadata = {
@@ -43,6 +44,8 @@ export default function CropImageTo1x1Page() {
       </div>
 
       <CropEditor defaultPreset={defaultPreset} showPresets={squareSizePresets} showTrustBadges />
+
+      <ToolShowcase ratio="1 / 1" outputLabel="1080 × 1080" caption="Pixel-perfect squares at the size you need." />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>Make any image square online</h2>

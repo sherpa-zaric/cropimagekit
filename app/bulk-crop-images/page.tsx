@@ -4,6 +4,7 @@ import Link from "next/link";
 import RelatedTools from "@/components/RelatedTools";
 import FAQSection from "@/components/FAQSection";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 
 const BulkCropEditor = dynamic(() => import("@/components/BulkCropEditor"), {
   loading: () => <div className="h-64 flex items-center justify-center text-muted-foreground">Loading editor...</div>,
@@ -47,6 +48,8 @@ export default function BulkCropImagesPage() {
       </div>
 
       <BulkCropEditor showTrustBadges />
+
+      <ToolShowcase mode="bulk" ratio="1 / 1" outputLabel="images.zip" caption="Crop a whole batch of images and download one ZIP." />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>Batch crop multiple images online</h2>

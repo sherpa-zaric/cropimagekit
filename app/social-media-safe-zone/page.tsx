@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import FAQSection from "@/components/FAQSection";
 import RelatedTools from "@/components/RelatedTools";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 import { SITE_URL } from "@/lib/siteConfig";
 
 const SocialSafeZoneEditor = dynamic(() => import("@/components/SocialSafeZoneEditor"), {
@@ -48,6 +49,8 @@ export default function SocialMediaSafeZonePage() {
       </section>
 
       <SocialSafeZoneEditor />
+
+      <ToolShowcase mode="safezone" heading="Preview the safe zones" outputLabel="Checked before publishing" caption="See which areas platform UI will cover before you post." />
 
       <section className="prose prose-neutral max-w-none dark:prose-invert">
         <h2>Preview social media image safe zones before publishing</h2>

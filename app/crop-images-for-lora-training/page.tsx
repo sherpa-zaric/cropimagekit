@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import RelatedTools from "@/components/RelatedTools";
 import FAQSection from "@/components/FAQSection";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 import { aiPresets } from "@/lib/presets";
 
 const BulkCropEditor = dynamic(() => import("@/components/BulkCropEditor"), {
@@ -43,6 +44,8 @@ export default function CropImagesForLoRATrainingPage() {
       </div>
 
       <BulkCropEditor defaultPreset={defaultPreset} showPresets={aiPresets} showTrustBadges />
+
+      <ToolShowcase mode="bulk" ratio="1 / 1" outputLabel="512 · 768 · 1024 buckets" caption="Consistent square buckets for LoRA training sets." />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>AI dataset image cropper</h2>

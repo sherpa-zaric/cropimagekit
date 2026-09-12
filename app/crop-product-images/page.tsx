@@ -6,6 +6,7 @@ const CropEditor = dynamic(() => import("@/components/CropEditor"), {
 import RelatedTools from "@/components/RelatedTools";
 import FAQSection from "@/components/FAQSection";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 import { productPresets } from "@/lib/presets";
 
 export const metadata: Metadata = {
@@ -53,6 +54,8 @@ export default function CropProductImagesPage() {
       </div>
 
       <CropEditor defaultPreset={defaultPreset} showPresets={productPresets} showTrustBadges />
+
+      <ToolShowcase ratio="1 / 1" outputLabel="2048 × 2048" caption="Marketplace-ready product photos." />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>Crop product photos for online stores</h2>

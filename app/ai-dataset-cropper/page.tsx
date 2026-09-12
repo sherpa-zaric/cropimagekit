@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import RelatedTools from "@/components/RelatedTools";
 import FAQSection from "@/components/FAQSection";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 import { aiPresets } from "@/lib/presets";
 import { SITE_URL } from "@/lib/siteConfig";
 
@@ -46,6 +47,8 @@ export default function AiDatasetCropperPage() {
       </div>
 
       <BulkCropEditor defaultPreset={defaultPreset} showPresets={aiPresets} showTrustBadges />
+
+      <ToolShowcase mode="bulk" ratio="1 / 1" outputLabel="dataset.zip" caption="Batch-crop whole datasets to training-ready sizes." />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>Prepare image datasets with consistent crops</h2>

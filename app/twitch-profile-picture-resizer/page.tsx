@@ -6,6 +6,7 @@ const CropEditor = dynamic(() => import("@/components/CropEditor"), {
 import RelatedTools from "@/components/RelatedTools";
 import FAQSection from "@/components/FAQSection";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 import { socialPresets } from "@/lib/presets";
 
 export const metadata: Metadata = {
@@ -45,6 +46,8 @@ export default function TwitchProfilePictureResizerPage() {
       </div>
 
       <CropEditor defaultPreset={defaultPreset} showPresets={twitchPfpPresets} showTrustBadges />
+
+      <ToolShowcase shape="circle" ratio="1 / 1" outputLabel="256 × 256" caption="Crisp avatars for your Twitch channel." />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>Twitch profile picture size</h2>

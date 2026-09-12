@@ -6,6 +6,7 @@ const CropEditor = dynamic(() => import("@/components/CropEditor"), {
 import RelatedTools from "@/components/RelatedTools";
 import FAQSection from "@/components/FAQSection";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 import { socialPresets } from "@/lib/presets";
 
 export const metadata: Metadata = {
@@ -45,6 +46,8 @@ export default function FacebookCoverPhotoResizerPage() {
       </div>
 
       <CropEditor defaultPreset={defaultPreset} showPresets={facebookCoverPresets} showTrustBadges />
+
+      <ToolShowcase ratio="851 / 315" outputLabel="851 × 315" caption="Frame your cover for desktop and mobile." />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>Facebook cover photo size</h2>

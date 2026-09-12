@@ -6,6 +6,7 @@ const CropEditor = dynamic(() => import("@/components/CropEditor"), {
 import RelatedTools from "@/components/RelatedTools";
 import FAQSection from "@/components/FAQSection";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 import { socialPresets } from "@/lib/presets";
 
 export const metadata: Metadata = {
@@ -45,6 +46,8 @@ export default function DiscordProfilePictureResizerPage() {
       </div>
 
       <CropEditor defaultPreset={defaultPreset} showPresets={discordPresets} showTrustBadges />
+
+      <ToolShowcase shape="circle" ratio="1 / 1" outputLabel="512 × 512" caption="Sharp round avatars for Discord." />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>Discord profile picture size</h2>

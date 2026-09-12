@@ -6,6 +6,7 @@ const CropEditor = dynamic(() => import("@/components/CropEditor"), {
 import RelatedTools from "@/components/RelatedTools";
 import FAQSection from "@/components/FAQSection";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 import { socialPresets } from "@/lib/presets";
 
 export const metadata: Metadata = {
@@ -44,6 +45,8 @@ export default function TwitterHeaderResizerPage() {
       </div>
 
       <CropEditor defaultPreset={defaultPreset} showPresets={twitterHeaderPresets} showTrustBadges />
+
+      <ToolShowcase ratio="3 / 1" outputLabel="1500 × 500" caption="Headers that look right on every screen." />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>Twitter / X header image size</h2>

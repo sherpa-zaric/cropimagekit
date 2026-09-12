@@ -6,6 +6,7 @@ const CropEditor = dynamic(() => import("@/components/CropEditor"), {
 import RelatedTools from "@/components/RelatedTools";
 import FAQSection from "@/components/FAQSection";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 
 export const metadata: Metadata = {
   title: "Image Cropper Online — Free, No Upload, No Watermark",
@@ -42,6 +43,8 @@ export default function CropImagePage() {
       </div>
 
       <CropEditor showTrustBadges />
+
+      <ToolShowcase ratio="4 / 3" outputLabel="Any aspect ratio" caption="Free crop or pick a common ratio — your call." />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>Free online image cropper</h2>

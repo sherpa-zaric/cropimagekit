@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import RelatedTools from "@/components/RelatedTools";
 import FAQSection from "@/components/FAQSection";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 import { SITE_URL } from "@/lib/siteConfig";
 
 const CropEditor = dynamic(() => import("@/components/CropEditor"), {
@@ -44,6 +45,8 @@ export default function CropScreenshotPage() {
       </div>
 
       <CropEditor showTrustBadges />
+
+      <ToolShowcase ratio="16 / 10" outputLabel="Clean, focused PNG" caption="Cut away toolbars, docks, and distractions." />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>Screenshot cropper for private captures</h2>

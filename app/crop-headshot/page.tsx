@@ -6,6 +6,7 @@ const CropEditor = dynamic(() => import("@/components/CropEditor"), {
 import RelatedTools from "@/components/RelatedTools";
 import FAQSection from "@/components/FAQSection";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 import { headshotPresets } from "@/lib/presets";
 
 const defaultPreset = headshotPresets.find((p) => p.id === "headshot-1:1");
@@ -42,6 +43,8 @@ export default function CropHeadshotPage() {
       </div>
 
       <CropEditor defaultPreset={defaultPreset} showPresets={headshotPresets} showTrustBadges />
+
+      <ToolShowcase ratio="4 / 5" outputLabel="Framed for LinkedIn & ID" caption="Frame head and shoulders with balanced headroom." />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>Crop headshots and profile photos online</h2>

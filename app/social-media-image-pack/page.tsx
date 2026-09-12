@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import FAQSection from "@/components/FAQSection";
 import RelatedTools from "@/components/RelatedTools";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 import { SITE_URL } from "@/lib/siteConfig";
 
 const ExportPackEditor = dynamic(() => import("@/components/ExportPackEditor"), {
@@ -41,6 +42,8 @@ export default function SocialMediaImagePackPage() {
       </section>
 
       <ExportPackEditor />
+
+      <ToolShowcase mode="bulk" ratio="1 / 1" outputLabel="All platforms · one ZIP" caption="One upload, every platform size." />
 
       <section className="prose prose-neutral max-w-none dark:prose-invert">
         <h2>Stop re-cropping the same image for every channel</h2>

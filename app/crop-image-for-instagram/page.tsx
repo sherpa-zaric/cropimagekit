@@ -6,6 +6,7 @@ const CropEditor = dynamic(() => import("@/components/CropEditor"), {
 import RelatedTools from "@/components/RelatedTools";
 import FAQSection from "@/components/FAQSection";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 import { socialPresets } from "@/lib/presets";
 
 export const metadata: Metadata = {
@@ -44,6 +45,8 @@ export default function CropImageForInstagramPage() {
       </div>
 
       <CropEditor defaultPreset={defaultPreset} showPresets={instagramPresets} showTrustBadges />
+
+      <ToolShowcase ratio="4 / 5" outputLabel="1080 × 1350" caption="Portrait posts fill more of the feed." />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>Instagram image cropper</h2>

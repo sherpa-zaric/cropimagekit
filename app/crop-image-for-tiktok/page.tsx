@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import FAQSection from "@/components/FAQSection";
 import RelatedTools from "@/components/RelatedTools";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 import { SITE_URL } from "@/lib/siteConfig";
 import { socialPresets } from "@/lib/presets";
 
@@ -51,6 +52,8 @@ export default function CropImageForTiktokPage() {
       </div>
 
       <CropEditor defaultPreset={defaultPreset} showPresets={tiktokPresets} showTrustBadges />
+
+      <ToolShowcase ratio="9 / 16" outputLabel="1080 × 1920" caption="Full-vertical crops for TikTok and Reels." />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>TikTok image cropper</h2>

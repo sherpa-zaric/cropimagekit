@@ -6,6 +6,7 @@ const CircleCropEditor = dynamic(() => import("@/components/CircleCropEditor"), 
 import RelatedTools from "@/components/RelatedTools";
 import FAQSection from "@/components/FAQSection";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 
 export const metadata: Metadata = {
   title: "Circle Image Cropper — Free Online, Round Crop",
@@ -42,6 +43,8 @@ export default function CircleCropImagePage() {
       </div>
 
       <CircleCropEditor showTrustBadges />
+
+      <ToolShowcase shape="circle" ratio="1 / 1" outputLabel="Round PNG · transparent" caption="Perfect circle avatars with a transparent background." />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>Circle image cropper</h2>

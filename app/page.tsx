@@ -7,6 +7,7 @@ import ToolCard from "@/components/ToolCard";
 import RelatedTools from "@/components/RelatedTools";
 import FAQSection from "@/components/FAQSection";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -59,6 +60,13 @@ export default function Home() {
       <section>
         <ExportPackEditor />
       </section>
+
+      <ToolShowcase
+        mode="bulk"
+        ratio="1 / 1"
+        outputLabel="Every size · one ZIP"
+        caption="Set the subject once and export all the sizes you need together."
+      />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2 className="text-center">A cropper built for the next step</h2>

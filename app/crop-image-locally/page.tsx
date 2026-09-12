@@ -6,6 +6,7 @@ const CropEditor = dynamic(() => import("@/components/CropEditor"), {
 import RelatedTools from "@/components/RelatedTools";
 import FAQSection from "@/components/FAQSection";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 
 export const metadata: Metadata = {
   title: "Image Cropper Locally — Private Browser Cropper, No Upload",
@@ -41,6 +42,8 @@ export default function CropImageLocallyPage() {
       </div>
 
       <CropEditor showTrustBadges />
+
+      <ToolShowcase ratio="4 / 3" outputLabel="Never leaves your device" caption="Everything runs in your browser — nothing uploads." />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>A private image cropper for your browser</h2>

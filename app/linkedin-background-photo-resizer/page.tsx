@@ -6,6 +6,7 @@ const CropEditor = dynamic(() => import("@/components/CropEditor"), {
 import RelatedTools from "@/components/RelatedTools";
 import FAQSection from "@/components/FAQSection";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 import { socialPresets } from "@/lib/presets";
 
 export const metadata: Metadata = {
@@ -45,6 +46,8 @@ export default function LinkedInBackgroundPhotoResizerPage() {
       </div>
 
       <CropEditor defaultPreset={defaultPreset} showPresets={linkedinBannerPresets} showTrustBadges />
+
+      <ToolShowcase ratio="1584 / 396" outputLabel="1584 × 396" caption="Wide banners that survive LinkedIn’s crop." />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>LinkedIn background photo size</h2>

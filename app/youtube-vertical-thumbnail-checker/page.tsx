@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import FAQSection from "@/components/FAQSection";
 import RelatedTools from "@/components/RelatedTools";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 import { SITE_URL } from "@/lib/siteConfig";
 
 const YouTubeVerticalThumbnailEditor = dynamic(() => import("@/components/YouTubeVerticalThumbnailEditor"), {
@@ -47,6 +48,8 @@ export default function YouTubeVerticalThumbnailCheckerPage() {
       </section>
 
       <YouTubeVerticalThumbnailEditor />
+
+      <ToolShowcase mode="safezone" heading="Check the vertical crop" outputLabel="Checked before publishing" caption="Compare crops before your thumbnail goes live." />
 
       <section className="prose prose-neutral max-w-none dark:prose-invert">
         <h2>Check YouTube vertical thumbnail crops before publishing</h2>

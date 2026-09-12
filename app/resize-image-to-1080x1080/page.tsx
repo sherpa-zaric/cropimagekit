@@ -6,6 +6,7 @@ const CropEditor = dynamic(() => import("@/components/CropEditor"), {
 import RelatedTools from "@/components/RelatedTools";
 import FAQSection from "@/components/FAQSection";
 import StructuredData from "@/components/StructuredData";
+import ToolShowcase from "@/components/ToolShowcase";
 import { squareSizePresets } from "@/lib/presets";
 
 export const metadata: Metadata = {
@@ -44,6 +45,8 @@ export default function ResizeImageTo1080x1080Page() {
       </div>
 
       <CropEditor defaultPreset={defaultPreset} showPresets={squareSizePresets} showTrustBadges />
+
+      <ToolShowcase ratio="1 / 1" outputLabel="1080 × 1080" caption="The universal square size." />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>What is 1080×1080 used for?</h2>
