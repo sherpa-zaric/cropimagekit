@@ -46,7 +46,7 @@ export default function CropScreenshotPage() {
 
       <CropEditor showTrustBadges />
 
-      <ToolShowcase ratio="16 / 10" outputLabel="Clean, focused PNG" caption="Cut away toolbars, docks, and distractions." />
+      <ToolShowcase scene="screenshot" ratio="16 / 10" outputLabel="Clean, focused PNG" caption="Cut away toolbars, docks, and distractions." />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>Screenshot cropper for private captures</h2>

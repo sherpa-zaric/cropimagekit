@@ -55,7 +55,7 @@ export default function CropProductImagesPage() {
 
       <CropEditor defaultPreset={defaultPreset} showPresets={productPresets} showTrustBadges />
 
-      <ToolShowcase ratio="1 / 1" outputLabel="2048 × 2048" caption="Marketplace-ready product photos." />
+      <ToolShowcase scene="product" ratio="1 / 1" outputLabel="2048 × 2048" caption="Frame your product with balanced space around it." />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>Crop product photos for online stores</h2>

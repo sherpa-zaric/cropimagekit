@@ -62,7 +62,7 @@ export default function Home() {
       </section>
 
       <ToolShowcase
-        mode="bulk"
+        mode="pack"
         ratio="1 / 1"
         outputLabel="Every size · one ZIP"
         caption="Set the subject once and export all the sizes you need together."

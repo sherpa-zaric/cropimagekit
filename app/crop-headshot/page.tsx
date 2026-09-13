@@ -44,7 +44,7 @@ export default function CropHeadshotPage() {
 
       <CropEditor defaultPreset={defaultPreset} showPresets={headshotPresets} showTrustBadges />
 
-      <ToolShowcase ratio="4 / 5" outputLabel="Framed for LinkedIn & ID" caption="Frame head and shoulders with balanced headroom." />
+      <ToolShowcase scene="portrait" ratio="4 / 5" outputLabel="Head and shoulders" caption="Frame head and shoulders with balanced headroom." />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>Crop headshots and profile photos online</h2>

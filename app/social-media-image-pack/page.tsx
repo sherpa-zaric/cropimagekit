@@ -43,7 +43,7 @@ export default function SocialMediaImagePackPage() {
 
       <ExportPackEditor />
 
-      <ToolShowcase mode="bulk" ratio="1 / 1" outputLabel="All platforms · one ZIP" caption="One upload, every platform size." />
+      <ToolShowcase mode="pack" caption="One upload, multiple sizes for your next post." />
 
       <section className="prose prose-neutral max-w-none dark:prose-invert">
         <h2>Stop re-cropping the same image for every channel</h2>
