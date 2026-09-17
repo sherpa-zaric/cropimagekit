@@ -15,6 +15,11 @@ export default function GoogleAnalytics() {
       />
       <Script id="google-analytics" strategy="afterInteractive">
         {`window.dataLayer = window.dataLayer || [];
+          try {
+            if (location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.endsWith('.vercel.app') || localStorage.getItem('imagecropkit.analytics.disabled') === '1') {
+              window['ga-disable-${measurementId}'] = true;
+            }
+          } catch {}
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', '${measurementId}');`}

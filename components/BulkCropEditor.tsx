@@ -12,6 +12,7 @@ import TrustBadges from "@/components/TrustBadges";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Plus } from "lucide-react";
 import { toast } from "sonner";
+import { trackAnalyticsEvent } from "@/lib/analytics";
 
 import { getImageUrl, loadImageFromFile, revokeImageUrl } from "@/lib/imageUtils";
 import { calculateInitialCrop, exportCroppedImage, getOutputFileName, percentCropToPixelCrop, isValidCrop } from "@/lib/cropImage";
@@ -124,6 +125,8 @@ export default function BulkCropEditor({
       }
     }
     setImages(newImages);
+    if (newImages.length > 0) trackAnalyticsEvent("crop_image_loaded", { tool_type: "bulk", image_count: newImages.length });
+    if (newImages.length < files.length) toast.error(`${files.length - newImages.length} images could not be loaded.`);
     if (newImages.length > 0) setSelectedIdx(0);
   }, [images, selectedPreset]);
 
@@ -145,11 +148,14 @@ export default function BulkCropEditor({
       }
     }
     if (appended.length > 0) {
+      trackAnalyticsEvent("crop_image_loaded", { tool_type: "bulk", image_count: appended.length });
       setImages((prev) => [...prev, ...appended]);
     }
+    if (appended.length < files.length) toast.error(`${files.length - appended.length} images could not be loaded.`);
   }, [selectedPreset]);
 
   const handlePresetSelect = useCallback((preset: CropPreset) => {
+    if (preset.id === selectedPreset?.id) return;
     setSelectedPreset(preset);
     if (preset.aspectRatio > 0) {
       setImages((prev) => prev.map((img) => ({
@@ -161,7 +167,7 @@ export default function BulkCropEditor({
         ),
       })));
     }
-  }, []);
+  }, [selectedPreset?.id]);
 
   const updateCrop = useCallback((idx: number, percentCrop: Crop) => {
     setImages((prev) => { const n = [...prev]; n[idx] = { ...n[idx], reactCrop: percentCrop }; return n; });
@@ -206,13 +212,22 @@ export default function BulkCropEditor({
       }
     }
     if (entries.length > 0) {
-      await downloadAsZip(entries, "cropped-images.zip");
+      try {
+        await downloadAsZip(entries, "cropped-images.zip");
+      } catch {
+        trackAnalyticsEvent("crop_export_failed", { tool_type: "bulk", format, failed_count: entries.length, failure_stage: "zip" });
+        toast.error("Could not create the ZIP. Try fewer images or a smaller output size.");
+        return;
+      }
+      trackAnalyticsEvent("crop_export_succeeded", { tool_type: "bulk", format, output_count: entries.length, failed_count: failed });
       if (failed > 0) {
+        trackAnalyticsEvent("crop_export_failed", { tool_type: "bulk", format, failed_count: failed, failure_stage: "image_export" });
         toast.error(`${failed} image${failed > 1 ? "s" : ""} failed to export. ZIP contains ${entries.length} of ${croppedCount} cropped image${croppedCount > 1 ? "s" : ""}.`);
       } else {
         toast.success(`ZIP downloaded (${entries.length} image${entries.length > 1 ? "s" : ""})`);
       }
     } else {
+      trackAnalyticsEvent("crop_export_failed", { tool_type: "bulk", format, failed_count: failed, failure_stage: "image_export" });
       toast.error("No images could be exported. Please try again.");
     }
   }, [images, format, quality, selectedPreset, filePrefix, croppedCount]);

@@ -5,6 +5,7 @@ import ReactCrop, { type Crop } from "react-image-crop";
 import "react-image-crop/dist/ReactCrop.css";
 import { Maximize2, Minimize2, ChevronRight, ChevronLeft } from "lucide-react";
 import { toast } from "sonner";
+import { trackAnalyticsEvent } from "@/lib/analytics";
 
 import UploadDropzone from "@/components/UploadDropzone";
 import ExportPanel from "@/components/ExportPanel";
@@ -103,6 +104,7 @@ export default function CropEditor({
 
       loadImageFromFile(file)
         .then((img) => {
+          trackAnalyticsEvent("crop_image_loaded", { tool_type: "single", image_count: 1 });
           setImageElement(img);
           if (selectedPreset && selectedPreset.aspectRatio > 0) {
             setCrop(calculateInitialCrop(selectedPreset.aspectRatio, img.naturalWidth, img.naturalHeight));
@@ -119,13 +121,14 @@ export default function CropEditor({
   );
 
   const handlePresetSelect = useCallback((preset: CropPreset) => {
+    if (preset.id === selectedPreset?.id) return;
     setSelectedPreset(preset);
     if (preset.aspectRatio > 0 && imageElement) {
       setCrop(calculateInitialCrop(preset.aspectRatio, imageElement.naturalWidth, imageElement.naturalHeight));
     } else {
       setCrop(undefined);
     }
-  }, [imageElement]);
+  }, [imageElement, selectedPreset?.id]);
 
   const handleCustomDimensionChange = useCallback((newWidth: number, newHeight: number) => {
     const w = Math.max(1, Math.min(8000, newWidth));
@@ -196,8 +199,10 @@ export default function CropEditor({
         ? getOutputFileName(imageFile.name, format)
         : `cropped-image.${format}`;
       saveAs(blob, fileName);
+      trackAnalyticsEvent("crop_export_succeeded", { tool_type: "single", format, output_count: 1 });
       toast.success("Image downloaded");
     } catch (err) {
+      trackAnalyticsEvent("crop_export_failed", { tool_type: "single", format, failed_count: 1, failure_stage: "image_export" });
       console.error("Failed to export image:", err);
       toast.error("Export failed. Please try a different format or image.");
     }
