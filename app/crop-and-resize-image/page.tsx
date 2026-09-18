@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import DimensionsCropClient from "../crop-image-by-dimensions/DimensionsCropClient";
 import RelatedTools from "@/components/RelatedTools";
 import FAQSection from "@/components/FAQSection";
@@ -15,8 +16,9 @@ export const metadata: Metadata = {
 const faqItems = [
   { question: "What is the difference between cropping and resizing an image?", answer: "Cropping removes parts of the image to change its composition and aspect ratio. Resizing changes the total pixel dimensions without removing any content. ImageCropKit does both: you choose the crop area, and the output is resized to your exact width and height." },
   { question: "Can I crop and resize an image at the same time?", answer: "Yes. Enter your target width and height, upload your image, adjust the crop area, and the exported image will be both cropped and resized to your exact dimensions." },
-  { question: "Will cropping and resizing reduce image quality?", answer: "No. ImageCropKit uses the browser Canvas API with imageSmoothingEnabled for high-quality output. Processing happens locally with no server-side recompression. You control the output format and quality slider." },
-  { question: "Can I resize an image without cropping?", answer: "Yes. Use the crop area to select the entire image, then set your target dimensions. The output will be resized to your exact width and height without any cropping." },
+  { question: "Will cropping and resizing reduce image quality?", answer: "Resizing changes image detail. Enlarging a small crop cannot restore missing detail, and JPG or lossy WebP export can introduce compression artifacts. PNG avoids lossy compression, but it cannot recover detail lost during resizing. Start with an original image large enough for your target dimensions." },
+  { question: "Can I resize an image without cropping?", answer: "To keep the whole image, use target dimensions with the same aspect ratio as your source and expand the crop to its full bounds. A 4000 by 3000 photo can become 800 by 600 without removing content. A square target requires cropping; this tool does not add padding to preserve the whole photo." },
+  { question: "What happens when I choose 1920 by 1080?", answer: "The crop box uses a 16:9 aspect ratio. You position the box over the part of the source you want to keep, and the downloaded image is resized to exactly 1920 by 1080 pixels. The crop area in the source may contain more or fewer pixels than the output." },
   { question: "Are my images uploaded?", answer: "No. All processing happens locally in your browser. Your images never leave your device." },
 ];
 
@@ -56,8 +58,8 @@ export default function CropAndResizeImagePage() {
 
         <h2>When to crop and resize</h2>
         <ul>
-          <li><strong>E-commerce product photos</strong>: Shopify requires 2048×2048, Etsy needs 2000×2000</li>
-          <li><strong>Social media</strong>: Instagram posts at 1080×1080, stories at 1080×1920</li>
+          <li><strong>Product photos</strong>: create a square catalog image such as 1200×1200; check your storefront&apos;s current upload requirements.</li>
+          <li><strong>Social graphics</strong>: prepare a square, portrait, or landscape canvas to match your publishing destination.</li>
           <li><strong>Website assets</strong>: hero images, thumbnails, and Open Graph cards at exact sizes</li>
           <li><strong>Print</strong>: convert inch or millimetre sizes to pixels at 300 DPI</li>
           <li><strong>Ad networks</strong>: exact pixel sizes required by Google Ads, Facebook Ads, and more</li>
@@ -73,9 +75,24 @@ export default function CropAndResizeImagePage() {
 
         <h2>Quality preservation</h2>
         <p>
-          ImageCropKit uses the browser Canvas API with imageSmoothingEnabled for sharp, clean
-          output. Because all processing happens locally, there is no server-side recompression.
-          You control the output format and quality slider for JPG and WebP exports.
+          Use an original image with enough pixels for the selected crop. Enlarging a small
+          selection can soften detail, even with browser image smoothing. PNG avoids lossy
+          compression for text and graphics; JPG and WebP offer a quality setting for balancing
+          file size and appearance. Review the downloaded image at its intended display size.
+        </p>
+        <h2>Choose the output without stretching the subject</h2>
+        <p>
+          Target dimensions control both the crop ratio and the exported pixel size. For example,
+          a 4000×3000 photo fits an 800×600 output at the same 4:3 ratio. A 1920×1080 output
+          needs a wider 16:9 crop, so some of the original image is excluded. Move the crop
+          before downloading to keep the subject in frame. Padding and automatic subject
+          detection are not included.
+        </p>
+        <p>
+          For several source photos, use <Link href="/bulk-crop-images">bulk cropping with ZIP export</Link>.
+          To turn one photo into several publishing sizes, use the{' '}
+          <Link href="/social-media-image-pack?pack=creator">creator image pack</Link>, where each output
+          can be adjusted separately.
         </p>
       </section>
 

@@ -4,7 +4,7 @@ Started: 2026-09-08. Owner: Codex, with user authorization to test, commit, push
 
 ## Operating model
 
-Work in rolling 12-week cycles. Run once daily at 09:00 Asia/Shanghai, continuing the current backlog rather than inventing a new plan each run. Deliver a verified functional improvement or a complete actionable analysis, not isolated checks or log commits. Do not publish merely to fill a schedule.
+Work in rolling 12-week cycles. Run every three days at 09:00 Asia/Shanghai, continuing the current backlog rather than inventing a new plan each run. Deliver a verified functional improvement or a complete actionable analysis, not isolated checks or log commits. Do not publish merely to fill a schedule.
 
 The product thesis and exclusions remain in IMPLEMENTATION_PLAN.md and CLAUDE.md. Prioritize creators and the multi-size export workflow. Preserve unrelated work. Never commit credentials or user analytics exports to this public repository.
 
@@ -28,7 +28,7 @@ Windows are planning targets, not reasons to delay ready work or declare unfinis
 - Download event means ZIP creation and browser download initiation, not proven disk-save completion.
 - Segment by landing page and pack when sample size supports it. Never compare different consent/collection regimes as if instrumentation were unchanged.
 - Baseline: latest complete 28 days compared with the preceding 28, excluding incomplete dates and documenting the GA outage/recovery. Use shorter windows only as provisional diagnostics.
-- Every five hours: operational checks and one prioritized action. Weekly: backlog and baseline review. Allow at least 28 days for directional search evaluation; do not repeatedly rewrite titles on five-hour fluctuations.
+- Every three days: one substantive work package. Weekly: backlog and baseline review alongside delivery. Allow at least 28 days for directional search evaluation; do not repeatedly rewrite titles on short-term fluctuations.
 - If GA/GSC access is unavailable, continue technical and content work; report unknown metrics rather than zero. Request access once and retain the dependency.
 
 ## Current backlog
@@ -45,6 +45,14 @@ Windows are planning targets, not reasons to delay ready work or declare unfinis
 | D01 | P1 | Review Cycle 1 outcomes and create Cycle 2 | Pending |
 
 ## Run log
+
+### 2026-09-18: Exact-size export reliability and page accuracy
+
+- Fixed default-preset synchronization overriding a user's selected output on the dimensions editor. External default changes still synchronize; local preset selection now persists.
+- Added accessible width/height labels. Corrected crop-and-resize FAQ claims about lossless resizing and retaining the whole source with a different aspect ratio. Added concrete ratio examples and contextual batch/creator-pack links; removed unsupported marketplace size requirements.
+- Local production-build Playwright checks passed at 1280 and 390 pixels: selected 1920x1080 persists, actual PNG dimensions match 1920x1080 and custom 640x480; no page errors or horizontal overflow. Main export control verified; separate mobile fixed-bar check remains pending.
+- Build and lint passed (six existing image warnings). Deployment acceptance pending. Existing screenshot-page work excluded.
+- Next: bulk event receipt and ordered source/session funnel, plus GSC core-page indexing and full 28-day comparison. New export instrumentation needs an observation window; no traffic gain inferred.
 
 ### 2026-09-08: Cycle 1 kickoff
 

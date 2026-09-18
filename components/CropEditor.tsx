@@ -151,15 +151,20 @@ export default function CropEditor({
   }, [imageElement, onCustomDimensionChange]);
 
   // Sync external defaultPreset changes without remounting.
+  const defaultPresetKey = defaultPreset
+    ? `${defaultPreset.id}:${defaultPreset.width}:${defaultPreset.height}:${defaultPreset.aspectRatio}`
+    : "";
+  const previousDefaultPresetKey = useRef(defaultPresetKey);
   useEffect(() => {
-    if (!defaultPreset || defaultPreset.id === selectedPreset?.id) return;
+    if (previousDefaultPresetKey.current === defaultPresetKey) return;
 
     const timer = setTimeout(() => {
-      handlePresetSelect(defaultPreset);
+      previousDefaultPresetKey.current = defaultPresetKey;
+      if (defaultPreset) handlePresetSelect(defaultPreset);
     }, 0);
 
     return () => clearTimeout(timer);
-  }, [defaultPreset, handlePresetSelect, selectedPreset?.id]);
+  }, [defaultPreset, defaultPresetKey, handlePresetSelect]);
 
   // Sync external custom dimension changes.
   useEffect(() => {
@@ -335,8 +340,9 @@ export default function CropEditor({
               <p className="text-xs font-medium text-muted-foreground">Custom dimensions</p>
               <div className="flex items-center gap-2">
                 <div className="flex-1">
-                  <label className="text-[10px] text-muted-foreground">W</label>
+                  <label htmlFor="crop-output-width" className="text-[10px] text-muted-foreground">Width (px)</label>
                   <input
+                    id="crop-output-width"
                     type="number"
                     min={1}
                     max={8000}
@@ -347,8 +353,9 @@ export default function CropEditor({
                 </div>
                 <span className="text-muted-foreground pt-4 text-sm">×</span>
                 <div className="flex-1">
-                  <label className="text-[10px] text-muted-foreground">H</label>
+                  <label htmlFor="crop-output-height" className="text-[10px] text-muted-foreground">Height (px)</label>
                   <input
+                    id="crop-output-height"
                     type="number"
                     min={1}
                     max={8000}
