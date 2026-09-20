@@ -4,7 +4,7 @@ import Link from "next/link";
 import RelatedTools from "@/components/RelatedTools";
 import FAQSection from "@/components/FAQSection";
 import StructuredData from "@/components/StructuredData";
-import ToolShowcase from "@/components/ToolShowcase";
+import BulkCropExample from "@/components/BulkCropExample";
 
 const BulkCropEditor = dynamic(() => import("@/components/BulkCropEditor"), {
   loading: () => <div className="h-64 flex items-center justify-center text-muted-foreground">Loading editor...</div>,
@@ -20,13 +20,15 @@ export const metadata: Metadata = {
 const faqItems = [
   { question: "Can I crop multiple images at once?", answer: "Yes. Upload multiple images, choose a crop ratio, and export all cropped files together." },
   { question: "Can I download all cropped images as a ZIP?", answer: "Yes. Bulk cropped images can be downloaded as a ZIP file." },
-  { question: "Does bulk cropping reduce image quality?", answer: "No. Each image is processed individually using the browser Canvas API. No server-side recompression occurs. You control the output format and quality for every image." },
-  { question: "Can I crop all images to 1:1?", answer: "Yes. Select the 1:1 ratio, adjust the crop on one image, then click 'Apply crop to all' to use the same proportional crop across the whole batch." },
+  { question: "Does bulk cropping reduce image quality?", answer: "Cropping removes pixels outside the selection. PNG avoids lossy output compression; JPG and WebP can lose detail when encoded. Local processing does not guarantee identical pixels, metadata, or file size." },
+  { question: "Can I crop all images to 1:1?", answer: "Yes. Selecting 1:1 creates a square crop for each image, including portrait and landscape originals. Adjust each subject separately. Apply This Crop to All Images copies relative framing while preserving the pixel aspect ratio; it is not subject detection." },
+  { question: "Does the same ratio mean the same pixel dimensions?", answer: "No. This page exports each crop at its own pixel size. Two square crops may be 600 by 600 and 450 by 450 pixels. Check ZIP contents before downloading. Use a fixed-size preset when every file must have identical dimensions." },
+  { question: "What happens if one export fails?", answer: "Successful images are included in the ZIP. Failed filenames remain visible, and Retry failed images exports only that subset without clearing your crops. If ZIP creation fails, the pending batch remains available to retry." },
   { question: "Can I rename files during export?", answer: "Yes. Enter a file name prefix before downloading. Files will be named with that prefix and a sequence number, for example product-01.jpg, product-02.jpg." },
   { question: "Are my images uploaded?", answer: "No. ImageCropKit processes the images locally in your browser." },
   { question: "Can I adjust images individually?", answer: "Yes. You can adjust the crop area for individual images before downloading." },
   { question: "What image formats are supported for bulk cropping?", answer: "ImageCropKit supports JPG, PNG, WebP, BMP, and GIF as input formats. Cropped images can be exported as JPG, PNG, or WebP." },
-  { question: "How many images can I crop at once?", answer: "There is no hard limit. Since all processing happens in your browser, the practical limit depends on your device memory. Most users can comfortably process 50 to 100 images in one batch." },
+  { question: "How many images can I crop at once?", answer: "There is no fixed file-count limit. Memory and source resolution determine the practical batch size. Start small, especially on mobile, and split the batch if decoding or ZIP creation fails." },
   { question: "Can I crop images to social media sizes in bulk?", answer: "Yes. Choose a social media aspect ratio such as 1:1 for Instagram, 4:5 for portrait posts, or 16:9 for YouTube thumbnails, then apply it across your entire batch." },
 ];
 
@@ -49,7 +51,7 @@ export default function BulkCropImagesPage() {
 
       <BulkCropEditor showTrustBadges />
 
-      <ToolShowcase mode="bulk" ratio="1 / 1" outputLabel="images.zip" caption="Crop a whole batch of images and download one ZIP." />
+      <BulkCropExample />
 
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>Batch crop multiple images online</h2>
@@ -67,17 +69,18 @@ export default function BulkCropImagesPage() {
         <h2>Apply the same crop ratio across a batch</h2>
         <p>
           Choose a common aspect ratio such as 1:1, 4:5, 16:9, or 9:16 and apply it across your
-          uploaded images. You can adjust one image, then use &ldquo;Apply crop to all&rdquo; to
-          copy the same proportional crop across the entire batch. This saves hours compared to
-          opening each file in a desktop editor and cropping manually.
+          uploaded images. Selecting a ratio creates a centered starting crop for each source.
+          Move or resize it around each subject. Apply This Crop to All Images transfers the
+          relative center and crop size while retaining the pixel ratio on mixed originals.
+          It replaces existing selections, so review the batch afterward.
         </p>
 
         <h2>Crop images for social media in bulk</h2>
         <p>
-          Every social platform expects different dimensions. Instagram uses 1080 &times; 1080 for
-          square posts and 1080 &times; 1350 for portrait. TikTok and Reels need 1080 &times; 1920.
-          YouTube thumbnails are 1280 &times; 720. Instead of cropping each photo to each platform
-          individually, upload the whole batch, pick the aspect ratio you need, and apply it once.
+          A ratio sets the shape, not the final pixel size. This page keeps each crop at its
+          source pixel dimensions, shown in ZIP contents. For one exact-size image, use
+          <Link href="/crop-and-resize-image"> crop and resize</Link>. For one source in several
+          output sizes, use the <Link href="/social-media-image-pack?pack=creator">creator export pack</Link>.
         </p>
         <p>
           For a complete reference of every platform dimension, see our
@@ -89,32 +92,32 @@ export default function BulkCropImagesPage() {
         <p>
           ImageCropKit accepts JPG, PNG, WebP, BMP, and GIF as input. Cropped images can be
           exported as JPG, PNG, or WebP. JPG works well for photographs where file size matters.
-          PNG preserves transparency and is ideal for graphics. WebP offers the best compression
-          ratio for web use while maintaining visual quality.
+          PNG preserves transparency and avoids lossy compression. WebP is another option for
+          web assets. Animated GIF input is exported as a still image, not a cropped animation.
         </p>
 
         <h2>Download cropped images as a ZIP file</h2>
         <p>
           After cropping, ImageCropKit exports all processed images and packages them into one
           ZIP file. You can also enter a file name prefix so exported files follow a consistent
-          naming pattern — useful when organizing assets for ecommerce listings or content
-          management systems.
+          naming pattern. ZIP contents lists actual names and dimensions. Matching source
+          filenames receive unique suffixes so they do not overwrite one another.
         </p>
 
         <h2>Batch cropping without losing quality</h2>
         <p>
-          ImageCropKit uses the browser Canvas API with imageSmoothingEnabled and precise pixel
-          mapping for high-quality output. Because all bulk image processing happens locally,
-          there is no server-side recompression. You control the output format and quality slider
-          for JPG and WebP exports, so every image in the batch keeps the quality level you choose.
+          Export creates a new image file. JPG and WebP compression can change detail; resizing
+          can soften edges, and enlarging a small crop cannot restore missing detail. PNG avoids
+          lossy output compression, but metadata and color handling may differ from the original.
+          Keep your source files and inspect an output before processing a large batch.
         </p>
 
         <h2>Private bulk image cropping</h2>
         <p>
           All batch processing happens locally in your browser. Your images are not uploaded
           to a server, which makes this tool useful for private photos, internal screenshots,
-          ecommerce product images, and dataset preparation. Close the tab and the image data
-          is gone — nothing is stored anywhere.
+          ecommerce product images, and dataset preparation. Closing the tab clears the editing
+          session; original files and downloads remain on your device.
         </p>
         <p>
           If your batch is mostly screenshots, start with the <Link href="/crop-screenshot">screenshot cropper</Link>
@@ -133,7 +136,7 @@ export default function BulkCropImagesPage() {
           { name: "Upload images", text: "Upload one or more images by dragging, clicking, or pasting from the clipboard." },
           { name: "Choose a preset", text: "Select a common crop ratio or preset that will be shared across the batch." },
           { name: "Adjust per image", text: "Fine-tune the crop area for individual images when needed." },
-          { name: "Apply to all", text: "Click Apply crop to all to copy the same proportional crop across every uploaded image." },
+          { name: "Review outputs", text: "Check each crop and the filenames and pixel dimensions in ZIP contents. Copy framing to all only when it suits the batch." },
           { name: "Download ZIP", text: "Choose PNG, JPG, or WebP and download all cropped images as a single ZIP file." },
         ]}
       />

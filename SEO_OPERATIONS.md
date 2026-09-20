@@ -118,6 +118,14 @@ Windows are planning targets, not reasons to delay ready work or declare unfinis
 - GA/GSC reporting remains unavailable; no new traffic, indexing or conversion measurement. This run records evidence only and makes no user-facing website changes.
 - Validation: pnpm build and git diff --check passed; pnpm lint passed with six existing image warnings.
 
+### 2026-09-20: Bulk workflow and evidence-based guide
+
+- Prioritized the existing bulk tool and guide over new overlapping landing pages. Full reporting comparisons are stored privately; reporting access is available, not blocked. Further index investigation is deferred by the owner. Bulk-specific event receipt and an ordered conversion funnel remain unverified.
+- Fixed mixed-orientation crop copying, duplicate ZIP filename collisions, and premature object-URL cleanup. Added actual output dimensions/names, per-image adjustment states, export busy protection and retry of failed images.
+- Replaced the generic bulk illustration with downloadable test originals and actual tool-exported PNGs. Updated the existing guide to distinguish aspect ratio from pixel dimensions, explain mixed-image review and partial export recovery, and link to exact-size and multi-size tools. No new route or unsupported platform specification added.
+- Four focused unit tests cover crop geometry and unique filenames. Build and lint pass (six existing image warnings). Desktop/mobile ZIP and publication acceptance are recorded in private operational memory; no traffic or ranking improvement is claimed from implementation alone.
+- Next: allow an observation window for this release, then improve another proven crop workflow if a concrete gap exists. Do not repeat analytics UI work or rebuild this same package just to fill a scheduled run.
+
 ### 2026-09-12: B02 preset entry implementation
 
 - Added validated pack query selection to the editor with Creator fallback and a Suspense boundary. Guide now links to Creator, Store and AI export workflows. Canonical remains query-free; no new sitemap URLs.

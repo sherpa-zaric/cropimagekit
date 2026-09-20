@@ -1,198 +1,107 @@
 ---
-title: "How to Bulk Crop Images Without Losing Your Mind"
-description: "Practical guide to bulk cropping images for ecommerce, social media, and AI datasets. Covers aspect ratios, file formats, batch workflows, and quality preservation."
+title: "How to Bulk Crop Mixed-Size Images to the Same Ratio"
+description: "Crop portrait and landscape images to one ratio, adjust subjects individually, check actual output dimensions, and download a ZIP without losing duplicate filenames."
 date: "2026-06-16"
-tags: ["bulk crop image", "batch image processing", "ecommerce", "social media", "image editing"]
+tags: ["bulk crop image", "batch image processing", "aspect ratio", "image editing"]
 author: "ImageCropKit"
 ---
 
-# How to Bulk Crop Images Without Losing Your Mind
+# How to Bulk Crop Mixed-Size Images to the Same Ratio
 
-You have 200 product photos that need to be 2048 &times; 2048 for Shopify. Or 50 Instagram posts that need to be 1080 &times; 1080. Or a folder of AI training images that all need to be exactly 512 &times; 512. Whatever the reason, you need to crop a lot of images to the same dimensions — and doing it one by one in Photoshop is not an option.
+A landscape photo and a portrait photo can both become squares without becoming the same number of pixels. That distinction matters when preparing a catalog, a team gallery, or a set of thumbnails.
 
-This guide covers the practical side of bulk image cropping: when you need it, how to set up a workflow that actually works, and how to avoid the quality pitfalls that trip up most people.
+This workflow uses the [bulk image cropper](/bulk-crop-images): choose one aspect ratio, adjust each subject, review the output list, and download a ZIP. Images are processed locally. There is no automatic subject detection, background removal, or cloud editing history.
 
-<div className="not-prose my-8 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 p-6 text-center text-white shadow-lg">
-  <p className="mb-3 text-lg font-semibold">Ready to crop your batch?</p>
-  <p className="mb-4 text-sm text-blue-100">Free browser-based tool. No signup. No upload. Download as ZIP.</p>
-  <a href="/bulk-crop-images" className="inline-block rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-700 shadow transition hover:bg-blue-50">Open Bulk Crop Tool &rarr;</a>
-</div>
+*Workflow and examples updated September 20, 2026. Original publication: June 16, 2026.*
 
-## When Bulk Cropping Actually Matters
+## Same Ratio or Same Pixel Dimensions?
 
-Most people think of cropping as a one-image task. But several common workflows require the same crop applied to dozens or hundreds of images:
+**Aspect ratio** describes shape: 1:1 is square, 4:5 is portrait, and 16:9 is landscape. **Pixel dimensions** describe the actual width and height of a file.
 
-**Ecommerce product photos.** If you sell on multiple platforms, you need different crops for each one. Amazon wants 2000 &times; 2000 with a pure white background. Shopify themes default to 2048 &times; 2048 square. Etsy recommends 2700 &times; 2025 at 4:3. A catalog of 100 products across three platforms means 300 individual crop operations.
+The general bulk tool exports the selected crop at its source resolution. Selecting 1:1 does not resize every file to 1080 by 1080. Check **ZIP contents** for each output's actual dimensions before downloading.
 
-**Social media content.** Instagram square posts are 1080 &times; 1080. Portrait posts are 1080 &times; 1350. Stories and Reels are 1080 &times; 1920. YouTube thumbnails are 1280 &times; 720. If you are repurposing the same photos across platforms, you are cropping each image three or four times.
+| Requirement | Appropriate workflow |
+| --- | --- |
+| Many originals, one shared shape | [Bulk crop images](/bulk-crop-images), with individual adjustments |
+| One image at exact width and height | [Crop and resize](/crop-and-resize-image) |
+| Training images at an available fixed-size preset | [LoRA image cropper](/crop-images-for-lora-training); check the selected preset |
+| One image in several publishing formats | [Creator export pack](/social-media-image-pack?pack=creator) |
 
-**AI and machine learning datasets.** Training data for image classifiers, diffusion models, and LoRA fine-tuning all require consistent input dimensions. SD 1.5 uses 512 &times; 512 buckets. SDXL uses 1024 &times; 1024. A dataset of 1000 images with inconsistent framing will produce inconsistent training results.
+## A Reproducible Mixed-Size Example
 
-**Thumbnails and avatars.** Profile pictures for a team page, product thumbnails for a catalog grid, or video thumbnails for a YouTube channel — all need the same aspect ratio and approximate centering.
+These are test graphics, not customer photographs. Their edge markers make removed areas easy to see. The outputs are actual PNG files exported by the bulk editor with 1:1 selected, using its centered starting crops.
 
-In every case, the problem is the same: you have many images, one target dimension, and limited patience.
+| Source | Original dimensions | Actual PNG output |
+| --- | --- | --- |
+| Landscape | 1600 by 1200 | 600 by 600 |
+| Portrait | 900 by 1600 | 450 by 450 |
 
-## The Two Approaches to Bulk Cropping
+### Landscape Source and Export
 
-There are two ways to handle batch cropping, and they produce very different results.
+![Landscape test source with a blue subject and marked edges](/bulk-examples/landscape.png)
 
-### Uniform Crop (Same Position for All Images)
+![Actual 600 by 600 square PNG export](/bulk-examples/landscape-cropped.png)
 
-You set one crop box — say, a 1:1 square centered on the image — and apply it identically to every file. This works when your source images have similar composition: same framing, same subject position, similar backgrounds.
+### Portrait Source and Export
 
-Example: 50 product photos shot on the same white backdrop with the product centered. A uniform 2048 &times; 2048 crop works because every image has the same layout.
+![Portrait test source with a blue subject and marked edges](/bulk-examples/portrait.png)
 
-The risk: if some images have off-center subjects, a uniform crop will cut off the important parts in those frames.
+![Actual 450 by 450 square PNG export](/bulk-examples/portrait-cropped.png)
 
-### Individual Crop (Adjust Per Image)
+[Download the landscape source](/bulk-examples/landscape.png) and [portrait source](/bulk-examples/portrait.png), then open the [bulk cropper](/bulk-crop-images) to reproduce the results. Resizing or moving a selection can change the output size or framing; the output list updates accordingly.
 
-You set the aspect ratio once, then adjust the crop position for each image. Every file gets the same dimensions, but the crop box moves to fit the subject.
+## Step 1: Load a Manageable Batch
 
-This is slower but necessary when source images have varied compositions. For example, lifestyle product photos where the product sits in different positions, or headshots taken at different distances.
+Start with a few originals, especially on a phone. Decoded images can occupy much more memory than compressed files. There is no guaranteed safe batch count for every device.
 
-The best bulk crop tools let you start with a uniform crop and switch to individual adjustments for the images that need them.
+Use **Add** to append images without replacing the current batch. Keep the tab open: crops are not saved as a persistent project. Unsupported or damaged files may fail to load; the editor reports the number that could not be opened.
 
-## Setting Up a Batch Crop Workflow
+## Step 2: Select a Ratio and Frame Each Subject
 
-Here is the workflow that works for most people, whether you are processing 20 images or 200.
+Choose 1:1, 4:5, or another required shape. A ratio creates a starting crop for each image. **Auto crop** means an initial crop exists, not that a person or product was detected. **Adjusted** means the crop was changed manually.
 
-### Step 1: Sort Your Source Images
+Select each thumbnail, move the crop over the subject, and resize if needed. Switching thumbnails keeps each image's selection. Leave room around faces, handles, or text. Always work from the original rather than repeatedly cropping exported files.
 
-Before you crop anything, organize your files. Group images by their intended output:
+## Step 3: Copy Framing Only When It Fits
 
-- Product photos for Amazon go in one folder
-- Instagram posts go in another
-- AI training images go in a third
+**Apply This Crop to All Images** transfers relative center and relative crop size while preserving the pixel aspect ratio across source orientations. Near an edge, the selection is clamped inside the image. It does not find the subject in the next file.
 
-This sounds obvious, but skipping it leads to exporting the wrong crop to the wrong batch. Five minutes of sorting saves thirty minutes of re-exporting.
+Use this for similarly composed images. Adjust off-center subjects separately afterward. Copying to all or changing the ratio replaces existing selections; do those operations before the final individual pass. Selecting the already active ratio leaves adjustments in place.
 
-### Step 2: Choose Your Target Dimensions
+## Step 4: Review What the ZIP Will Contain
 
-Pick the aspect ratio or pixel dimensions for each group. Common targets:
+**ZIP contents** shows filenames and pixel sizes. Images without a valid crop are marked **Not cropped** and excluded. Check the count before downloading.
 
-| Use Case | Dimensions | Aspect Ratio |
-|----------|-----------|-------------|
-| Instagram square | 1080 &times; 1080 | 1:1 |
-| Instagram portrait | 1080 &times; 1350 | 4:5 |
-| TikTok / Reels | 1080 &times; 1920 | 9:16 |
-| YouTube thumbnail | 1280 &times; 720 | 16:9 |
-| Shopify product | 2048 &times; 2048 | 1:1 |
-| Amazon product | 2000 &times; 2000 | 1:1 |
-| Etsy listing | 2700 &times; 2025 | 4:3 |
-| Passport photo | 600 &times; 600 | 1:1 |
+By default, `photo.jpg` becomes `photo-cropped.png` for PNG output. Matching names receive suffixes such as `photo-cropped-2.png`, so both survive in the archive. An optional prefix produces names such as `catalog-01.png`. Numbering follows batch order, including when retrying a subset.
 
-For a full breakdown of every platform dimension, see our [social media image sizes guide](/blog/social-media-image-sizes-2026).
+Choose PNG for lossless output encoding and transparency. JPG and WebP use the quality setting and may alter fine detail. Canvas export creates a new file: local processing does not guarantee unchanged metadata, color profiles, or identical source pixels.
 
-### Step 3: Upload and Preview
+## Step 5: Download and Recover From Failures
 
-Load your images into a [bulk crop tool](/bulk-crop-images). Most browser-based tools accept drag-and-drop for multiple files at once. The images load into your browser memory — nothing gets uploaded to a server.
+Open the ZIP and inspect a few files at actual size. Verify the subject and dimensions against the output list.
 
-Check the preview on a few images before you start cropping. Look for:
+If individual images fail, successful files are still included. Failed source names remain visible with **Retry failed images**, keeping your crops. The retry creates a separate ZIP for that subset. If ZIP creation fails, the batch remains available; retry or start a smaller batch if memory is exhausted. A closed tab cannot recover an unsaved session.
 
-- Subjects that are off-center and will get cut off
-- Images with very different aspect ratios from your target
-- Files that are lower resolution than your output target (you cannot upscale a 400px image to 2048px without quality loss)
+## Common Questions
 
-### Step 4: Set the Crop
+### Will all square images have identical dimensions?
 
-Apply your target aspect ratio to the first image. Adjust the crop box to frame the subject properly. If the composition works for most images in the batch, use "Apply crop to all" to copy the same settings across every file.
+No. A 600 by 600 crop and a 450 by 450 crop share a ratio. Exact dimensions require a fixed-size preset or a resize step. The generic bulk page does not have custom width and height inputs.
 
-Then scan through the batch. Images with off-center subjects will need individual adjustments. This is where the time savings happen — you are tweaking 10 out of 50 images instead of cropping all 50 from scratch.
+### Will cropping make a low-resolution image sharper?
 
-### Step 5: Export
+No. Cropping discards surrounding pixels. Enlarging the remainder cannot recreate detail. Keep more of the original when possible, or use a higher-resolution source.
 
-Choose your output format and download:
+### Can I keep animations?
 
-- **JPG** — Best for photographs. Smaller file sizes. Use quality 85-90 for a good balance between size and visual quality. Going below 75 introduces visible compression artifacts around edges.
-- **PNG** — Best for graphics, screenshots, and images with text. Larger files but lossless. Use when you need transparency.
-- **WebP** — Best for web use. 25-35% smaller than JPG at equivalent quality. Supported by all modern browsers.
+This is a still-image workflow. GIF input does not produce an animated cropped output. Outputs are PNG, JPG, or WebP still images.
 
-Export as a ZIP file to keep everything organized. If the tool supports file naming prefixes, use them — `product-01.jpg`, `product-02.jpg` is easier to manage than `IMG_4521.jpg`, `IMG_4522.jpg`.
+### Can I reuse one crop for every platform?
 
-## Quality: What Actually Gets Lost
+Different shapes often need different framing. Keep the original and use the [creator export pack](/social-media-image-pack?pack=creator) for several outputs from one source. Platform requirements can change; the [image sizes guide](/blog/social-media-image-sizes-2026) separates example canvases from sourced specifications.
 
-The number one concern with bulk cropping is quality loss. Here is what actually happens:
+### Are image bytes or filenames sent to analytics?
 
-**Cropping itself does not reduce quality.** Cropping removes pixels from the edges of an image. The pixels that remain are exactly the same as they were in the original. No information is lost from the kept area.
+Processing stays in the browser. Editor analytics describe actions such as image counts, format, and success or failure, not image bytes or source filenames. See the [privacy policy](/privacy) for site analytics details.
 
-**Quality loss comes from re-encoding.** When you save a JPG, the encoder applies compression. Each save cycle applies another round of compression. If you crop in one tool, then open the result in another tool and export again, you have double-compressed the image.
-
-**How to avoid it:** Use a tool that crops and exports in one step. [ImageCropKit](/bulk-crop-images) processes images using the browser Canvas API — the crop and export happen in a single pass, so there is no intermediate save step that could introduce additional compression.
-
-**Resolution matters more than format.** A 2000px JPG at quality 85 looks sharper than a 800px PNG. Match your source resolution to your output target. If your source images are 3000px and you are cropping to 1080px, you have plenty of room. If your sources are 600px and you need 2048px, you have a problem that no crop tool can fix.
-
-## Practical Tips From Real Workflows
-
-### Ecommerce: Process by Platform, Not by Product
-
-If you sell on Amazon, Shopify, and Etsy, do not try to crop one batch to rule them all. Export separate batches per platform:
-
-1. Crop all product photos to Amazon dimensions (2000 &times; 2000)
-2. Export as JPG with the Amazon file naming convention
-3. Repeat for Shopify (2048 &times; 2048)
-4. Repeat for Etsy (2700 &times; 2025, 4:3)
-
-Yes, this means processing the same images three times. But it ensures each platform gets exactly what it needs, and you avoid the "wrong crop uploaded to the wrong listing" mistake that costs real money in suppressed listings.
-
-For a detailed breakdown of each platform's requirements, read our [ecommerce product image size guide](/blog/ecommerce-product-image-size-guide).
-
-### Social Media: Crop to the Tallest Format First
-
-When repurposing one photo across multiple platforms, crop to the most restrictive format first — usually 9:16 for Stories and Reels. Then use that same crop for square and landscape formats by adjusting the crop box within the already-cropped frame.
-
-This works because a 9:16 crop contains enough vertical information to fill a 1:1 or 4:5 frame. Going the other direction — cropping to 1:1 first — throws away the top and bottom pixels you would need for 9:16.
-
-### AI Training Data: Consistency Beats Perfection
-
-For machine learning datasets, the goal is consistent dimensions and framing across the entire batch. A perfectly centered crop on every image is nice, but what matters most is that the model sees the same input format every time.
-
-Use [bulk crop](/bulk-crop-images) to enforce the target dimensions, then let the training pipeline handle augmentation (random crops, flips, color jitter) during training. Do not waste time manually centering each image — the model does not care about aesthetic composition, it cares about consistent tensor shapes.
-
-## Common Mistakes
-
-**Uploading low-res images and expecting sharp crops.** You cannot create detail that was not in the original. If your source is 500px and your target is 2048px, the output will be blurry. Shoot or download at higher resolution than your output target.
-
-**Ignoring the background.** Cropping a product photo tighter does not fix a cluttered background. Crop and background cleanup are separate steps.
-
-**Using the wrong format.** PNG for product photos wastes bandwidth. JPG for screenshots with text introduces artifacts. Pick the format that matches the content.
-
-**Forgetting to check the batch.** Scanning through 50 cropped images takes two minutes. Finding out one got cut off after you uploaded it to Shopify takes fifteen.
-
-## Tools for the Job
-
-- **[Bulk Crop Images](/bulk-crop-images)** — Free browser-based batch cropper. Upload multiple images, apply a shared aspect ratio, adjust individually, download as ZIP.
-- **[Screenshot Cropper](/crop-screenshot)** — Crop private screenshots, browser captures, chat screenshots, and documentation images.
-- **[Trim Screenshot](/trim-screenshot)** — Remove browser chrome, desktop background, sidebars, and empty margins from screenshots.
-- **[Crop Image Online](/crop-image)** — Single image cropper with presets for every major platform.
-- **[Crop Product Images](/crop-product-images)** — Dedicated tool with Shopify, Amazon, and Etsy dimension presets.
-- **[Crop by Dimensions](/crop-image-by-dimensions)** — Enter exact pixel values for custom sizes.
-
-All processing happens in your browser. No uploads, no accounts, no watermarks.
-
-## FAQ
-
-**How many images can I crop at once?**
-There is no hard limit in the tool. The practical limit depends on your device memory — most browsers handle 50 to 100 images comfortably. Larger batches may slow down depending on image resolution.
-
-**What image formats can I bulk crop?**
-JPG, PNG, WebP, BMP, and GIF are supported as input. You can export cropped images as JPG, PNG, or WebP.
-
-**Will cropping reduce my image quality?**
-Cropping removes pixels from the edges but does not affect the remaining pixels. Quality loss only happens if the tool re-encodes your image at a lower quality setting. Single-pass export tools like ImageCropKit avoid this.
-
-**Can I crop all images to a square?**
-Yes. Select the 1:1 aspect ratio, adjust the crop on one image, and click "Apply crop to all" to copy the same proportional crop across the entire batch.
-
-**Can I rename files during export?**
-Yes. Enter a file name prefix before downloading. Files will be named with that prefix and a sequence number — for example, `product-01.jpg`, `product-02.jpg`.
-
-**Are my images uploaded to a server?**
-No. All processing happens locally in your browser using the Canvas API. Your images never leave your device.
-
-<div className="not-prose my-8 rounded-lg border border-blue-200 bg-blue-50 p-6 text-center dark:border-blue-800 dark:bg-blue-950">
-  <p className="mb-3 text-lg font-semibold text-blue-900 dark:text-blue-100">Start cropping your batch now</p>
-  <p className="mb-4 text-sm text-blue-700 dark:text-blue-300">Upload images, pick an aspect ratio, download as ZIP. Takes under a minute.</p>
-  <a href="/bulk-crop-images" className="inline-block rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow transition hover:bg-blue-700">Open Bulk Crop Tool &rarr;</a>
-</div>
-
-*Last updated: June 2026*
+[Open the bulk crop tool](/bulk-crop-images)

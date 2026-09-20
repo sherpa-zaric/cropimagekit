@@ -17,6 +17,7 @@ interface ExportPanelProps {
   cropRatio?: string;
   note?: string;
   fileSize?: string | null;
+  downloadLabel?: string;
 }
 
 const formats: { value: ExportFormat; label: string }[] = [
@@ -45,6 +46,7 @@ export default function ExportPanel({
   cropRatio,
   note,
   fileSize,
+  downloadLabel: customDownloadLabel,
 }: ExportPanelProps) {
   const parts: string[] = [];
   if (presetName) parts.push(presetName);
@@ -109,8 +111,8 @@ export default function ExportPanel({
         )}
 
         <Button onClick={onDownload} disabled={disabled} className="w-full">
-          <span className="hidden sm:inline">{downloadLabel}</span>
-          <span className="sm:hidden">Download</span>
+          <span className="hidden sm:inline">{customDownloadLabel || downloadLabel}</span>
+          <span className="sm:hidden">{customDownloadLabel || "Download"}</span>
         </Button>
       </div>
     </div>

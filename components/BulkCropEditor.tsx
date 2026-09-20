@@ -10,12 +10,13 @@ import AspectRatioPicker from "@/components/AspectRatioPicker";
 import PresetPicker from "@/components/PresetPicker";
 import TrustBadges from "@/components/TrustBadges";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, Plus } from "lucide-react";
+import { ChevronLeft, ChevronRight, Plus, RotateCcw } from "lucide-react";
 import { toast } from "sonner";
 import { trackAnalyticsEvent } from "@/lib/analytics";
 
 import { getImageUrl, loadImageFromFile, revokeImageUrl } from "@/lib/imageUtils";
-import { calculateInitialCrop, exportCroppedImage, getOutputFileName, percentCropToPixelCrop, isValidCrop } from "@/lib/cropImage";
+import { calculateInitialCrop, exportCroppedImage, percentCropToPixelCrop, isValidCrop } from "@/lib/cropImage";
+import { bulkOutputNames, transferCrop } from "@/lib/bulkCrop";
 import { downloadAsZip } from "@/lib/zipImages";
 import { type CropPreset } from "@/lib/presets";
 import type { ExportFormat } from "@/lib/siteConfig";
@@ -26,6 +27,7 @@ interface ImageItem {
   url: string;
   element: HTMLImageElement;
   reactCrop: Crop | undefined;
+  adjusted?: boolean;
 }
 
 interface BulkCropEditorProps {
@@ -78,8 +80,11 @@ export default function BulkCropEditor({
   const [selectedPreset, setSelectedPreset] = useState<CropPreset | null>(defaultPreset || null);
   const [format, setFormat] = useState<ExportFormat>("png");
   const [quality, setQuality] = useState(92);
-  const [showGuide, setShowGuide] = useState(true);
   const [filePrefix, setFilePrefix] = useState("");
+  const [failedUrls, setFailedUrls] = useState<string[]>([]);
+  const [isExporting, setIsExporting] = useState(false);
+  const exportingRef = useRef(false);
+  const imageUrls = useRef(new Set<string>());
 
   const imgRef = useRef<HTMLImageElement | null>(null);
   const thumbStripRef = useRef<HTMLDivElement | null>(null);
@@ -113,6 +118,7 @@ export default function BulkCropEditor({
     const newImages: ImageItem[] = [];
     for (const file of files) {
       const url = getImageUrl(file);
+      imageUrls.current.add(url);
       try {
         const element = await loadImageFromFile(file);
         const reactCrop = hasRatio
@@ -125,6 +131,7 @@ export default function BulkCropEditor({
       }
     }
     setImages(newImages);
+    setFailedUrls([]);
     if (newImages.length > 0) trackAnalyticsEvent("crop_image_loaded", { tool_type: "bulk", image_count: newImages.length });
     if (newImages.length < files.length) toast.error(`${files.length - newImages.length} images could not be loaded.`);
     if (newImages.length > 0) setSelectedIdx(0);
@@ -136,6 +143,7 @@ export default function BulkCropEditor({
     const appended: ImageItem[] = [];
     for (const file of files) {
       const url = getImageUrl(file);
+      imageUrls.current.add(url);
       try {
         const element = await loadImageFromFile(file);
         const reactCrop = hasRatio
@@ -160,6 +168,7 @@ export default function BulkCropEditor({
     if (preset.aspectRatio > 0) {
       setImages((prev) => prev.map((img) => ({
         ...img,
+        adjusted: false,
         reactCrop: calculateInitialCrop(
           preset.aspectRatio,
           img.element.naturalWidth,
@@ -170,29 +179,35 @@ export default function BulkCropEditor({
   }, [selectedPreset?.id]);
 
   const updateCrop = useCallback((idx: number, percentCrop: Crop) => {
-    setImages((prev) => { const n = [...prev]; n[idx] = { ...n[idx], reactCrop: percentCrop }; return n; });
+    setImages((prev) => { const n = [...prev]; n[idx] = { ...n[idx], reactCrop: percentCrop, adjusted: true }; return n; });
   }, []);
 
   const applyCropToAll = useCallback(() => {
     if (selectedIdx === null) return;
     const src = images[selectedIdx];
-    if (!src?.reactCrop) return;
+    if (!src || !isValidCrop(src.reactCrop)) return;
     const srcCrop = src.reactCrop;
     setImages((prev) => prev.map((img) => ({
       ...img,
-      reactCrop: srcCrop ? { ...srcCrop } : undefined,
+      reactCrop: img.url === src.url ? srcCrop : transferCrop(srcCrop, src.element.naturalWidth, src.element.naturalHeight, img.element.naturalWidth, img.element.naturalHeight),
+      adjusted: img.url === src.url ? src.adjusted : false,
     })));
   }, [images, selectedIdx]);
 
   const aspectRatio = selectedPreset?.aspectRatio ? selectedPreset.aspectRatio : undefined;
   const croppedCount = images.filter((img) => isValidCrop(img.reactCrop)).length;
 
-  const handleDownload = useCallback(async () => {
+  const outputNames = bulkOutputNames(images.map(img => img.file.name), format, filePrefix);
+  const handleDownload = async (retryOnly = false) => {
+    if (exportingRef.current) return;
+    exportingRef.current = true;
+    setIsExporting(true);
+    const failures: string[] = [];
+    try {
     const entries: { name: string; blob: Blob }[] = [];
-    const usePrefix = filePrefix.trim().length > 0;
-    let seq = 0;
     let failed = 0;
-    for (const img of images) {
+    for (const [index, img] of images.entries()) {
+      if (retryOnly && !failedUrls.includes(img.url)) continue;
       if (!isValidCrop(img.reactCrop)) continue;
       try {
         const pixelCrop = percentCropToPixelCrop(img.reactCrop, img.element.naturalWidth, img.element.naturalHeight);
@@ -201,24 +216,24 @@ export default function BulkCropEditor({
           width: selectedPreset?.width,
           height: selectedPreset?.height,
         });
-        seq++;
-        const name = usePrefix
-          ? `${filePrefix.trim()}-${String(seq).padStart(2, "0")}.${format === "jpg" ? "jpg" : format}`
-          : getOutputFileName(img.file.name, format);
+        const name = outputNames[index];
         entries.push({ name, blob });
       } catch (err) {
         console.error("Failed to export image:", err);
         failed++;
+        failures.push(img.url);
       }
     }
     if (entries.length > 0) {
       try {
         await downloadAsZip(entries, "cropped-images.zip");
       } catch {
+        setFailedUrls(images.filter(img => isValidCrop(img.reactCrop) && (!retryOnly || failedUrls.includes(img.url))).map(img => img.url));
         trackAnalyticsEvent("crop_export_failed", { tool_type: "bulk", format, failed_count: entries.length, failure_stage: "zip" });
         toast.error("Could not create the ZIP. Try fewer images or a smaller output size.");
         return;
       }
+      setFailedUrls(failures);
       trackAnalyticsEvent("crop_export_succeeded", { tool_type: "bulk", format, output_count: entries.length, failed_count: failed });
       if (failed > 0) {
         trackAnalyticsEvent("crop_export_failed", { tool_type: "bulk", format, failed_count: failed, failure_stage: "image_export" });
@@ -227,16 +242,20 @@ export default function BulkCropEditor({
         toast.success(`ZIP downloaded (${entries.length} image${entries.length > 1 ? "s" : ""})`);
       }
     } else {
+      setFailedUrls(failures);
       trackAnalyticsEvent("crop_export_failed", { tool_type: "bulk", format, failed_count: failed, failure_stage: "image_export" });
       toast.error("No images could be exported. Please try again.");
     }
-  }, [images, format, quality, selectedPreset, filePrefix, croppedCount]);
+    } finally {
+      exportingRef.current = false;
+      setIsExporting(false);
+    }
+  };
 
   useEffect(() => {
-    return () => {
-      for (const img of images) revokeImageUrl(img.url);
-    };
-  }, [images]);
+    const urls = imageUrls.current;
+    return () => { for (const url of urls) revokeImageUrl(url); };
+  }, []);
   const outputWidth = selectedPreset?.width;
   const outputHeight = selectedPreset?.height;
 
@@ -252,7 +271,7 @@ export default function BulkCropEditor({
   const cropRatioLabel = selectedPreset ? formatRatio(selectedPreset.aspectRatio) : undefined;
 
   return (
-    <div className="space-y-3 pb-20 lg:pb-0">
+    <fieldset disabled={isExporting} className="min-w-0 space-y-3 pb-20 lg:pb-0" aria-busy={isExporting}>
       <div className="flex items-center justify-between gap-3 text-sm">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
           {selectedPreset && (
@@ -303,8 +322,10 @@ export default function BulkCropEditor({
             const isCropped = !!img.reactCrop;
             return (
               <button
-                key={i}
+                key={img.url}
                 onClick={() => setSelectedIdx(i)}
+                aria-pressed={isSelected}
+                aria-label={`Edit image ${i + 1}: ${img.file.name}`}
                 className={`relative text-left rounded-lg overflow-hidden border-2 transition-colors shrink-0 w-[100px] ${
                   isSelected ? "border-primary" : "border-transparent hover:border-muted-foreground/30"
                 }`}
@@ -313,7 +334,7 @@ export default function BulkCropEditor({
                   <img src={img.url} alt={img.file.name} className="w-full h-full object-cover" />
                   {isCropped && (
                     <span className="absolute top-1 right-1 inline-flex items-center rounded-full bg-primary/90 text-primary-foreground text-[9px] px-1 py-0.5 font-medium">
-                      Cropped
+                      {failedUrls.includes(img.url) ? "Export failed" : img.adjusted ? "Adjusted" : "Auto crop"}
                     </span>
                   )}
                 </div>
@@ -362,43 +383,24 @@ export default function BulkCropEditor({
         </button>
       </div>
 
-      {showGuide && (
-        <div className="flex items-start gap-3 bg-muted/50 rounded-lg border p-3 text-sm">
-          <div className="flex-1 flex flex-wrap gap-x-4 gap-y-2">
-            {[
-              { n: 1, label: "Upload images" },
-              { n: 2, label: "Choose a preset" },
-              { n: 3, label: "Click each image to adjust crop" },
-              { n: 4, label: "Optional: Apply crop to all" },
-              { n: 5, label: "Download ZIP" },
-            ].map((step) => (
-              <div key={step.n} className="flex items-center gap-1.5">
-                <span className="w-5 h-5 rounded-full bg-primary text-primary-foreground text-xs font-medium flex items-center justify-center">{step.n}</span>
-                <span className="text-muted-foreground">{step.label}</span>
-              </div>
-            ))}
-          </div>
-          <button onClick={() => setShowGuide(false)} className="text-muted-foreground hover:text-foreground leading-none">×</button>
-        </div>
-      )}
-
       {selectedImage && selectedIdx !== null && (
         <div className="space-y-3">
           <div className="flex items-center justify-between flex-wrap gap-2">
-            <p className="text-sm text-muted-foreground truncate">
+            <p className="min-w-0 break-all text-sm text-muted-foreground">
               <span className="font-medium text-foreground">{selectedImage.file.name}</span>
               <span className="ml-2 font-mono">
                 {selectedImage.element.naturalWidth}×{selectedImage.element.naturalHeight}
               </span>
             </p>
             {selectedImage.reactCrop && (
-              <span className="text-sm text-primary font-medium">Cropped</span>
+              <span className="text-sm text-primary font-medium">{selectedImage.adjusted ? "Adjusted" : "Auto crop"}</span>
             )}
           </div>
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex flex-col gap-3 flex-1 min-w-0">
               <div className="flex justify-center items-center overflow-hidden min-h-[420px] border-2 border-foreground/25 rounded-lg checkerboard flex-1">
                 <ReactCrop
+                  disabled={isExporting}
                   crop={selectedImage.reactCrop}
                   onChange={(_, percentCrop) => updateCrop(selectedIdx, percentCrop)}
                   aspect={aspectRatio} minWidth={50} minHeight={50} className="max-h-[85vh]"
@@ -413,8 +415,9 @@ export default function BulkCropEditor({
                 quality={quality}
                 onFormatChange={setFormat}
                 onQualityChange={setQuality}
-                onDownload={handleDownload}
-                disabled={croppedCount === 0}
+                onDownload={() => void handleDownload()}
+                disabled={croppedCount === 0 || isExporting}
+                downloadLabel={isExporting ? "Creating ZIP..." : `Download ZIP (${croppedCount})`}
                 outputWidth={outputWidth}
                 outputHeight={outputHeight}
                 outputIsCropArea={!outputWidth && !outputHeight}
@@ -436,35 +439,45 @@ export default function BulkCropEditor({
             </div>
           </div>
 
-          <div className="rounded-lg border bg-muted/30 p-4 space-y-3">
-            <p className="text-sm text-muted-foreground">
-              You can adjust the crop for each image individually by clicking the thumbnails above. If you want the same crop on every image, use the button below.
-            </p>
+          <div className="border-t pt-4 space-y-3">
             <button onClick={applyCropToAll} disabled={!selectedImage?.reactCrop}
               className="w-full inline-flex items-center justify-center rounded-md bg-primary text-primary-foreground h-10 px-6 text-sm font-medium hover:opacity-90 transition-opacity disabled:opacity-50">
               Apply This Crop to All Images
             </button>
           </div>
 
-          <div className="rounded-lg border bg-muted/30 p-4 space-y-2">
-            <label className="text-sm text-muted-foreground block">
+          <div className="border-t pt-4 space-y-2">
+            <label htmlFor="bulk-prefix" className="text-sm text-muted-foreground block">
               File name prefix <span className="text-xs">(optional)</span>
             </label>
             <div className="flex items-center gap-2">
               <input
                 type="text"
+                id="bulk-prefix"
                 value={filePrefix}
                 onChange={(e) => setFilePrefix(e.target.value)}
                 placeholder="e.g. product"
-                className="flex-1 h-9 rounded-md border bg-background px-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary"
+                className="min-w-0 flex-1 h-9 rounded-md border bg-background px-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary"
               />
             </div>
-            <p className="text-xs text-muted-foreground">
-              {filePrefix.trim()
-                ? `Files will be named: ${filePrefix.trim()}-01.${format === "jpg" ? "jpg" : format}, ${filePrefix.trim()}-02.${format === "jpg" ? "jpg" : format}, ...`
-                : "Leave empty to keep original file names."}
-            </p>
           </div>
+          <section aria-label="ZIP contents" className="border-t pt-4 space-y-3">
+            <h2 className="text-base font-semibold">ZIP contents · {croppedCount} {formatLabel[format]} files</h2>
+            <ul className="divide-y text-sm">
+              {images.map((img, i) => {
+                const crop = isValidCrop(img.reactCrop) ? percentCropToPixelCrop(img.reactCrop, img.element.naturalWidth, img.element.naturalHeight) : null;
+                return <li key={img.url} className="flex flex-wrap items-center justify-between gap-2 py-2">
+                  <span className="min-w-0 break-all">{outputNames[i]}</span>
+                  <span className="shrink-0 font-mono text-muted-foreground">{crop ? `${outputWidth || crop.width} × ${outputHeight || crop.height} px` : "Not cropped"}</span>
+                </li>;
+              })}
+            </ul>
+          </section>
+          {failedUrls.length > 0 && <section role="alert" className="border-t pt-4 space-y-2">
+            <h2 className="text-base font-semibold">Export failed ({failedUrls.length})</h2>
+            <ul className="text-sm break-all">{images.filter(img => failedUrls.includes(img.url)).map(img => <li key={img.url}>{img.file.name}</li>)}</ul>
+            <Button variant="outline" onClick={() => void handleDownload(true)}><RotateCcw className="size-4" />Retry failed images</Button>
+          </section>}
         </div>
       )}
 
@@ -480,11 +493,11 @@ export default function BulkCropEditor({
 
       {selectedImage && croppedCount > 0 && (
         <div className="fixed bottom-0 inset-x-0 z-40 lg:hidden border-t border-border bg-background p-3">
-          <Button onClick={handleDownload} className="w-full h-11 text-base font-medium">
-            Download ZIP ({croppedCount})
+          <Button onClick={() => void handleDownload()} disabled={isExporting} className="w-full h-11 text-base font-medium">
+            {isExporting ? "Creating ZIP..." : `Download ZIP (${croppedCount})`}
           </Button>
         </div>
       )}
-    </div>
+    </fieldset>
   );
 }
