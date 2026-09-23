@@ -77,9 +77,8 @@ export default function AboutPage() {
             GitHub
           </a>
           . If you need to know more about who operates the site — for example for a
-          business inquiry — email{" "}
-          <a href="mailto:privacy@imagecropkit.com">privacy@imagecropkit.com</a> and we will
-          respond.
+          business inquiry — use the{" "}
+          <a href="/contact">contact form</a> and we will respond.
         </p>
 
         <h2>Contact</h2>

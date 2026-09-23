@@ -93,7 +93,10 @@ export default function PrivacyPage() {
       </p>
 
       <h2>Contact</h2>
-      <p>For questions about privacy or the website, contact the site owner at privacy@imagecropkit.com.</p>
+      <p>
+        For questions about privacy or the website, use the{" "}
+        <Link href="/contact">contact form</Link> and we will respond.
+      </p>
     </div>
   );
 }
