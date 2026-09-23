@@ -33,6 +33,16 @@ export const metadata: Metadata = {
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
   },
+  // Google AdSense site verification. The ca-pub ID comes from the
+  // NEXT_PUBLIC_GOOGLE_ADSENSE_ID env var (Vercel / .env.local), never
+  // hardcoded here, so it stays out of the public repo.
+  ...(process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID
+    ? {
+        other: {
+          "google-adsense-account": process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_ID,
+        },
+      }
+    : {}),
   openGraph: {
     siteName: "ImageCropKit",
     type: "website",
