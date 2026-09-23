@@ -27,6 +27,10 @@ export default function ContactPage() {
         <h2>Other ways to reach us</h2>
         <ul>
           <li>
+            <strong>Email:</strong>{" "}
+            <a href="mailto:privacy@imagecropkit.com">privacy@imagecropkit.com</a>
+          </li>
+          <li>
             <strong>GitHub:</strong>{" "}
             <a
               href="https://github.com/sherpa-zaric/cropimagekit/issues"

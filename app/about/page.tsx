@@ -65,6 +65,23 @@ export default function AboutPage() {
           No network requests are made during processing.
         </p>
 
+        <h2>Who runs it</h2>
+        <p>
+          ImageCropKit is run by an independent developer as a small, free utility. The
+          project is open source: you can inspect the code or report issues on{" "}
+          <a
+            href="https://github.com/sherpa-zaric/cropimagekit"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          . If you need to know more about who operates the site — for example for a
+          business inquiry — email{" "}
+          <a href="mailto:privacy@imagecropkit.com">privacy@imagecropkit.com</a> and we will
+          respond.
+        </p>
+
         <h2>Contact</h2>
         <p>
           For questions, feedback, or bug reports, visit our{" "}
