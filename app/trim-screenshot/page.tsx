@@ -25,6 +25,8 @@ const faqItems = [
   { question: "What format should I use after trimming a screenshot?", answer: "PNG is usually best for screenshots with text or UI elements because it keeps edges sharp. WebP is useful when you need a smaller file." },
   { question: "Can this automatically detect the screenshot edges?", answer: "Not yet. This page provides a manual trim workflow so you can choose exactly which area stays in the exported image." },
   { question: "Can I trim work or chat screenshots privately?", answer: "Yes. Local browser processing makes this suitable for private work screenshots, chat screenshots, support tickets, and documentation images." },
+  { question: "How do I trim a screenshot on Windows or Mac?", answer: "Capture the screenshot with Win + Shift + S or Cmd + Shift + 4, then paste or upload it here and drag the crop box just inside the content. The trimmed download works the same on both systems." },
+  { question: "What is the difference between trimming and cropping a screenshot?", answer: "Trimming removes the outer edges — whitespace, browser chrome, desktop background — while cropping can select any region inside the image. This page handles both with one crop box." },
 ];
 
 const related = [
@@ -51,17 +53,28 @@ export default function TrimScreenshotPage() {
       <section className="prose prose-neutral dark:prose-invert max-w-none">
         <h2>Trim screenshots without uploading them</h2>
         <p>
-          Screenshots often include parts you do not need: browser tabs, address bars, desktop
-          background, empty white space, chat sidebars, or unrelated UI. ImageCropKit lets you
-          trim the screenshot in your browser and export only the useful area.
+          <strong>
+            To trim a screenshot without uploading it, open the capture in a browser-based
+            cropper, drag the crop box just inside the content you want to keep, and download
+            the result. ImageCropKit processes screenshots locally, so internal dashboards,
+            private chats, and bug reports never leave your device.
+          </strong>
         </p>
         <p>
-          Because the image is processed locally, this workflow is suitable for internal
-          dashboards, customer support screenshots, private chats, design reviews, documentation,
-          bug reports, and any screenshot you do not want to upload to a server.
+          Screenshots often include parts you do not need — browser tabs, address bars, desktop
+          background, empty white space, chat sidebars, or unrelated UI. Trimming in the browser
+          keeps only the useful area and keeps the file private.
         </p>
 
         <h2>What to remove from a screenshot</h2>
+        <p>
+          <strong>
+            When trimming a screenshot, remove browser chrome, empty margins, desktop background,
+            app sidebars, and unrelated chat context — anything outside the content you actually
+            need to share. These elements add noise without adding information, and cutting them
+            makes the remaining content easier to read.
+          </strong>
+        </p>
         <ul>
           <li><strong>Browser chrome</strong> — tabs, bookmarks, address bars, and extension icons</li>
           <li><strong>Empty margins</strong> — white space around the useful content</li>
@@ -72,20 +85,27 @@ export default function TrimScreenshotPage() {
 
         <h2>Best format for trimmed screenshots</h2>
         <p>
-          PNG is usually the best export format for screenshots because it keeps text and
-          interface lines sharp. JPG can introduce blur around text and icons. WebP is a good
-          choice when the screenshot needs to stay small for web publishing or documentation.
+          <strong>
+            PNG is the best export format for trimmed screenshots because it keeps text and
+            interface lines sharp. JPG can introduce blur around text and icons, while WebP is a
+            good choice when the screenshot needs to stay small for web publishing or
+            documentation.
+          </strong>
         </p>
 
         <h2>Manual trimming instead of automatic editing</h2>
         <p>
-          This page does not automatically blur sensitive data, detect private information, or
-          decide the best crop for you. It gives you a manual crop box so you can control exactly
-          which part of the screenshot remains.
+          <strong>
+            This page trims screenshots with a manual crop box. It does not blur sensitive data,
+            detect private information, or decide the best crop automatically — you control
+            exactly which part of the screenshot remains in the exported file.
+          </strong>
         </p>
 
         <h2>Related screenshot tools</h2>
         <p>
+          For a full walkthrough of screenshot cropping on Windows, Mac, and online, read the{" "}
+          <Link href="/blog/how-to-crop-a-screenshot">how to crop a screenshot</Link> guide.
           Use the <Link href="/crop-screenshot">screenshot cropper</Link> for general screenshot
           crops, <Link href="/crop-image-by-dimensions">crop by dimensions</Link> when you need an
           exact output size, or <Link href="/bulk-crop-images">bulk crop images</Link> when you
