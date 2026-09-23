@@ -23,8 +23,9 @@ const faqItems = [
   { question: "Are screenshots uploaded to a server?", answer: "No. ImageCropKit processes screenshots locally in your browser, so private work screenshots, chat screenshots, and browser captures stay on your device." },
   { question: "What format should I use for screenshots?", answer: "PNG is usually best for screenshots because it preserves text, UI lines, and sharp edges without compression artifacts. WebP is useful when you need smaller files." },
   { question: "Can I remove whitespace from a screenshot?", answer: "Yes. Use the crop box to trim empty margins, browser chrome, desktop background, or extra whitespace before exporting." },
-  { question: "Can I crop long screenshots?", answer: "You can crop long screenshots manually today. A dedicated long screenshot splitter is planned, but this page does not automatically split images yet." },
-  { question: "Can I crop chat screenshots privately?", answer: "Yes. Because processing happens locally, ImageCropKit is suitable for cropping private chat screenshots before sharing them." },
+  { question: "Can I crop long screenshots?", answer: "Yes. Select one section of a long screenshot and export it. The tool does not automatically split a scrolling capture into multiple images. Very large captures can exceed your device's available browser memory." },
+  { question: "Does cropping a chat screenshot hide personal information?", answer: "Only information outside the selected area is removed from the exported image. Names, messages, faces, and account details inside the crop remain visible. Local processing does not automatically redact them; review the exported file before sharing." },
+  { question: "Will PNG make a blurry screenshot sharp?", answer: "No. PNG avoids adding lossy compression artifacts, but it cannot restore detail missing from the source. Enlarging a small crop does not create more readable text. Start with the original screenshot rather than a compressed messaging-app copy." },
 ];
 
 const related = [
@@ -84,6 +85,41 @@ export default function CropScreenshotPage() {
           This page does not automatically detect sensitive information, blur text, or split long
           screenshots. It gives you a private crop workflow so you can manually choose exactly what
           stays in the exported image.
+        </p>
+
+        <h2>Cropping is not the same as redaction</h2>
+        <p>
+          A crop removes the area outside its boundary from the exported image. It does not
+          conceal anything inside that boundary. A chat excerpt can still reveal a name or
+          avatar; a dashboard can still expose a customer record, access token, or account number.
+          Keeping image processing local protects the editing step, not the contents of a file
+          you later publish.
+        </p>
+        <p>
+          Before sharing a work capture, check the exported file for identifying details and
+          unrelated messages. If sensitive information sits between the details you need to
+          retain, cropping alone is insufficient: use a dedicated redaction tool. Share the
+          reviewed export, not the original full-screen capture.
+        </p>
+
+        <h2>Keep screenshot text readable</h2>
+        <p>
+          Start with the original capture when possible. A copy downloaded from a messaging
+          service may already contain compression damage, and PNG export cannot undo it.
+          Tight framing can make a screenshot easier to read at its displayed size, but enlarging
+          a small selection does not recover missing characters or fine interface details.
+          For documentation, retain enough context to identify the relevant control or error
+          message without including the entire desktop.
+        </p>
+
+        <h2>Long captures and multiple excerpts</h2>
+        <p>
+          A scrolling capture often contains several separate topics. A focused excerpt is
+          usually more legible than shrinking the whole image into a narrow column. This page
+          exports one selected region at a time; automatic splitting and stitching are not
+          included. Large captures also require more browser memory. For several separate
+          screenshot files, the <Link href="/bulk-crop-images">batch cropper</Link> provides
+          a ZIP workflow rather than automatic splitting of one long image.
         </p>
 
         <h2>Related screenshot workflows</h2>
