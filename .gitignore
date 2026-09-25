@@ -62,3 +62,16 @@ AGENTS.md
 
 # dev screenshots (root-level PNGs are temp debugging assets)
 /*.png
+
+# local workspace data (memory notes, GSC/GA4 extracts, Chrome login profile
+# with cookies — never commit any of it)
+.workbuddy/
+
+# growth ops docs (internal strategy, triage, receipts — not site content)
+GROWTH_PLAN_90D.md
+INDEXING_TRIAGE.md
+A1_REQUEST_INDEXING_RECEIPTS.md
+
+# one-off browser automation scripts (hardcoded local paths, depend on the
+# local Chrome login profile; lint already ignores scripts/**)
+scripts/*.cjs
